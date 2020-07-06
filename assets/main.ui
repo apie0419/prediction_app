@@ -138,7 +138,7 @@ padding: 4px;</string>
    </widget>
    <widget class="QLineEdit" name="lineEdit">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -147,6 +147,9 @@ padding: 4px;</string>
       <width>141</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -269,7 +272,7 @@ color: rgb(255, 255, 255);</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QTabWidget" name="train_dtfrom">
+   <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -279,7 +282,7 @@ color: rgb(255, 255, 255);</string>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="train_tab">
      <attribute name="title">
@@ -327,7 +330,7 @@ color: rgb(255, 255, 255);</string>
        <string>    To</string>
       </property>
      </widget>
-     <widget class="QDateEdit" name="dateEdit">
+     <widget class="QDateEdit" name="train_dtfrom">
       <property name="geometry">
        <rect>
         <x>70</x>
@@ -688,7 +691,7 @@ QPushButton::pressed
      <x>0</x>
      <y>0</y>
      <width>871</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
    <property name="autoFillBackground">
