@@ -1,504 +1,0 @@
-éÍT?s{"class_name": "Dense", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "dtype": "float32", "kernel_constraint": null, "kernel_initializer": {"class_name": "VarianceScaling", "config": {"distribution": "truncated_normal", "dtype": "float32", "mode": "fan_in", "scale": 2.0, "seed": 1}}, "kernel_regularizer": null, "name": "dense", "trainable": true, "units": 1, "use_bias": true}}H”™æ∂ù?µ%‹<éÇ&=u¡Ñ>C@&?>åÉ=ÈƒøHŒ?L#`>õ≤æpçªÿ†d> ÉpΩ≠Éºo—â>PF˜∏€0é"ﬁ{"class_name": "Conv1D", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "data_format": "channels_last", "dilation_rate": [1], "dtype": "float32", "filters": 16, "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomNormal", "config": {"dtype": "float32", "mean": 0.0, "seed": null, "stddev": 0.01}}, "kernel_regularizer": null, "kernel_size": [3], "name": "conv1d", "padding": "causal", "strides": [1], "trainable": true, "use_bias": true}}¯/¥}£{"class_name": "BatchNormalizationV1", "config": {"axis": [2], "beta_constraint": null, "beta_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "beta_regularizer": null, "center": true, "dtype": "float32", "epsilon": 0.001, "gamma_constraint": null, "gamma_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "gamma_regularizer": null, "momentum": 0.99, "moving_mean_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "moving_variance_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "name": "batch_normalization_v1", "scale": true, "trainable": true}}{§~Y{"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation", "trainable": true}}èﬁ’,V{"class_name": "Dropout", "config": {"dtype": "float32", "name": "dropout", "noise_shape": null, "rate": 0.3, "seed": null, "trainable": true}}›™˝¡{"class_name": "Conv1D", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "data_format": "channels_last", "dilation_rate": [1], "dtype": "float32", "filters": 16, "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomNormal", "config": {"dtype": "float32", "mean": 0.0, "seed": null, "stddev": 0.01}}, "kernel_regularizer": null, "kernel_size": [3], "name": "conv1d_1", "padding": "causal", "strides": [1], "trainable": true, "use_bias": true}}˙q¢|Í{"class_name": "BatchNormalizationV1", "config": {"axis": [2], "beta_constraint": null, "beta_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "beta_regularizer": null, "center": true, "dtype": "float32", "epsilon": 0.001, "gamma_constraint": null, "gamma_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "gamma_regularizer": null, "momentum": 0.99, "moving_mean_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "moving_variance_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "name": "batch_normalization_v1_1", "scale": true, "trainable": true}}}˙4{"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation_1", "trainable": true}}ë•H}’{"class_name": "Dropout", "config": {"dtype": "float32", "name": "dropout_1", "noise_shape": null, "rate": 0.3, "seed": null, "trainable": true}}€0é"ﬁ{"class_name": "Conv1D", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "data_format": "channels_last", "dilation_rate": [1], "dtype": "float32", "filters": 16, "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomNormal", "config": {"dtype": "float32", "mean": 0.0, "seed": null, "stddev": 0.01}}, "kernel_regularizer": null, "kernel_size": [1], "name": "conv1d_2", "padding": "same", "strides": [1], "trainable": true, "use_bias": true}}}˙4{"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation_2", "trainable": true}}›™˝¡{"class_name": "Conv1D", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "data_format": "channels_last", "dilation_rate": [2], "dtype": "float32", "filters": 16, "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomNormal", "config": {"dtype": "float32", "mean": 0.0, "seed": null, "stddev": 0.01}}, "kernel_regularizer": null, "kernel_size": [3], "name": "conv1d_3", "padding": "causal", "strides": [1], "trainable": true, "use_bias": true}}˙q¢|Í{"class_name": "BatchNormalizationV1", "config": {"axis": [2], "beta_constraint": null, "beta_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "beta_regularizer": null, "center": true, "dtype": "float32", "epsilon": 0.001, "gamma_constraint": null, "gamma_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "gamma_regularizer": null, "momentum": 0.99, "moving_mean_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "moving_variance_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "name": "batch_normalization_v1_2", "scale": true, "trainable": true}}}˙4{"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation_3", "trainable": true}}ë•H}’{"class_name": "Dropout", "config": {"dtype": "float32", "name": "dropout_2", "noise_shape": null, "rate": 0.3, "seed": null, "trainable": true}}›™˝¡{"class_name": "Conv1D", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "data_format": "channels_last", "dilation_rate": [2], "dtype": "float32", "filters": 16, "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomNormal", "config": {"dtype": "float32", "mean": 0.0, "seed": null, "stddev": 0.01}}, "kernel_regularizer": null, "kernel_size": [3], "name": "conv1d_4", "padding": "causal", "strides": [1], "trainable": true, "use_bias": true}}˙q¢|Í{"class_name": "BatchNormalizationV1", "config": {"axis": [2], "beta_constraint": null, "beta_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "beta_regularizer": null, "center": true, "dtype": "float32", "epsilon": 0.001, "gamma_constraint": null, "gamma_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "gamma_regularizer": null, "momentum": 0.99, "moving_mean_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "moving_variance_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "name": "batch_normalization_v1_3", "scale": true, "trainable": true}}}˙4{"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation_4", "trainable": true}}ë•H}’{"class_name": "Dropout", "config": {"dtype": "float32", "name": "dropout_3", "noise_shape": null, "rate": 0.3, "seed": null, "trainable": true}}÷˜ÌGm{"class_name": "Conv1D", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "data_format": "channels_last", "dilation_rate": [1], "dtype": null, "filters": 16, "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomNormal", "config": {"dtype": "float32", "mean": 0.0, "seed": null, "stddev": 0.01}}, "kernel_regularizer": null, "kernel_size": [1], "name": "conv1d_5", "padding": "same", "strides": [1], "trainable": true, "use_bias": true}}}˙4{"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation_5", "trainable": true}}›™˝¡{"class_name": "Conv1D", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "data_format": "channels_last", "dilation_rate": [4], "dtype": "float32", "filters": 16, "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomNormal", "config": {"dtype": "float32", "mean": 0.0, "seed": null, "stddev": 0.01}}, "kernel_regularizer": null, "kernel_size": [3], "name": "conv1d_6", "padding": "causal", "strides": [1], "trainable": true, "use_bias": true}}˙q¢|Í{"class_name": "BatchNormalizationV1", "config": {"axis": [2], "beta_constraint": null, "beta_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "beta_regularizer": null, "center": true, "dtype": "float32", "epsilon": 0.001, "gamma_constraint": null, "gamma_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "gamma_regularizer": null, "momentum": 0.99, "moving_mean_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "moving_variance_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "name": "batch_normalization_v1_4", "scale": true, "trainable": true}}}˙4{"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation_6", "trainable": true}}ë•H}’{"class_name": "Dropout", "config": {"dtype": "float32", "name": "dropout_4", "noise_shape": null, "rate": 0.3, "seed": null, "trainable": true}}›™˝¡{"class_name": "Conv1D", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "data_format": "channels_last", "dilation_rate": [4], "dtype": "float32", "filters": 16, "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomNormal", "config": {"dtype": "float32", "mean": 0.0, "seed": null, "stddev": 0.01}}, "kernel_regularizer": null, "kernel_size": [3], "name": "conv1d_7", "padding": "causal", "strides": [1], "trainable": true, "use_bias": true}}˙q¢|Í{"class_name": "BatchNormalizationV1", "config": {"axis": [2], "beta_constraint": null, "beta_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "beta_regularizer": null, "center": true, "dtype": "float32", "epsilon": 0.001, "gamma_constraint": null, "gamma_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "gamma_regularizer": null, "momentum": 0.99, "moving_mean_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "moving_variance_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "name": "batch_normalization_v1_5", "scale": true, "trainable": true}}}˙4{"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation_7", "trainable": true}}ë•H}’{"class_name": "Dropout", "config": {"dtype": "float32", "name": "dropout_5", "noise_shape": null, "rate": 0.3, "seed": null, "trainable": true}}÷˜ÌGm{"class_name": "Conv1D", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "data_format": "channels_last", "dilation_rate": [1], "dtype": null, "filters": 16, "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomNormal", "config": {"dtype": "float32", "mean": 0.0, "seed": null, "stddev": 0.01}}, "kernel_regularizer": null, "kernel_size": [1], "name": "conv1d_8", "padding": "same", "strides": [1], "trainable": true, "use_bias": true}}}˙4{"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation_8", "trainable": true}}›™˝¡{"class_name": "Conv1D", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "data_format": "channels_last", "dilation_rate": [8], "dtype": "float32", "filters": 16, "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomNormal", "config": {"dtype": "float32", "mean": 0.0, "seed": null, "stddev": 0.01}}, "kernel_regularizer": null, "kernel_size": [3], "name": "conv1d_9", "padding": "causal", "strides": [1], "trainable": true, "use_bias": true}}˙q¢|Í{"class_name": "BatchNormalizationV1", "config": {"axis": [2], "beta_constraint": null, "beta_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "beta_regularizer": null, "center": true, "dtype": "float32", "epsilon": 0.001, "gamma_constraint": null, "gamma_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "gamma_regularizer": null, "momentum": 0.99, "moving_mean_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "moving_variance_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "name": "batch_normalization_v1_6", "scale": true, "trainable": true}}}˙4{"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation_9", "trainable": true}}ë•H}’{"class_name": "Dropout", "config": {"dtype": "float32", "name": "dropout_6", "noise_shape": null, "rate": 0.3, "seed": null, "trainable": true}}ﬁo⁄ãØ{"class_name": "Conv1D", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "data_format": "channels_last", "dilation_rate": [8], "dtype": "float32", "filters": 16, "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomNormal", "config": {"dtype": "float32", "mean": 0.0, "seed": null, "stddev": 0.01}}, "kernel_regularizer": null, "kernel_size": [3], "name": "conv1d_10", "padding": "causal", "strides": [1], "trainable": true, "use_bias": true}}˙q¢|Í{"class_name": "BatchNormalizationV1", "config": {"axis": [2], "beta_constraint": null, "beta_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "beta_regularizer": null, "center": true, "dtype": "float32", "epsilon": 0.001, "gamma_constraint": null, "gamma_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "gamma_regularizer": null, "momentum": 0.99, "moving_mean_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "moving_variance_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "name": "batch_normalization_v1_7", "scale": true, "trainable": true}}~€…à"{"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation_10", "trainable": true}}ë•H}’{"class_name": "Dropout", "config": {"dtype": "float32", "name": "dropout_7", "noise_shape": null, "rate": 0.3, "seed": null, "trainable": true}}◊l§7B{"class_name": "Conv1D", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "data_format": "channels_last", "dilation_rate": [1], "dtype": null, "filters": 16, "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomNormal", "config": {"dtype": "float32", "mean": 0.0, "seed": null, "stddev": 0.01}}, "kernel_regularizer": null, "kernel_size": [1], "name": "conv1d_11", "padding": "same", "strides": [1], "trainable": true, "use_bias": true}}~€…à"{"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation_11", "trainable": true}}ﬂÙ?¸˙{"class_name": "Conv1D", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "data_format": "channels_last", "dilation_rate": [16], "dtype": "float32", "filters": 16, "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomNormal", "config": {"dtype": "float32", "mean": 0.0, "seed": null, "stddev": 0.01}}, "kernel_regularizer": null, "kernel_size": [3], "name": "conv1d_12", "padding": "causal", "strides": [1], "trainable": true, "use_bias": true}}˙q¢|Í{"class_name": "BatchNormalizationV1", "config": {"axis": [2], "beta_constraint": null, "beta_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "beta_regularizer": null, "center": true, "dtype": "float32", "epsilon": 0.001, "gamma_constraint": null, "gamma_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "gamma_regularizer": null, "momentum": 0.99, "moving_mean_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "moving_variance_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "name": "batch_normalization_v1_8", "scale": true, "trainable": true}}~€…à"{"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation_12", "trainable": true}}ë•H}’{"class_name": "Dropout", "config": {"dtype": "float32", "name": "dropout_8", "noise_shape": null, "rate": 0.3, "seed": null, "trainable": true}}ﬂÙ?¸˙{"class_name": "Conv1D", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "data_format": "channels_last", "dilation_rate": [16], "dtype": "float32", "filters": 16, "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomNormal", "config": {"dtype": "float32", "mean": 0.0, "seed": null, "stddev": 0.01}}, "kernel_regularizer": null, "kernel_size": [3], "name": "conv1d_13", "padding": "causal", "strides": [1], "trainable": true, "use_bias": true}}˙q¢|Í{"class_name": "BatchNormalizationV1", "config": {"axis": [2], "beta_constraint": null, "beta_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "beta_regularizer": null, "center": true, "dtype": "float32", "epsilon": 0.001, "gamma_constraint": null, "gamma_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "gamma_regularizer": null, "momentum": 0.99, "moving_mean_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "moving_variance_initializer": {"class_name": "Ones", "config": {"dtype": "float32"}}, "name": "batch_normalization_v1_9", "scale": true, "trainable": true}}~€…à"{"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation_13", "trainable": true}}ë•H}’{"class_name": "Dropout", "config": {"dtype": "float32", "name": "dropout_9", "noise_shape": null, "rate": 0.3, "seed": null, "trainable": true}}◊l§7B{"class_name": "Conv1D", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "data_format": "channels_last", "dilation_rate": [1], "dtype": null, "filters": 16, "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomNormal", "config": {"dtype": "float32", "mean": 0.0, "seed": null, "stddev": 0.01}}, "kernel_regularizer": null, "kernel_size": [1], "name": "conv1d_14", "padding": "same", "strides": [1], "trainable": true, "use_bias": true}}~€…à"{"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation_14", "trainable": true}}»K>ºKIzª6¬;f∂˙ª Lµ<ﬂÊçº˚·å:˜˝”;Ñèô;Ç
-	º‹»o;ö	&ºd≠û<µR«;dzà;Ö;`º*ã‡<çâ=îº≈ºø=˙ KºóÈ|;™˝î<ƒºñKºÎ-∏<Ω<yŒº≠0ºUÇzºõºÃÔ∫));üwé<MˆºM†á;G†Äπå‰1º∆I¥:˝πã;ôñæº%›U∫Âà9<£ﬁºn?Ÿ∫“‡Áª∂›ﬁº^Kπ<»;£r)ªb
-_;c°cº“uQ<Tå?º«ù÷<>Oº®+öª5∑ü;! <x™ﬁ;Q.EªA,;fÿ;º¥v∫øn:≈7y<∞3ö<
-D/ºum¨ªÈQ;¶ºpr<{ÿª_j<2è&º·g§<ü´@ºîÃªÂmºFó‚;11vº<+‰ªúH<îÆ∫ºÿû'<SV<òmñ∫†rÅ<5√$ºS3>;πíóª¢ÆÉºåæª.[?ªÓ¥Ë;ﬂ<ºô&õ<Æˆ‚ª¯çª¿&ª˚∫‚∫„b\<Ô°;≥C≥;Ùƒ;∫àà>ºÏ¿ª$Ú¡ªhéª	ß<'Ÿ\<aˆñ;˝-X<ﬂ9F:Ïq<Oˆß:u	®∫	0º D:DƒªÁ@ªQ;ä;ﬁ,ãªÒ;©H
-ºeÂº◊;◊Nö;*aÅºmì;ä=Ò;DÌ ºÀ±<Mµ<ã^+;xª∏ºˆﬁXª»7<Õ°<£+«9èÃ†;,<º~ö-<œª<â¡*<[õºEeªlR™ªYw¨ºòúä<ô]ÔªZ™”ª5i•∫AO<c‰;ù‚W<•lº"9ï;ÄÄìª âÊ<≠ÂπNÍUª‚æ∫"¶¢:±s:º€3<gÉ<tÜ,º◊n†∫1íª&<„7MºÇîª‹∫π;≤fßºbÃÚ:]ãv<¢©ºµÀ ;:q°ª°«;òÇªn‡¥∫\Ûà;˘èŒ;Äé©;˝Ñ)º NÖº›˘Tº”= <"¿çºW2T:ƒÈóª(¡Âª'ÏÙ;ÿ·”;LG;œ¢Xº“„¡:ë<?xºeÓ¯;Z·∂;¯sÈºüY;ÌﬁºÌ÷6ºd-É;å˘œ∫k“…ªË©®πt√<@P<´*ºyÅ{ºˆ
-Î;¶ù<1íª-ò[<N›<RÃ–ªÿ≥[<g!ºÓ;-<Vë<CÌ:Bt“<kåk<”SΩ<ËT<âÌ∫†.ºl.;)k"<“{Qºp!ºé‰.º{¿˛ªŸC;tÌÊª‚À¡ºƒyÀªCaºÁi<ﬂv;’≥%<œÌˇªsNÂ<Z∫ºb<<e,<É¡î;ÏwÒª‘€ªk“÷;}ﬁì<Ôê<¬^◊ª=^ªÀRøª≠‰É<{cº;ìZºÇ*^<«d ª(∆êª»Mîº∆Xñ9ZÓéº‰áWª^ÚﬂªB{º:<öºQ•ä<˝‡';§J¡;…ª}b°;~•<_ê<˜ESºC•;Â( ;©∫<“≈;µö¸ªó‰;:oœ:iö^;9ùŸ<yi3∫‹R∞;Ÿ⁄=º+≈<>Ç—:Åÿrªàº$õF;zá¥;‹Tπ∫%_Üªÿ¿º&®£º0ê‰ªÁuK<•¨°<¢u⁄ªM}•<÷§ñºe∫5ÊdºÍjú∫*ÔˆªıJÜª=+'ºD™;€<RªjﬂªWâ≤;J‹Ö;l 
-ºF˛É;i'åª)’%∫j#ï;“O&<
-æ0ª·ªª–€∑sÇT:O&<Œæº[B-;-õº7æ≤;⁄∏Üªîiâ<»z";µæÍ;)IAºæﬁM<AÖ¶;˛¬9<(8mº2&ìªÅŒ;%ø<˙yªè∂a;•áÈ;iÅºÍIu;}>œ;f°d∫sÇ∫Øçª„í;∫<Û™aªz_>º]xãºπÜºömx<]∞«ºR:%ººÖE<*›æ∫hmØ;∂ º`ª∫wª;õ;È5≥;3Ôºá{¬ª7h<Âì<B¯:$ÿÏª†ô›;√û;=ê<+\jªQ4=Õ4d<ê≤Sº?:ª<∑·Úº≤Z¢∫S≠ò<¯v–ºL∂ì;7Æïºíè∫ﬂ=&ºïÌ;q9∞ªZò4ª‹ÂVºÎVÊ:™Ôî;ÆÑ9Ÿ«<á*§ªÉÈlºN2–<kÎ:∫ÀDUº<ó9º—1 ºW§Œ:fªØ£ºYÙ]º9Á<ÕË‚ªÔ8i;ûá_ªµú≥∫+Ö
-<WNd9£{;;´gF<£®ªì›Å:Û+ <˚a<¡›‚;=e¥;Ê©AºÇdo<à›”;2µ<$¥∂º”›Ç<æ—ªkº≈ÿªN≠°;¬N ∫Kﬁ∂:÷4º ¶0ºØ;‹ëº1 ;<Ω¸ ;æeπ::î<xP‡9.⁄∫¬ôªV»º˜ﬂ3;ùñºLELºQ<huª<ﬁÕºk…º˜◊Ñ;0º˜dª:ﬁ	ª˚f;]ˆqº˚≤<nsªöÇ ª}#dº¥∆≠ªÿ†Å<\EE<ü1lºÇÅÇ<VV“ªGìº∆#ﬁª!≈Ñª—Jç<u…;*{—;X:“C:3(º(:<¢`ìª≤nº⁄Ô-º^l<)Ü:Œ*<Ÿ†4<}_®;nª†<Òu©;µec; o<H√±ªbK¥º^≠;1Œâ;2Ó7<lAº(®9ßE<‘úHºÂ˜¥º’7T<ÁŸ∫ªÈ;á:√¢:¶<¢jºt0T;g…O;ûÛÇº•9∏ª›í‹<_'‚πÿrïªqCıª û<óW<8?):ÅìπºØ\$ººX:˛û:9;C¿ <À≈
-<(€;cí~º!Sªr»ªUí<˙'=<:Oô∫˙ﬂªÀ∆x<‚_≥:MˇÔª¢£û;∫ÿ–<ª‹;YlÉº‘r˙∫]˜›∫ ˘–ª“SªœÀà;ë◊^<◊ü¨ºÊj∑j!á∫˝Yº0{EºH_<êç˜∫ë≥:˜D<6Òª®ËºEl]<prsº (ªF@<üp;J \ºTn<ªg´âª$¸Üº0æO<4˘Ü<ágªãa2∫›Il<ä’;XÖπ∫Üh‚ª{ù<'ÁW<’‡◊∫nãÇªı´ò<>g<&œ;u>S< <‘Ä∑;èI_;Uµ|<L'Ì<˛.0<í n<»bÒ;˘˝º)Ô:ºm˙£;í˚ßªOª≠ª¢Õkº˛ƒ6º5vH<@˚Kª9Oµ;ûv›ª<L{;ko∆ª˜≤øªŒ?¬ª/¸2<D'†º‡Ì§ªÇ®{ªøÅrªÁé ∫ëó3ª„ûºÏ/<n]πyÏc<3…<”•í<•0x<•'∆;+Éq:¯G£9Rë⁄ªªˇ«:`N¯:E]-ºüy∫<Ω–=ªïùE9`ä:kΩ÷ºﬁyç;U(ºº<+¸∫üÆ8Ê”≠:˙€ªﬁ qºﬂk:fxØ∫]:1<ŒGöª9ﬁÊ∫ıõº"lOº∞ªäõ<Ô<<ÇÄ;™ñ»º≠r3<˛_øª±Ò≥;ù∆ºÑüªı√ú<°?h<‚ ºç∑ºÓb7∫VôGª/†<∂°9ºπã<å»ôªπ;Áº5.pºeºï<‚[º∫o º‰¿ºx∑¬ª3”¡<eJ‘;-JS:ê'<ŒVºø‘†;=E;íÏª∞’·∫™=4;GD◊ª|ÇÖ<ñ(<éZº2¢;Ì1 <¢‘x:0j|<˚Q(ºÉãÈªè˝C<Â <•≤?<ç[I;”ºA‘<ﬁ“ÍºëFvºvõ;ô6˛ªz8M;ú}ºÆ&∞;Ü,;—ã‰ª∫‡ÁºÂ5ö;q∞x<$=xªã€º34<ÈºŸ;ÕÀ∆∏∂*O<ºÉ$;¥±‰;Ò¯ÄºB±<ÚÓºbÊª∂=?º˚]Í∏õÒª¨·ºÇ~Í;$TIº˚O<ÇÌÄ<éHºuÕ:â?<.c$ºb º_Ûª¨:ª**Ä<Ä˘;;]Åª‚ÊÒ;ˇÍ¶<=˚Øªÿ{Öºé#ƒ<p_∂º¸p<	‹°<n!Üº#ôêºB‹áº¿∑<πsvºuq2ºê_∏;/$éºß¢ß:Ëó\<ùü™<˝ßìºb±æ;ò‰≈;2F˘:Õ<±%ü;\ÉËªøôª_©<∞æ≥ªq9ºÙ˘ºìæ	;ÖEF;º÷<ÄJä<´ÏV<∏àã;Pˇ!<os_ª„Øòºr¿f<íºu&:q]nª–P{<æ-T<†)∑; ©Êº–ºítº<üÂ_ºÖËh:_ª˝;Ì*;T˙;Úlgª”Û:>|P∫®&¿<
-Œ!<º{˙ªı»d:dıπª\:º˘iõ:ù¯ó<gÕ<@ìè<#±∑ºO.<(ÂX<§Aû9ÑôZª
-<≥Àπ⁄ø;vÏ;EA<ºÑºª\«<0◊â;S∆w∑&Gc<∏ƒ≥;xÓ
-:˜ô´∫∏-ª‚#˘8ö{”ª+Ï9p<ÛÅ
-º6WuºV9Ï;öò{<Fõ†ªÁ<h(;[∂ªÂıì;]ƒK;õá:*É ;'º¸Y>:;»#ª2Å<ã ;Ìà˛;.Ñ!º¬w®;ß_¥:w=}ªø)°<<ç‚ª¿‘ì∫AàÕ∫‘≈3ªÔêòºZ˝ª˝x<*€;÷®ê;%]º a∫–ë<k†ÇºÊ7<›ùÉª…Ó™:ÎY∫ŸJ9i›ƒ∫0Œ˛;ÚUz< ©HºÕTªeåê<o∑<ÇÄK<≠pNªAVº˛C‚ªAE´º@<ß”Õª–DA<,ñÜ<jnéªéäªˇ÷A<°ºô¬Œ;Èøª¿
--<íT<„Cª˛Êì<•3º1≤†ºwyº®Æ1<°Ÿ;ûìª>x
-<Aõ∫ëﬁ:∫B∑1º´~Ÿ;?à≤<¥˜ˇ;◊≈ˇ:Èˇ<®)[ªàdˇª&ßõª}Úπ‚ËÉª>>3<∆†±º‰‹p:>∑å<ÌÖá∏è»0ºÉ¨í:˚˘ÅªSßª⁄-~;Îè<I6C<EÎV:jåıªq˚zªÈ∆¡;œWªÃbûª56<X˜Ä;Gf%<ÑVº®·Ä;Ì™ªZ≈–π^áª(%Æ:Ç`Lº©Ñè∫&'~º⁄t§<3"à<¢~⁄ºäΩ;.º	w<£ã|<3∆Ì;Õkı;ª∆ª%wõ;õDºWDòªj?ÚªqØº‘F º≤8∫`âªj[Öºf:˚^˙;8„‹∫cg∫Û˜é<∂Pô;˝ª5E7;h£º£¯ÍªÒ$Xºdø,;ò ºΩ>2ª5˙Ä<Ç}º4∆€;˙Sáª*ôJº”ûºÒ±π;#w—;*˛ª•/“πác<Åí;Ω∑«<È0∏;,
-„º<H<˙ÿ:˝∑ˆ;º:U–ºëª‡6ªµ%ﬁª*@é<‡ªI;>ØN<>;ÕTÄº∫V<#õºFíI;‰†πï”ª}•:˘n<HfOªµLÇ;ù∫M:ªYÓ±ºKp6ºôYº>_<ï…ª%Çßº≤Uä;y,;Qy6<Ä];ê<úVº¨1O<›Ãt<"H<Ûﬁ\<z†cº‡fÇ<ôl∆ªr¬ñ;¿Q%;ã†ªÏöºµÕE:Pg;B∫¨ªﬂÜ:¡“;Ôˇ†<¬ÍÇ9tùÑ<∂Hªd;Av]ºë8œ<QÊ‘;ˇÓô<>Ω£;gòIºB¿r;Êå‚ª≥Ÿc<ÁΩÈ<è”_<8≈Ò∫
-ÿªê^˛;Õ¯:]Øgª˛îõº¡PS;ªëíª!Xâºîﬂ	º^\;Ö±:k<» cπZˆ˘ºR¿Ú;◊ªîºGıÆ;›è<]\Æª∞ıÌ∫'çË;¯Kcª#§⁄ª ¿O<èÇë<⁄)<ÎøfªRŸÄ∫å[∫d_≈: »≥∏Ï8;ck∫•sd9j77^–:@Ly∫].;w|Ç:ç’;Fd∫63»∫    ù…Ä?†ìÄ?©ûÄ?z—Ä?œÄ?ä§Ä?‡çÄ?  Ä?hπÄ?n¿?≥#Å?∫2Ä?∫”Ä?ﬁÔ?«À?  Ä?í©Ä∫T∫p5≈:±∏v;l	k∫ı@e9gá7ë<–:q\y∫GK.;~yÇ:¢¥;}Hd∫îE»∫                                                                      Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?ﬁÚCºÛu<<¢N¿;^JºÏÃ<)≥z;åıÑª í∂ªÈ?;√õç:¯J3<óÓxº‡j=í+2<=4ºˆä∫;fºóYjº:ŸD<i#<∫Y0ü<‹n<B€∫ª⁄º`ß¶ª’ØØªË¨™:;‹ô;±%%<Óêïª±Åª™∫;õ≈7<¿«ª»";†(:œM;ùÄº√#~;2^<É¨§;Uî(ªCÚ©∫C1|ªyRºka3<iuÈ;J™rºŸÂéº7∞ãª∆±]<ò±:‚¬s<´ï<ümÈ;¿ßËªfLeªVßé;…·ºf‹Wº–≠<K∑æ9%<∏ï<ú<©;ûó+π\Ç4ªÙÉGºÅHºÌ∂ªå∂ºéÏ¯ª\a÷9ﬂWÖº¢ß;êGBºG\D<md`<•0uºzΩ5ªƒ5:P‘•<Ø´…∫Û	ª˚GR<Å{B; È—∫¬p„∫Ï™x: óJ<S◊Cªüè>:3Ω÷wëªöN∫;ÄÄ<oÔ;@Ó\<r"òº}ìo<Di;˛•ªŒ3m∫\E0º‘—ºn¯´;Ø¨<Q˘t<ÒÏ'º€KI∫Óa1<çEªé}≠;|Ÿ5;ÔÄºÁu ºÏıÅºTûe∫ÌêàºpŒ“:µ#áºÏQ˚:Vbºã’≤:˝¶<îª]–|ºœ7…;è¶—ª\5¥:^lÚ;†ƒ<W¿ûª≤gê<[0<BF™<Û®êª≤ú	ºø2D<8„Äª9æH;⁄¿;ö©>ª§{üª’∂<rÃîºüúK<ÛøºpÍÅ∫7Ë÷ªÄzÚ∫_üE<≤]Î:Mäp;úV÷9:¸X<ÑáÉª8k_ºg*<+ä:4ˆ˘;o®π]+5<w‰Gº›‹<Ëw<¢@§π6ª∆\ºù≈°ªFbûª∆k:ºƒD9<í>;"Õ©<˚Ω˝;{è;©¯ŸªgPºCE$:≠öbºtYVºâéíº0êv;Ô'ªf⁄Î;Ö‹DºÉª±ó <p)çªöÁÀ:Z˜€ªîBº^ﬁÌπÖîàºüGî∫à≤®º	<0DÙ:[ö<WeâºÎåªe¿âºfÈL;¡Ñ<¨töπg?_º/≥<Â˛§;dΩlº≤¨ªÆH0ºÔ®v<œ º¨cı;ÎO<OeºKÄºÈ.<Nö™;ËD;oõù:ØX¶;Z§…ªD
-<N
-;™Ø;•¢:<√ã=se⁄:ΩÆ°<~;0øã;Nﬂª¿ö<G^4;–Ωô<Ω/;dÕ:œFºPÊØ:np<B‘5º€pµ;ÔêS∫ÄWq;∂uºÏÔz9‰Nèªc1ºwC‚;kÑ<îÕ89+-~;´∑ºæAïº†cÄº≈ü	<};,º;<'ˆ∫<¿9ªoëéºq)ªkd;Í˜mª´÷º∂‘<úÕ9Ë©	∫Ú 7;òù:™π\ªvY.<BΩR:–ò{;í)∫∏&7º	‹=∫R.<π«Ïπ:Zà∫È$4;7}‘ªÁ|ª…è6º;G«πú$U<ë(ô;y•ªXÊ!<õÄºﬁ3ãº¨sÿπYÅWºòmèº ø4πCDπ;»ì<@Hª∏|´∫…oñª©⁄°9CHºªtæ≠ªÇÙ<≥ˇªŒºñ<¸∫Âªéπ¬
-<%}ªyƒH<snK<‚3è∏Ω÷;6K;àHØ<Ñ§$;∆R9ç¶O<p‘<¶ºlº”L:ﬁ£º\yˆ∫≤W:ZYï:˘zC∂T´ª˛Ñ∫b"ºNÄ<	ìL;'¢ ºvQîºøèQ</úå<7ØºPw?<Ê)~<u—”ª8◊DªM&%;•Âµ:¸©∂;Ew6ºåv‰:óL<rB“;¥Œª„~Üº7ÔR:.Àg<C˙˚:‚≈9˝ˇá<ùr¥∫∞Úªtºº˘›¥;¸‚‰ª1|wªW	<´Ç;¶—P<Ô?¥;†&ºõéº!IºÁ≈#<US—8˚5Y;ˇ™é;S,È;”¨ª¿Æ6ºbä;òIP;q⁄õªïÊa;"d®º◊Aﬁª¡˝:0â<‰ë;¬:6:¸˚≈;)≠°ºˆ)‡ª@‡∫ÄØ;eHå<Ú+<Í˜&ªô∞áªÖ:£<&X;!ê;≥K;<∫\8º(§ç<˝ê<≈`<µ¬p<[EªˆØ<_ºlé><.7øºWßÅº˙fçºSXê;;ñ4;±Yá<Õ“	<Îã;9≈xºÉœŸªÈ&vºÔµ<Ô…≠∫Ûº@<ùïªÈ	,7Ú0ºfVªº03<çÏ–9A˚Ñ:Üíª"/<›fÖ;¥ó2<ÏƒÄª†ó≈;îø;≤ÅÂ;‰Ãªä¯ºr!7:Æâ‹:Bı;"r:˘ôÕ;Ì∫2<≈%(º≠Œ;◊X<µ2b;Óá;ø.ªáNãº˚^Fº≤F<–¨&º»ª˚ªûC"<€ù|;)Èjº Æ<Áy‰∫ﬂ/ç;˙Ûªí›9Ñ!#∫ûöxº ªƒ)rº4?Ì:Áµ„:dvLºr<H<¶◊ºéc%<$ﬂ¸<‰§ºaöñªFÜï∑·πà<ΩË<kΩáº±ﬂª÷·`<O;‡dåª©ùººf◊ªñ;*ºœèFº˙<$JºÒ0∫…⁄<wu¨:Ø›ªjûÜ;]ÓC;4ñ„ªR¥2;˜ñö:ßÃ:ò ªòß;Áí:<¢
-
-º¡Î¶πÈweºıæ∏∫yzD<∆ñ!;N˝•ªåIì;Àïºkß\ªQ„â<Õjº&‰;Õ0§< :ÿÃsºM¶;Q·ºÑÊª∫ºª¡™ºë<”È˘;ø9ºÓˆd<Ú‰:"aºGû;[¬ªß◊æªD~ZªãNëºOx·;∆.< Õª‚Dù:éã=<>Ûk<à0êªA∂<Ë8Öªcÿ.ªù¢º¿ªªd’#º˜F˝:tzd:r2<ïÑlº5ñ.<>t?<ëîªeßûªfÓÑº¡f<ªı`ÿªhI<¶AÆ;1õNªD0ª„OÍª	Yóº1˙˜;ﬁµÜ7‘=˚ªñB≠;EÇË;fñ)<J¨ãª— >ªi¸O<~§êºÂÆ89z„5∫ πÆº@<oªuÖ–ºG.ÕªÏí:;≠Ãz∫@Ñ˜;‘SΩª⁄Ü:˙<iÿm<¡d†º’jMª Àòªz@ªXÕD:êêﬂ;[7PªõæØªª‰Ÿπ1Õﬁª¬√Ïªèê∫}aºÒ<1ë@∫ñ<*ºë]ˇ;ŸFè<˛uºõßª!JUπÁ≤	<zÓR<’f"<ﬁÖfºÏ=Îª˛ú,º|˘º¶¡zº™h«:±ù;DI;ı⁄¶;≥;ﬁñ;KÌ∆;;ûì<SÊ:MIº$]<œÛ’∫â;g“Ÿ∫,Ô◊º‹—‚;Ô&ºŸôÔ;"‹ºﬂ6î:˛¶ª˘º8µÖ<!q<w+Ÿª∏(º.îû<
-îw9j´'º§Wé;Y<ÜäÄ<ÛﬂíºRÁΩ<ù}<ï‰:ªµÔ∫\Nx;ﬂàºŸ%pº»∏∑ªów<…5éªMu≥<ﬁ¥;ˆîõ;8o◊ª3E7ºh?¸8j»≠;Éx<f⁄Äªxdâ;)&;Ö
-OºIT<πÔª9¶ª0r><∑bµªäJ ∫á º*Ñà<∏>[<Ÿvû;ﬂdè;Ÿæ|ºî·º·ói<çT<∑ì<°ﬂdªäg∏v_áª+A<‡û∆;-Z∞;M9KºŸtπ∫∂ß/<S1ÄºÏ8u<‹M"ºàJª§ZD<KÀº0D3º(≈‰πJ”≥ª˜©¶;jöºgñ:˜w∫/J<§üπªˇ<æ>åºTû∫¶l™º›åÌ;˛"<≈*;:‘<3L<)‘ªïjö;µr»ªŸ.ºY‹ºVSºÛÏP</$îª*mi<∞H†;çîT∫Ï,SªÄÜ©∫O”;ß≥˘ª3¥cº, ¸:æ€¯:ˇæ±ªW¡é<,M-ª¢Nºcå;º©;≈$éºˆk>º$˛ûºòRº¨îÎº≤û\<È;Eÿπ<¢\ö;‘ªCaü<°9R#º!IŒª àøªµAW<¿W<A≥'<âU∆:ãñ-;ò˙p∫,›πµ‰·∫®V®∏¨'€π∂f™π    g˝*∫›_∫FO5∫Í|ä:a¿h9y7¸:î√•∫{ˆÕπ¥ÔÄ?õ¿?>Ä?¸∏?Õ±Ä?%»Ä?R‡?  Ä?l›?{˛?F?&3Ä?«ÊÄ?£!Ä?Éì?◊ìÄ?¡á-;ãq∫hMπ‰‰·∫Ì-¶∏Â¢⁄π‘b™π    à˝*∫◊_∫%Q5∫Içä:›,j9øC¸:Ä“•∫$ÄÕπ                                                                  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?k;,∞‰∫ù¯<ÑÙ<ﬂΩ=<•Ø¯:°ôEº€!ñ;Ä•N<Iß∫»Ωº˜Òï;$h<./øª·∞√;)≈^ªèÂºzÔ’<˚sj<ê^`<*\5<u˙{<,∫ª;¨Àªÿ°ªÛ©ä<§rÜª—˙ÉªP=<ôÉoºÛ ≈;AÊºèJ1<ÉìÄ;zª·wSªFî<&“;ÒrºìÕ‹;>k™;ÊÀ<©∫©≈ªz);u«Eº´i—;ˆ∫;8„ºª=m<úÍâ<ÄÀ3ªaÚ–ª]Ku<Ø;úë—;ƒÜ:	eº©R∫⁄{U<?ƒ∫ù_,<)ªµ<ãÖÊºAQl;«Ç≤;¶¸æª⁄‘–;I="ºüÖÂªÌàU<X¯-:„‹{<˜Œ< íÅ<ê6/º`åÎ;≤§q;"];ÑOI<‚˝†<¢c:üºπªc_Ç:yõ©;}øE<ËYº Bâªîá‘<ê√ë;Öå;(2<eı#;_ı	;ù¢ù;K¨:©~´ª»Õº@7í<GZ<[Éó;¿x ;Gx∑;∆mº£•ú9>?<ı <˚sﬁ:≈º]
-;çÌ};Î\MªÉfhº€`9;ÒõÊª‚H*<·Éº÷õº@„´πWXººò÷;6lß<é]º:&“8¨é;,âCº€Púª≠ñÑ;£Ω<Ûƒ<ë <®<∫˝ä;!ÖLªˇwÀ<ñÂº?‹0<”¢;ñ“.ºˇåº?˙)<ìæô<=hûªÀ ºm¨|ªäx<ÊGõªÇµQª	3TºPl0º€±Qªãiº4·ñ<A¯√;Ï ^º°ïª’¶ª\ÿèº∆	Qºzµ˘:÷≥ºa-ºó;°<Ó8^πÕÌ<‹JH<8Jkº≠Ä∞ª  bºÖ"<w¶Ôªd4òªﬂ=ôáºl‡˛;;T†£º¸¸¥ªã›;∑<2T≤;√p<W…˚ªæädªCû%<qÚ;zÑeªäSªbA :˚(Ñ<ûÈãª¬◊ª¬+’ª≠0Z<‰(!ºôç'< <œªº‚çZ:[®∫´ﬁwºDçÿª˚ª˛ªÚª8Ì<çTÛª?–;\ºY<#óª–Ê<k,ªSËL<I¯ºÃ›ºåböºEø‡ªπ‡3ºµl;+q¨;GfQ<áwèº÷≠\<aŸ◊;z`< ;g;Ç∫ LÒ;[1<3$"</äº\§‰:M~9ºX^+<≈I<|Ìû;Ë ªßyº^ƒ˙;lË;«bHº¯)m<˛ôÑºµ9<MõYªΩümºﬂr{;=¯™º7∫ÛÆ6º€	<Ö)›;0π<3é∫◊˝a<ŸA¯º&¸|<’Ü<_≠6<û‚/;Iå<m‡”;≠ÔªfJãª…ìi;¯>eºêÜå<¬˙⁄ªg@<çYºè¬º^õ·ªl/F:‹˜A;sRºò<ôÁ–ªhy≈<QIy<
-“;ûÖ‡;xo: ¶_<®øå:8 ;ºNôªù°:Ü¨Hº~ÉÍ∫¯'ºï#«∫OM¨;ñÈ<’Úº@Ç•ªn…yªLrmºº/Ÿ;ˇäïºoZë∫YÃ7º˝,Ã;ñ∫,ºvá,<Htºp„∫LUé;UOª´ã˙:’2*<±8A;éÌFº©i<È#!∫áƒª∫OáªpfòºÅ⁄<<2<È◊6<ºQÜ;[Ì;1Éà<†	
-ª¸∑ñ</†Ä<L∑ª9yCªMñ∞ª’Ì;/ﬂæº;6›º˝L<<À‚;zXw:|Dº¸À/;Uº™ÎÂ:©Í;…É;áÙ:ˇÊ;À.Bº†¨<‘ºJnñª“¬<–Êπmø_<?∆∫•=#º∫h6º´ﬁTº·ΩπnµQ< –‚;„K<YRi<“›*;J¯ªcÍºŸ.~;√Fƒ;ß0ºUï∫å]#ºﬁnªß˘—ª†¿,;°ˆ:Ì]πÙ‘π≈khπ;ß∏_©˝∫    &9 7Ô{#π&\uπÅﬂê:ünπøC¸:iQ™∫e≥⁄∫\r“ª Ü—;{J†;≤¸ªTw<êtiªm;W/⁄º‘#º2K<Õeö∏N”öª’=√;Eãá<ºro<ıÇ,º“Læº◊a;pÈ∞;¶í?<íñ–ª+vâ<„Î
-<Ìøø;8592¨Ü<zZz;íﬂ’ª^Lºx‚ÆªÓûp<Û6ºo\∫◊•¶;)Nº˛uc<aíºÊ.j<ÉŸ<ÃÚ<Spø:’Ój;£zªuî?<„äÚªáGÕª1óû:Ÿ>‚ªöé:ZÀÖº  jº¬TF:Q$ó;ÁéÇ<m›;≈4l<gÆÀ<Ç‹Ÿ;¬ÕºøŸ;§?°ºµ;}V©;Ì«ªŒ´ˇª√∂ûª≈t<…ß	º¸∂Pº˘fº`:Ú9Û[R<pGî;∂y0º,ê[ªC3§ºYnL:·&÷;YK<T…(ºj´•ª!ÒYºÕπÏ;Qo><+í6<iHª«^µ∫‹ppªü ÑºÖåéºH~ï:ó∂;!¥ª”„ñ;˝eÜº”“:XKºá6˘;À<;!º≈ãƒª'ëÚ∫‰Fõªπ"Ì;Q1º(#πª@rü;y* ∏^8c< cÛ:ÅóÕ;ÇIÉ;π“<0ü7º9aºkõõ;ŸPªòê!πl‘l<BXÄ;].u;ıRwº´dºÍÙÜ:Á;á{“ª«(ªÜ!∆∫çKª˙E ∏ÂõQ;–*<Ï–;%óî<3 ‹ªˇ∫"¡:Í„Â;ù’ïª~ö∑ª˜›ØªÉoï<ç#<-∑9*3ºO@·;Ï¯rªÅôºª≥;0∞p<⁄;^t◊;\ƒ◊;⁄)ºΩ„H<VﬂÊ:Ï›º*+nºÛ=<Ó≤ªjõ"ª≈"Ωª≤=Ú;¡+<fç<¶⁄ºêRπ;â\<¿˛\ºz“ëºﬂ¥ªµò@ª(s!ºv™ºídí<Î‰<K´:d£Ü<Um<˘øØª.E;sÒó∫ÅfºÕ(å;¢g˛;Ts[ªlPﬁªÏRfº§ºî‹zª·Ñ∆ªô≤zº&ÓºÒô<·•Ù:@^`∏˛.<Éª”LºÔ^®<l»º˘
-:%å¶∫d3ã<ª›0ºTÀ∫ÑÂç<∫›)<ÜÏ^∫ˆK!º=ì¥<—Œ»ªΩ¸G<4≈Ù∫t˝ûªrÍA∫tNº#F¶ª∑ƒ:–d˝ª“*º®Xä;‚É1ª„D–;æƒãª"Ÿ*ºπS‰;‡’œªÁgê;Ï‘<T”â<—ƒòº%0ﬂ;è ˚∫VéèºßEΩººW^:≤K<Ÿ2Ã;éÍ$<%‡ªäπªFı9XSÒ;>†∂IUùºo ØªÅºª•Ω<ººbπ˛,º˝‘∫or_∫¬®Í;A∂ª<÷Ø;¬£ªt+;ÚCºÕ†tªèâ<qº˛∏œ;◊¡°ª‘πÖ;s… <PŒ/º˛TõºW”Üª÷g,<‚ûÖº`îºÖ[I<[h;vzø:;}Å<3.ª-Ä<G/,∫î⁄ºd>˙ªøt<∞k{ºÄìN<1†ºw		;Ñíñºúí°∫oSì;n∂<a˛<KÇºpGXºãˇºœ«;‰”[;¸ºΩ≤y;¿õ¡<l:∞ª[ºÜ∂<∫⁄9;ˇp≈:„+<≠óª—Ã˚ª]ânºÜ•Ï;∞ø"∫è\‚;ïıQªSíí∫©ºØªó∏èº∞:??lª∏ªΩªô^<aÿ;õªMQ∞∫ÿ;Ω;ÑøÕ;7˘π∫‰dºˇêªˇ6<z˙∫ºD+ºZtß:+’ª∆ªÕ£;¥«L<xvÉº≠w’:áπ.º®¢Mªdf0<ØŸ[<ÀŒ\;O˝;"â&ª\~ôªÙ}∏D˛Ω9KPƒºjª
-<|ã—º?¿°ªi'©;ÙT∏º‚:cªnCæªÊ`ã<¿[ºDÄ'ªÉp¶;”∫»;M„:º$Pº˙îÈ:˘å=<
-Jº[]øª öMªvH4º¡sÙ;}{µªópÙ;Tºjåßº¥„Uº'2Ë9"Û"<ô√|ºØ”öº´Á<¶-èº·Êƒ;7]<Â≥|ºK$Y<ä1à:cE‘ªÌó[ª*»—ª˜˘"<Ωü4º]bW∫üÌŒªvn£;ãÛ’<ã;…]';ËY;U$º08¢9u‘}ºÅwyº ≥º[©Cºx|:<™L3º◊òÏ;Öcn<Tç¡9-ß…ª:{)<.ˇ„∏<7∞;ºh/ºÇ≈é:H≈Qº—n	ºˆÜ}<lw;6F§;Á›Rº†ºÀZç<å˘õº°iäªCä^;t|Ù;JMˇ;03Ò:,πªf_∑πÏUX∫iUº7&ÿ:˘ÿ´:Z™è<WL˜;í3á;DS;∑©ºAjªk~î;–;¬;Åâmª!1<=•Tº!≥å∫s≤ª\ˆ<¢|cº^‚X<séf<ñÜ <u˙ª°¯<Ò@ï;œum<MÑ%<"Øs:∆%J<,÷€:°âFªÆÖΩ;íÃªl}“;u)Ä∫æ>ç;‘;ùˆª€	ñº⁄µz∫˜,z;ö.ªº˝À:Ü0<trªJMﬂ;n~·;ÑºÏ:>ºjºº§◊<ºƒØ8€OòªÄDò;owÚºÿåºÛ.áº2Lª:ºUºtv>ºq–Îª.≥ 9•wAºvùÉ;˘∞&ªÏÍâ;íŸˆªöËÔ;¡4ºWhZºn≈2ª{"ºﬁÙ;fÉó:˘≥Q:.há<wπ{Ê<c"m:∞€ªüuπïx‚∫ê2<2Î˚ª˝\Ñ<˜4fº/Lú<ô:Dê;ÉH:…≤pª¢ÿ~<"-Vª“ëí:Oæ?<•ºm[∫5ºxú:}©S<ﬁ21ºW∆‡∫¸Æª67º¡„¢;*≤S<m:Ï;ÓÀ:<˘OÜª…mB<(b;wÓºB:˛;i±&∫r*a<Ω)©<•‚ª4\π:‡)IºßeºŸK^<ôª°º7<QºêtÅ;UH"ªgçL;|]ºôÇº÷˝˘;ºTÜRªnñâ<≈%Eªf«7∫˝º˝´†:Ç;Õ;R⁄x;Û(èºÜ-º¯ı:<∞¿¶9éÑ)ªÕà<I7°:ÔÈƒ<èB<Yk<¢¯ª7⁄Ï∫x¸îºàK	ºLÑ;Ø¯;√˘ª<û!ª∆'Q:ˆ+Ÿ∫˚±–ªYÒ;~ºë»ò<EW<TÜL;ïÄº;œo∫oM∫º-{≤∫ˇﬂr;Vä=<I«ªøi£ºg‚<ÖªI∑ºÛÀ9·'nº¿•lº2Ç<ÅíªŸH®;•CÒª…E0º»Wºªnƒ;≥óïºû∑ª≠F‘ªf:Aº∆\<N„7π«Ñªs”º8À2ºrl8ª]óì∫|W5∫Ω†∑ºÄı«ªoΩ˘ªé;<D≈ª©à;’£Hº≈ò;}µ º§kàªÇñ˚∫…<˚Ÿ <|\Â∫∞“ªøå5<Àª-®ˆ;´'áªÚºÔçU;µÅf<A6<W}f<X;;∂à∫e´*:BÓ2ºt^˛ª]EQ∫E∂¿;√äñ<Ü(ª9[<©WªüØ;N‚kªDâ ;•Õ:X\<“¶[<+˛ùº›a2<^(ã∫+ªxÓ <;Öª3ª∏ªáÇª‹ÿºÅªT∂<«-ºê(Ç;îºΩ)é<	õn;¸Ñ<J¨Z<§≤≤ª¥∑°ªÆxç:Ωw<Büî<íÂ3º <ÌVº⁄híº6¨ÂªÏ±ºm(<œjá:Ò∂ª∆<ü∫&Ó–;[˜Ò<§›ûº›Fê;çÔtºAƒªπäZªñî<åº—8∆<|Û˜ºß6;˝6 ºÈâ º∞ÚZ;KJ<ØÕª¨∞ó<KW§:⁄;é∫cwºî∑s:SUíº7≠;Ù4º‹™∂|Í1<‹s º	.#;:	 <ÁzSº˝
-º)b|∫Ü¬œª>25<ïU;]ø”º˙hZºjÃÛª≠a˛; <]…<¥€≥πæA@<´Ê·<Äæb;—pÀ;`ÚÄºUNu<·ÂèºœÒ√ª-Zº5B›<o1˙ª‚ıô9éºuO?<7Câ;J?:ì—Âªså<≈û”ª’âõ∫©Ï∏ªì∫/O¢ªù ¸9Ä!I:nú∫ p°π    £k©9Ï2∫T´‹∑∫q≤πíûOπ}‹®:√4'∫4.:    bÏ9;d!9ÇÄ?¿Ä?¿?©Í?  Ä?˝ Ä?·—?ˇ?Qı?∆Ô?6&Ä?J÷?Ù?  Ä?ÚÄ?úÄ?¸¸9˛ I:1ú∫’m°π    p©9˘2∫:‰€∑±q≤π§úOπ›®:‹4'∫+4.:    fÏ9F|!9                                                                  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?mIºˆ~ªY"~ª«,ú:ü¯¶ª≠êÁ;∆«:∞ªäª]ÁIº˝Sˇ:VÓ;Ÿ˘Å;…Î«πîúŒªiá¸ªÖú—;…–C∫-G|<âr4ºä5æª*Ä‰:¡k'ºÈ <ºÉ≥òº˚l
-º*Ztº‘H4<ÒˇÑªz#ßªñp{º™˙ëºQÅ^∫6àª¬ƒœ<å- º»Ÿ;i£;}ﬂ‰;è5ªÎû;˝¸é:FzªŒ’-ºúõˆ;eÀ;9B:ºBó<*”õºáü2ªTı´ª0;ì;›ú<.3;Ω∫ãºI/ºÛ‚‡;Ïà0<OQ€:ıÓpºSv<ΩMÊªÇ≤Û;î_Ï;¯|h<†nª¬¥^º;ë\º‰]-;)√è;-Ñ,ªnFƒ;&ˇå; Ñ®:Úﬁ˝ª˝EºÀ®;Èöpº≠}<¶M
-;Ö´;ÍCñ;ù´qª §7º`Åº ‡	º’ª4§ <)í ªI<ù£ò:cı:ï.O;ß"<8®6ªôk≈º≤|à;â.ª-ûiºDU3ºÛ<Ï;¢º;,ºÓÑë8#V<û√~;Tá∑ª≈<›='ºˆá¡∫¬‚DªæGºÛöª\U/<™:0Ù<m02<ï⁄âºSSsª"∞ë;Ñ√∞ª¸Ì‡9;ft<“jl:|æjºü¸aºÖq<(%ù:∏¿qª6Và;°g¸;åº=§ª≠úíªwi·;ÃÁ<î<ba¥ªÔE¬∫ÆïHªY”ªéÔV<RÀú;Úo!<∆ZNªk7"ªVmE;ÔNºÎuÍªY©Ä<kÈ£º äá;Z„∫ªéπ<°ˇQ;3÷;aÆˆª¨≠Ñ<VΩ/ªx∑˘;HEêºÆíQ<y√áº–B;˝Ÿª›
-0;•ı;ÇP4π∞Ñˇª°!ºƒÛ≈ª(Œ∫T±;oœû<-ı∏;ﬁSVºèc<Ëu›;*¶ºzLç;87SºπUL8†G·∑ÀÉ<G>åªœÜ¬<∞ªàı˘ª4í:ª˘—∑ºW©t<&õ<:¡t	<Ωµ¢;©ˇA:wX∂∑Üâıªn#1ºõˇƒºy?>ªtTöº´52º"'<è–í;“«ª"Üìªa˜ëº˙Hª¯#ΩÚÑ;ıQB;©0<k+A<’Æ∫Ì¡ã;8å•;ﬂ˚9—€<¿ù5ªœ⁄Üª≈ôûº«z;¡yº⁄˝<óÊ<tï:
-∞ª«‚ü∫π-ªa?‹<w]Qª£0cªéZº•¡<Üà:O¥º!m÷ºÂú:¬à†ºÀ*dº[w‡ª8X4<˜wÉº<√∫∫3,§ºº çº2)<®+ãªP"Î∫∞4<jNÑ;.wºöº‘ÌLªJÍË;pÌÆ;ô”Ú9∆π´;1Çº#ÖH<U;≤ªí]%=˝MÚ:‡ûØ∫jî;˝@¢;ûF<Ωñ°<Äj<oÇ∏¥~Q<õS≠;õIºËHºu‹ÄªbM;lø<Ïg<ªèGﬁªª˘Ê6jQì<ƒÁÄ;vû∫úvº°à]<ıDºZôÅ<)oºæÓEª¨¶ôºt¡í;˛\µª⁄1ø;rxºD}ª“2£º0@aªÙAªæ<f/æªöã‚;ÜH<¸úQº”6ºœ	o<Cû<îÃ$ºUÖ¯;¥‘ºÀz;"Æ>;Òç·ªv¬!º\üîºU˛Ò;9⁄_;«B2<é∆à∫¢}õªÖ`º¶Ô$9ª+Ω<l8Z;;ÕW:›UÉ<ÌÌª)∏Zª«⁄õ;éÒ’;¢9∑9}ú
-ºÁ∏P;òhL;â2±ºÁ≠Åª4Ïñ:<ÿì˝9åZ#º˘¯ªƒH&º Â#ºﬁÁ;Î›∫Ì±ªËÆ<R>ª±…ú<>5º>Æ:~}<ÿ
-eπeºçY.º«[±<˝;o5Wª=	%<èàªÛ±–;ÖaVº<<*◊•πÕ˙(ºÈ*•<Ï∞º©∫:P£;5Áªå>ı:ÇxÑºf:<†¡‹ªZÜ;ÿ&E<∆C"º√|A<˙[º∫˜«º3;D;Æ °ªIâ;O<w»;Jm.;Ê‡5∫w∞§∫∆˙>∫=ªi<@<Qπ;Hº*í+<»Ï«ºöjº;W£Õª<Û':4⁄˜∫å>£ºE‰ùªg”:.<ï®%º’∂;#ÙπÂ≤∏ª¨€|ª™·:Çã˝ªF∫∫çbÅ<ùãºÅ±ªŒ,'<É_mº<Y∆;I–íªõÒºU+ä<Ä,‡;>I>;/P´;is<j è;8‘s<œ]íªÊc√;ò›Úª ªF1Yº 7ºÎê)ºPÆªïò©ª£óç:TÛLº?KΩ˘d<ª“*Õ∫◊¢<9‘v;wƒ≈πÌ&<#∞;5ﬁF<ûm
-<;Rº √¬º›√ªnCç;VpÔ;q…§;ê&ªÁO©;"ı<Ç˜”<°çkªpNuª|…j<∞jN:;•Fº∏¸ˇ∫L‡¢<&˜≤ºôPO;ªZº´d6ª.MÈ∫›‚*=fë <,ëºo˘Ôª„EûªöìºéäÂ∫D∆.<ô;Å∑∏*<	◊∫;<~?;sºd
-êºX⁄ù∫∏ÁÈ;F˝;kµ6∫“¢ª¢„;'}1ºê»GºÀ£Ç;}ËªcJ>;àòm;ºäH;ß6 ºñT<J\›:⁄éº8’ªk|´;±"º«Ä< ˘:k¥ª»∞Üªçª–´Öª˛w‚;˘é	ºTœº)äb<%}<ç»$<NŸ∫Kπ	<2ôº:íígºÂìÖºƒ0%ºÛe”ªÿä∞;$g<OF*ªT;í9yﬂ<U;æ;
-FPª¡Ù/ªpÖE<£⁄Õª/<ütº·˘°ºCD;≠ú¯:≥r<*+A< ‘å∫ﬂ-CºDª>Ã<´{ :7·†ªø±Ñ<Òí€;@Mª.Éiºz≥ö</óã:lj<Ká>;˜ı:º ~q<‰∫9ºjÊ√;Ãåº·+];™-8;@ôé;ÉÖ<9Ìª…!Å:˘ÿ‚∫u¬<Dº;œ;CÇdªKâÁª~O´∫π>@<uºá;ˆ/a<£Ç*º/˙›:P{<.≠LªJú<TÎqªôpJ<oÏ´ªtuªA	≤ª‚íq:ïXZ<ì(û∫.nTºÖ®	ºÈlº:›Ω?éñªKT<Ê-Ç<õ[Õª±$ﬁª$÷4ºÀîÀªqŸªÚ#—ªâﬂ∂;ùÍ°º¢;ƒPº·I∆ªy¬ºº£<K∫;«‘Ã∫ÿCx<R´<Cÿ <ûñúπ	æ{ªœTè∫˚§∫†
-p:I^ÿ:/‰W;‡•ºvÀÜª≤ñÅ;‡ø›<√åΩª‘+ˆ;ÊnÀªå!º) áªcπ¸ùçº“X)<ﬁVJº¡-<]Œç<âL<’ò<M∆ª/Å!ºõÖ∑ªÛuı:˙lô;~Åº¢ ª©Oã;Ôc,<r«k<˛˜"ªú‚ô<oÎ3º#±W:7êª^†Ÿª 2‹:πqH<Ô&†ª©ú<bA[ªpu¥9vµªµ2õ<ı¬<—a]:¥´ìº5¥)º}πº* <†3ªn†≈ªÎÅóª∆'ª#Œ&ªknª§`êª"1éªøb`94I<ßHº≠-*π…<<%<$Lÿ;éô˝ª™∑º(• <Úbº˝≈<Ú,@ª…ªΩ;vÛMºÚÑNºˆ˘Cº0™<N>º•ø»:"ÎSº”åü;∑PÃªErH<ãèòª´∫'ïè;f%8<ØDºÍÌ&ªI∑Gº&~ÍªúW•ªÈhºCNÎ9¸”<îP:;‡ç_:°ﬁ@º¶<·ãi<R6ª„u< Ö8∫>¬ºh˜ºyç;ø,ºNP·;ÅÜ<ä±ò9ì+Z;GË’º´ßCª°’ºRt'ºªp≥ªS]<[PÃ;√µx;ÅÙπ;ÛX±ªÏ∏[ºI
- ªﬂ`<Ç’Â<Â¨ªŒ c:X–æªYÙºì0º”W§ª¸Hòºñëcº‹Å:©Eú;97/<§Ä∫Ê+{<s‡Hºﬂ¿<¸¯6ºT6é;%c<ŒŸÄ<±i<Ò/<vhå;âæ º≠√ªñ&;VÛª£µéª ±¨∫/*∫å=Ôπßg∫‹m∫>±∫n∫ n∫ÑC∫1n∫*n∫Znõπˇ∫!n∫ìîÆπáêFπõ±∫"˝?õ‹?6¸?√⁄?∏ˇ?üﬂ?ﬁ‹?"ﬁ?Îÿ?eŸ?Üÿ?  Ä?s‹?9÷?Õ–?F˙?0*∫à=Ôπßg∫›m∫@±∫n∫n∫eC∫4n∫*n∫xhõπ;
-∫ n∫ÏêÆπ¬ÇFπú±∫                                                                  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?<iü;±á:ãè/ºúhº|¿ûªoXìª&≈õ< <^∫
-vÎ:ì†>9<&’:9¯#ºÀc≥<π8 º{7;¸PEª`<jÅª%ﬁß∫etïºä8gº°B;¢1ìºÛÎy<âöÄ<ÖÙ;˚⁄åª.πVº”ïª:ò˛b<˝QÕªW¢ º¢1äªyÀπª˘µÛ:‹[à<˘∑ªwˆºî;º∂√<‘Òi:˝J«;Ít8º\üs;Ç '<™|<A—ªü;< ›œ;¶6Dº™i<nX_ªŒ˜=ª;xº´êªç)-; pÊ;F“Àª<<Dc´ª<Íºt¥Âªè<;˛ï±ºT’cºL¸ï;¥kUª”Ω:_^†:Ê©>ªÔbŸªpåó;NÏ@<ïJ<≈ásº…”ªD¿é;Ú˜;œÒ;k<g†¶:!±6ª‰√µ<¢6πªè*;æ8›;ŸÄ@ºÖ|†º`≈òªDó:™i<90(ºÛ≤;MÖ;o}´:.\∫ou2<Ñπw/∫ºí˜	º∂Fçª°6º.<K¢…;Êoº+oºï…vª7}ºß´ì∫}*í;P ±<∂Œüª«‚Íª°ô¨ª•&$<mŸ=º>Daº0ü<D¿”ª‘¨|∫D&<GOkºçcÅ;¯±Íªı∆ê9+≠V;>Fö∫+p2ª–ë6;.)‡;o4b;$N<‡©Ü;G•<≈^'º9«<'‹⁄ª•òúº0ˇâª%‘;0ìz<‹Zª3df;uéº§`ø:¨ÄMºG?x<œ
-€<z€ªT˘ïº˛™oºô”ç;ezBºø7º2£†ªçÆª›>ºƒó”ªÓ|∞;E@<Kú:é◊;ÀÂb∫®Êº±Sç<«ëw<‹w<‰—<º|29<∏,«;}ß:à"<@ê§;!sQ<Øf[ºÁl¸9ƒø<©≈;j¨˚:¡–P<˚¿º3àäº „É∫mÉ§ªu#kª=ÓÙª¯≤ôºny{º;Æ¡ºÌtÖ;*†ûª›ÅQºiôÆª]¯ªªÉ™∫“√…∏{/¥;Ù√;–IËªN,º˘◊sª[°∏;™ÉΩ;#Àªä71<\¥„ºª‚Œ;¢<ßÖ;ÕõºI‘å;ö∂<y±“;{=<º\'πº"àUºJ0å;◊;ª3¬ˆª"6ºÓzˇ;¸õUªÁp®ªÌmáªıb<l!˚ª°^<3ÊYºÜ ¨<nkt;s ~º#AÛ;i(<1ïª7¨~;◊™±<?1º=äıª ì;nN«:∞lë;åèÜ<\8tºˆ∆
-<Àº‰k1;ÃÆª3ÿ;‚∆#º†ºwú»;
-ØÔ∫âÀ:ÊzÉªÊíŒªÎÁéºÖÏª˝›'<ﬁ-X∫xÄ¨πkDP<˙n4ºÜπ;p•d9:?M;<¡∆;ZŸ„ºôtÕ;œ£∫;e?3ºÿCº§˙Öº;øÿ;ìb–;_'è<gèì<&  ∫ÅÙ±ª5Îë;ú4;@
-ªüÌ ºåÛ&∫Øëª8±eº»S<UJ<‹dcªu\ê; ?-<Å¶*<j^áªAWOª+÷;ﬁö<÷˜;¡ÅU;Ìb9;/¡º#>ñ;ÒØq<yºC:¯Û;ôsßª¬†P<oª`AÑºölªŒh<BWó;«»â<*ù®;è:DºÈí7Z§;m∫û:ÖGÜª8fê;¯QÛª©5öº◊≠pªíî";ôz)ºÔ%<¬é<ı+ºràºÔ≈&ªob;S≥.;Ü^–;∫ˆÕπcf˜;]'Wº£–¥∫ÄÎ¨ª"];(ƒœ<ã@ˆ;Îíª8≠ªD ºbXª⁄e‹ª≥z…ª˚Ú;πâªûª	ÿª∑vª}b<á6©πœç<√∂¸;—›<á	âº¢-v:S◊{∫¥√ºÔœ™ºèÓ:°. ºV˙ı∫Ú “∫/<àÅYπÊÉ´ªπ $;òÃÎ;ÙòhºrAè<kqºë’´;>à;
-ù‡ªX*]<Ë∆ ;…7¨;∑¢áº<¿;)X<gí0ªK>;Ç</º<≤∑ªïw;c·Ÿ;Ö’öº!Çç:°èiº,8Íªt(Øªæ‹Tº∑4 πB—Mª7oËª˚G=<dIçª˜
-@º9ïª‰ëûº&e<QpAºü◊=<n∫Dî;$·ö<ÄuºÃq<ºó]„;!ÕËª"Pª)ö
-ªÊ\0ª2#æπ[Tºm≈‰;A9<—ÛE∫à˘¶<≤vxªwòÃ:èZºZá·;=ñäº…ZÜ<È∫º]Yº v]<R‚◊:mSº¬n?<Us¬;æ G9v‘`<e#ª€—ªJ{;&Z9NÁ<º™ºÀú≤<ŸØºãHÆ<ú6†;hâº˛˜BºN†ªdsºâp◊ªıCï:≈v≤;c<ÓÕ:≠ó5ºWÖê<6ÛØ;˛m¶<B∞º€’º8CºÊ:ª±À;K◊ªaÊ¶<œta<’S
-ºz_U<3O<Øìª;˜Áû;ºö≠<~:¢;ØÙ`ºèÏW;ËË-<B·ÓªÃ%=ÃΩº¿ºg.Æ<ü<9‡©ƒπ -FºXªh<ÿ¢<±cIºõñïªπOŸª“iªﬁÿ0º?l´ºJ=Jº˛πé<ÚFƒ<Â`;6[$ª_ã†ªπ?,∫xÑƒª= <π+¢ª@+3ºéúÍ<u2™<Zn™;F ºØà<4+ºNHlºŸ6<ÇHãªœˆ9/ÿ±ªØ∫4º õπ‡ &º° ºJ<¢4ºœv˛;åÔí<P≤ÚªÛ*Ù;à⁄(ºz’ªáJPºÖ˝º ôµ;R´wºÑ±ºUõ<Í’ç:u?¯;ﬁÄË;ÜÎé<î~ª1
- <’£Ë;3]êºı≥á<◊'e;∑OKª!æ∫7¶<|<“-∏ªiïmºı9bºYÿ≠ªëÿ<‹Ñ–πJE∫l†Æª^ ÷ª{ç<ºèËI<ó¯í:$ì;N÷<ºnJ¢<ïÙÑºw˝g;æû4ªØ∑¨∏YHI<sò;Ëô<o];ŒÓ»;Rd∫;}åºﬁ\ï;éùªXºb√Dº’≤4ºIBaªt'ªJÙ:Ÿ¯∫ÿâ}º∫-<q‡Ç<rÍbª˙±à∏=˛“:;;‘ñ+ºSU;Dª‰Ê<®vú<ÑÁﬂªè{<úÄ<l˚ãºˆ+ªƒÙ◊ª)å±;{<Dºå©r:â5<F¸aº•·ﬁªª˛ìº±¶9¿:®{œ;Z◊Ö;≠ê<ò›,º¥≠Ñ∫°Ru<˚Áª-æªä;9º‰w©ª“Ï¡;ºeªXÚÖªﬁ∑;DYΩ:ûtñ:bWÎ:ÜL<Ä»;>É≤;\;¢ÿ:„M‹ºÙDA<Ê‚<môX91B<{u∑	9Bª&À<Ù«>:uy<!ôï<c:ú;Ï&ªp÷Åº¡ã<ª®RPºaV<∫M«∫€!∆<O‹⁄ªOØä<ﬂú”ºxÉº~ÜºÈÓh<0ó<ã<Ù'ÔªO30;/`<Ãº
-›+∏Y c<Gjûº˙6<*	º¢k
-ºÈJ;iÎÂ;Âÿ,;‘—ºp/Qº(ÿºﬁı;—vM<©Ü*<Î$;G|êºõ&b<h[‡;Û!ºE-<:(Õí∫KZ<#û;Æ±:ÑŸª;: º—“ªï\ºxd∑ªÈèÔª˜§òπ–ñ;1ù<“ü∫gñ;*√B;∏
-{ªM¬åºâÏœ∫~\ˇ;SÆËªª¬,ºÃEOªÅ≈∏;“∆;§8¢ºﬁ
-UªEæ∆ª«ÔôªÅBºOçú;ègºÏ£<=óä;˘ª<8Î;úÖ;Ω(∆ºﬂåÌπYª$(Á:ì<?êß∫‚*ºÉ(Sª¬‚<˘πù∫´ÇºY?ºâ~.ªÜˇªK◊€ºﬂ6fºx%L<Ñß“:9Ÿhº,û	<J[3<∏,5ºËtØ;ÿiº„$†ªıvª–ÈMºî¬	º"ÅÓ;Õt;Xk\ºõªl	"<ó´õ<h+ﬁ9∆ô;ÍfßºÅ£ª·W¯;¶<>2ºãYjπÖ˘ª∏]m<˛°œªœfèºc¥º˙0*∫    -ß∫}È∫bÅB∫Zy6πì@p∫˛æπ÷±¡πÑ3°8¥∫2“π‚,πÓÊ*πC≠u∫FQ∫Ù?  Ä?Ã÷?™€?:”?yÄ?·»?õ?à¡?¯˛?πÕ?∏Â?TÄ?iÄ?D∆?˝?1*∫    £§∫(Ë∫KÉB∫Fz6π¡@p∫%¯æπ-≠¡πçj°8ç∫ÚÈ“π◊Í+π5Â*πÂ¨u∫MQ∫                                                                  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?Œ˛œª6¿<Û@º?U£:‹à√;Ÿò´ºŸˇ;‰Ù®;çªÂ	Îª[˛∆<K<‘ºIß§ºa…ª2 <kh€ª⁄$°º©ì':ÚºM<=ÙP<p¡;Ãfõ;w´ª;√Ã:~¬<;âèÖ:µ\∫∆´,º∆—<<Râ◊ª|.ª’∑~º]+<˝í<Ús√ª^vº e<!ˇª}Mïº€∫ﬁ]¯∫÷¥âº95<ºÂºX•9;
-¥Á;¬Ÿs;ç(<TR<òo¥ªÖ:µ¨ º}\X∏iÇrºªBf<tôº”Q|ªo¶X;$mòπ–ƒï<[,1<Xç‹ªƒi≥<n4ƒπyƒõ<Ï8“∫
-1EºX]<;=<å8<µ<˝¬∆:ŸP;xFæªƒZM:a)¬ª∂…†<K±<ÆEt9å£ºP] <ôˇ<ºq=˜é<?dÅ<¯¶ß<3^æ9~f: 9°ºívºN–ŒªÛ«=ºT	¶ºAÎèª•Ã»;‹î≠:y1§:kŸ£ºt—ò:©¢1<¥ª?;‚H±:%	;˜ÿSªπñ);
-•0º‡π±ª0‚»<pR¯;Î=¥ªØ‹gºLúÚ∫÷÷-<¸·ó;tg ∫;≈:)dº)Æ±<’öy8ß≠ºª›˚±;ª—);oJCºaräº¿∞ûªìN<r*Z;[àø∫w@9ºœâ¡ªÄp;ulºÕ+;ù59ºfı¬<$,ã;@çR∫≈>gºÕÊºíûëºá
-≤:N<7Fkºj‰ÆªØºs}KªBç; ﬁ∞ªAS¢∫©≤M∫^[õ:Ç‚a;i£*ªÎπ];»3;°‡6;€ôjπBiºÑNõªkV(<≤µmªJÅ9ª&Ï˜;ê#ôº∑{+:L≠çºvËªãË;¸∫+<~€ÛªŒœ%<Ê*Øªàº%X∫X(`;≠ï;¯ñcºYB˛ªÚÈÎ8¬Ùä<I‘íºŸ∆Ö;%üªÍˆº4aÛ;yñäº•µÿ8Dºêıª„Bí;-‡HªÇGà<4´X;É0:◊ﬂN<:—ºáZN<≥J∞π¬µÅ<[ö˝ªÅa•:)—ªæÖ<≥º@$<ªD¿ªÏúÖº[ºp›ª]P; Ë ;=D…º$Ï™ºB*É:≤ÑúºX
-Qº™>º∆á´º/°¢<s£áºãΩ∞<ı}”ªËº†;ãoC<^˚!º… ª∫$˘:'RDº¶åÑ<Æ/à:T¡Í:Wü<o7üº∞‘πÁ∆s;rÑªoÃµ:aâYª∆ıªxX	ººW;5íÔ:O,4<ÇÕ"<_çªùﬂ∫;◊DGªßõXºØ5ºdªÚK‘:‘ñºE;Dª®ÛÉ;ìŸªk5Íª¥t0;ºD;ÇÅ5:¥Bo;{~âº3¨9[œù:·¬-;ÔÑâ<¿å5º*º3=äº´ÙMªY[æ;¥®“;O
-ºn3¸ªaÿª0‘:Øè5;¬&<)¬Ã;Ï  º˜≤z<¸9<np;˙Äª¸Rºäﬂ∏;Ì_.;&¶‹:®Ãë:€ì:®Tì;ÜS‚;}ÅôªfhE;^ˆﬁ:ôuXªÖy‹9∑y;Ô óª7‰ªmÏï<â¨°ªiHƒºŒ›∞ª¡:<*º•;£ﬁ;˜û<®;Äûª/lºM»+ºÖ•ã<œoãª¢%:<À£˚∫)#ªi≠º
-.ƒ;”RH<∫õ∫ZªV‰éºwî;˚b;Ë{Á;L˜HªêUGº@«<Ωr/ºæ`6<≠ˇÅª[IHºBáﬂ∫ptºNtªÜô¥ºÚjˆ;XÎB<≥;"¥ç;Ô^ª¨	ñºÏ∆_<‡°]∫r¨:<∞|];"®<ã·˚∫@4Wº/êª˜_[ºÎUÑ∫oÔçºbh¡∫ì¨Xª∏ﬁZª◊	ù;÷M<ãC8<Ÿ—èª›¶æª}Ä≥<“B‘:ÑªNJ7<Ô:√∫L"<cõ}ª≠•Å;¢èßªÏ`Çª¸-ªY∞.ªn0Ò;ÄùÃ;≠b|<Ol‡πIΩÓ;Q-z;&∆ƒªI¬†;µEr<da¡ªjÀ<êπ.ºˆC<oÀY<L ü:º§È; ?bº6;˛£h;sO∂ªÏâºùPºı û<î\ªl|‚ª–`˙∫Wáº'˘<G%-πáLº&>úº)%9ﬂù=<©e <_>“∏Œ»âº\ˆªÎ5<!yâ;´é∫Å°IºÙ˙<´≥;p≈,ª’>ø;vÇº∫œÛ:U7:ººã<k8<ºÉó;BΩ;ô?∂x~-ª3∫Ó;⁄π7ä:F=é;‡Fº"∫£;å`º¶≈Œªòª'f•ªL∏°º>ºΩ+S<[Ω«ª´õìº£„x;∆Ç¢;Á´˚;4t<< ≥<òßùπµ)º4<ñ˜cºÜK^ºÄˆ‹ª*ÙÚ∫÷Lªä.©ªîj<"∫‚;ºáª[rs<è'ª}ÿΩ;≤±åº4∂%;)áê<¢H<6Åºû•ºçf&:î&º	Q«ªf}û;m˜
-º∑<˘–5;ÆƒXºœv|ºòÊ¡;‡/≥;èÄ<êz	ªÂc›ªõ`<VÛ˜∫Â¢;ªdW<.Pº√É‡;[ºªGºªB©<\Ãü;À∏çªXÚòªºLò;{w]ª5‡hº‚Ü“;E3ÿªX.≤;è4ºæ÷?<´D<˘¬|ºgÎÅ<≥^⁄ª‚°<gªMnãº£óôºß˙åº¥Ö»;Ù Æªœq<?x<p[<æ‡5∫
-|;È-ºÿÍb<˝Ñ<”Ò;»~<î\õ<élD<’¥:iñÇª‡êmºu^];m(H<>÷Ãºª0<3hz<XO∏º	¶˛:·0˝ª˜¶ú;⁄*<êÈˆ∫!JÖºg´í<E≥›ªºdj9 Ÿ=º[m[:2Á±∫°JºR+ç<√èíª}ˇï< 9ª€3Ç∫Nß´º-äîºN‰€:OM©;ÙCV∫ªg	ºõ¥ºô"0<§ç’;ó‘:Ò°•;ºdß<≥Ì
-ºÆòº;∆™?8‹€ªI«ò;ß~4;ò”ó:¬õoª˛¯x<	ñ< Œ¸:‰»ÖºXö¯;a©R;.vË∫”ïéºP}<”N;gü°∫L°;!‘s<¸'ºbÊπ∫’Ü∆ªWÃ*ªΩ˝É;—ª:°û<È»∫;Àÿ+º´≥“ªò5ºPyÜ:˝€:SfºWâ:pA@ª·l5;5ß4ºﬂb«;«\˜;Ã∂ªù⁄\<`åº·;ºÀ«≤ª¥Ïm;7ZUº ˙<“ö∫. *<ù˝b<≥∆M;–≠<s≤'<,‰W<¿<∫™Ù·ªÑvéª˘r$ºı´ÕªÙπf;&¥ªb÷º€e?º#tÒ:V»ªîwª©g˘;ˆå<Xï;ñÍ¬ªÀÂmª+Ç§ª¸ïÑºìç;V®ªçÙ<üe˘;—„ºö)r<eå^<ŸâBº%Q<∆ê ∏d+º°›K<MM–;.ﬁºπe®;.ÃÅª.G√ª$∑ºs¿^ª3
-)ªg7 ºÀf◊ºiøË∫eŸ:ÃÉº Âq;eº¨ºmf;1©∫îH⁄ªg)ªfc·<?><Ø¬7ºÒVß;	
-“ªÜL<”kª<1)∞ªâ™»ªê ;é?Œª˛œÔªA&<!OÂ;‹ÖÆ;©i™ªfo<[ºÌ`+<l!ø;s^Ωª¨tº@ºó¯g<«é⁄∂‰E“∫è“…ª¥ÏV<Ç.“;”Ì›:ÔÛ<º∆X6<Æ><ûºïÎ^;››™9≤˛Ó;Ü›
-º≥,<∞ª„;o”ë∫Ω·â<ÿ∆>;sÑHªáÏÔ:	§º˘;∂®;}zT<f¬&<∏ˇ¯;|JNºÃäºÔ∑“;bMˆπs´<eı•;U¢c:æÑ•ªçå	ºŸøs<ßÓ;"Â£ª«ò¯;föº∆—ª‡OÌªÔÍπr{o:ì6âº¨–ºùQºLµ<\4öªD…â<	*;ºÿ“ ; _°;¶RÄº›«l∫ªº@ºÊ*B<ê‚ºÏ«·:):s;≠÷J;∫π;^'∫π€ª(%i<'˛∫ƒuŸ∫cÖºt˝Vª0yêºââ3ºè◊¥πn∫    ﬁm∫,n∫0n∫˛m∫ÿ!◊π    )n∫        +n∫MüŸπ        Ä‘?ïÈ?  Ä?√›?]⁄?ñ⁄?–‹?”?  Ä?pŸ?  Ä?  Ä?⁄?⁄–?  Ä?  Ä?n”¥πn∫    ›m∫,n∫1n∫ n∫e◊π    ,n∫        +n∫:ùŸπ                                                                          Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?DΩæ:ÁCÄºÙ∫™Evªân∫ªã»úªÍáßªVÀ<ÕÒ6<íµ√π˚qº+"±;wx∆ª8ßÒª∑ƒ:-]üªˆú	<˙∫'ÉÚª¸Q<‘êªÁ¿; k+;ÎÆèºgÔ—ªe+®<ájøª%œ◊;=ìbº‘çè<,ãòº_ò<Yìª∏z$ªùPö:”Ó“<"ÎªúæoºóÄñ<$1ºsD;oQ<u∫Z;>Y∞ª^‘ª]∂ªø<'ß <πÖ‘∫ïy8<,≥ª@˚x;ô˚Xº¿|"º˚)º™R(ª–_πé.w∫Œóº	Fˇ:õ Çº;lÜº&%ô:wÂ<á )<fƒªT~≈ªã´Ñª>úº˛•;üäå;È÷;Cúv∫“˙;§ÑªD(Üªd#K<ÄOƒº §™ª∆Ì<–Zëº"lºÎ’F<]„1;OHªê›±<ªÑπ;êﬁ ∫ŒE¡;Ù6˛;ó:Z∞ºSFˇ:DÒ#ºI2ª!*;/Ç#º>E<<ÊÊ <RV<Gqë<«ƒ~ª∏Ñ<BHØ<*çáªÖ—!;'ÃºX_jªöxºv∑<ŒîÇºTYTª4–g<,Ôj∫–˘∆:J£<’’Ûªg¿–ªkN‘ªê0£∫/’ºûw
-;©;te≤9˜d
-;‘íºòä<<c~ºLºÎ;mt=<Wˇb∫y´)<y˚7ªÇìª&Œ2;3C∫<~<∆TQ<8£Á9Z°<‰o°;ò'kº÷ÿ9Uª:Fû º,èN<_t<|v<NÙΩ;5ºèªGålº[ÂZ∫Rº3^ºªA∞<Eü;§ü/ªº4í:Úº<¶j°;¶£y;Ôè"ª´<:†<\u;≤å=9Øo=º9tH;6Û,;≤N!ªwªV—äº9$9ﬂÇ;K©º^L2<SºÎ∫∂®∫g‡:uW<·îEπ {™ºÕ˛¶ªWèSºC°oºiµ;(o<©∏`ª⁄ñà<r(':Œ¶;Ü#Qº©(A<îº˘'Û;$ç¶ªF≥m<ì”ªEº;ŸlªÉº´•9∑=›ÒªkºÃ ªr¥∏Œ:À®ºgöIºb «ºïS<^(k:"¥ô<¢Áç<πx<€Ü´ªŒ¯˛;^ÃüºÚ|î;=Àº¡<,ºœwª1 º¶1Í:ˇ†;Ç∏iºê…Q;ôáªfxAºçt<bAY∫x«Nº
-à=º\C<ﬁäÈ:ÿÇóªæ.)<Â"8ºá™<ÓÁ≠π˜∞!∫Ä†=;aCtª∏hi;í“<ÏGÏ:Ú≠;Ç{:Áòªÿª£<&‡9|Åwª'›@ºå|òºŒçç;«?(<+gD:î5Ä;*èÀª˛∑<«[P<	òòºÌî;ã–;AÊ·ª”aº∞K±ª`~<ênª£:ºâ'1:ã¢<˜=Pªäs™ªáîºÛYµ;æ%û;Tª(ºJH«ª=S§ªªÊÄ;<◊∫ædûºc‰ªÌHë;†Òrª°ü<<§‡Kº’ı∏ºWØ<]‘=:∏#ºÒSºgBé<2-º2"<ùã<…ºÿs<9†ºÅ•≥<ãxº†9åß<Ä#<”“<s!%º¶&Ëª±áè;/0åº
-—Á:œ9Nªíà<4’\ª2€mº‘0ºYºi5ïº9Ñππ6Hûª+l";™õÕ;;Óê<DØ&º≈√NºÈ'ØºÙ’€ª$0<íñ	;ì…:“— ºY¡[;!
-ºM^?ºyßÀª*î<éj<jAèª	÷Öºx—lªu®q;/ìêºÕ´≠;h<”Ö;–)ºéaªi1;;;gÀª˜ófºJD8º&‡í;ã™I;ÖêMª`á∏;çeƒ<Ù~D<Ê ;í*3ª¬õ<•˛°ª_æ<Q›ª¥ ∫g_¥;é<ö∫+òÃ;Qøª€Dv<;1jºÊU»;"õ6;˝˘_ªF[;Ç0°ªá3/º∂÷öªkzóºJ«Ä;/À0ºCõ<Í˜¯;b#ñ;óRc<ÑÖE<ø;∑Üº-ªûª‹ªgÙl;ï:;†i<&BB:Dº]<Zê<$g<-⁄¡∫9jºS;/÷©º≤‘∞<ªeÁªÄ;º“ÇØª£øª⁄Eºk˚ªnõ™ªÌ–.ºGE1<ÓˆOºÕ^ò;›7:˙ªæ∆};≤oÉ<«>îπÁ.º7Z;ÓÔ <8˝º](π;•}T<iŸ´∫á_;ª4 ˚∫%èZπf≤n:ıß|<≤€Êªòò%ª¡≠‚;@◊Á;K ¶ª
-≥§:Nå◊;ïöÀ;¶ª•Ít;Ÿ2ª…vâ;ù‹ºy’;{À[;£öªT:¥:-†±ªÃÜfº›qjºI09∑#„ª
-Y0ªkr∂ªÎj[º¥èàª‹ıâªKòî9Ñçºñπ˝á<àºeP< 
-˚;“ñæ∫ ë¬<ûjñºÅ¡ª+!P9À√†;Å’;Çº ºÉõ:C©<ÍY∫Aﬁ∫b⁄Ä∫F∑Èªu'V;À¶«<dÚ∞ª≈§∞ª˛L%;;FµªG¡kº0Ö;˝‚ºHCº…q<´˘{;¥ÈÄª˘ª~D.º…E::Nñ∏ªr∑⁄:Wá∏;Ω."ºoˇ•∫‚ï<êûf∑º};ß*oº,“Ú;òüÍªÓÔ;;∂>ö;7π<Lsp∫KZßª˘Å:5≤h<®©<ik;F*–;}˚;ˇí<°ÓRªjË ºñuo:’¯Aºû! :‘ﬂªXüªÆ¶ªÏµnºØHt9≈˙gº…ÑE;π*éªˇvªª5˛∏Ï(†∫¨ß;êø"<Q Ê;”`˜;“í
-<∏ˇÔ;Bq≤;Ô·qª;‰Ä<]ìº|]KºöÇ≥;3¿2:˙µÂ;∆¿;Ú¯jªÕÆ;FI≤ª{”∫Yº€5é;(•ª,?Ü<‚„ªºu‹O∫<ÅÆ∫çz:º≤ ;∂ºÎü>º‡œŒ:â˙„;>7<£“l<qPW<ºXi:•.=<'xì;NÜö;ç´G;*ê:t]:&E≈;¬û[º‘bÈ;S!0<|˙‡ºıyA<R
-ºπíäª¶¥º“¨Uª∞-ºB∫S∂ﬁ∫r:ë∏[{;ÂÖúº—Iºv&å;3ë|:€u@:ãaTº≥˘4ººrÉª∞.∏∫L3ªà¸∫ÚÄ÷ªƒ0á;ç·(<m<ç<Ü∞π&ˆº«˚Ùª†õ.<Òäªµ˙|º\ß<%P¨∫H%üªX;‘≈èºÚr›ªq@’9dY;ª‹a]<=^<&™;[Ijº´∞<*ªXﬁ&;A†ñ:m≥<ôO4<O$º[◊å:‡Û<P≤<ƒÍ=†ÅÕªê*:,;ßÌ^ºŸ∫ìeªWâ‡ª·`Iºl7ı;=ôªë©ï;8æ;BXÉºÓÿ7º"#éª43<¢Œzª@y<·Å˝ªRIªÜ‘<´í;Œ¿›ª˙á_º+Ä˚ª–À‰∫àsR<o.∞9ÕÇπ+dΩπilËª?õË∫ﬂgíªWôº˘ﬁz<º7°;ÆïÂ;~=;Oïº∆›®9¢≥º8	ΩÒNoª|i;n…åº~c–∫µ“¯ªOÄ<øÈÀ;Ú;á_\ºåYúº‡!ç;¥0„ª¡÷Â;Ó<T;U<∂K:èkª¬#ˇ:j˚ºpNV<-hÀª¨úªõ·πº…òª=A<‹Á<˝~Ö<¯∫ª?
-ºgP<Ä 
-º-<Œ•Øº$nºÛä∫ıFpº3;±;¶õ∑ª‚i≈ª˘8√ª˛ëAºŒñPºïÔâª=fiº€p;{E|<ß°/<π_∫øs<0ÉªÖ'ª≥QºæÃ:%ô,;¨Ê<y3<;ó›Ÿ;É‚b<•vÄ∫)¡ ª∂ˆç;^’ º·©;Ω≠<’$∑;ÙKº‰÷âªƒÍ+<</!<hõ∫∫_d|;E≠º;œcÊªBó¸ªV’ºÑsRªÓ∫Ü∫.÷W;‹Wë;FØªÆ 9˝äo<∫Ùª@*<ßzó<±Ä:≠ï∫;[Øbº–q˙º: Rªò:&∫xﬁ∫    4$∫∑ÿS:dP∫^˘[∫ c∫π…(∫©<¸9—J≤∏U<0∫C:    =i∫Õ∫ÉÕ?‚?  Ä?‰?n Ä?Ωœ?n«?Â‹?Sﬂ?øÄ?ÑÓ?∆◊?*Ä?  Ä?Œ?‡ˆ?¢<&∫pﬁ∫    ƒ4$∫ŒÿS:∞O∫ø˙[∫»c∫≈…(∫∫<¸9≈≤∏æ<0∫É	:    Fi∫Œ∫                                                                  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?Û°öª◊õRº“N];o◊ﬁª9∏ô;íõ°;¬=<ÿb∑ª$˚ê;!ökº≠π¢ºÌïºÎüU<7ô<óª=¸Fª¯^0;p"{ª√ªáª£#<º…ˆ<W∫;ÓJª∑ô;¿ZªÏùüª.	1º{]¶;Ø†Ü<µÚAºRñ<<ó°±ºa_ºlLºír£<ù'-ºT¸;RobºAÑ¥:ß\Ã<ôá; ∫
-;†π;kÆV;Áõíª¢ı÷;Ñ\Ñ<Ämí<ùzºîãª◊¥RºÈ∑;,â;~x°ª}Ñö;|ÚÔªÄ>ëº’∫;5∏<;Y};nS›;„<õâ∆9i´·∫Â;K\<ÕC$º.âIºáÏœ;ßåÉ:alk<¢IºŸá><R–<yÑª≈á§ª…≥ ;¯C:§Ï∑8–˚ÔªP,;j/˜ªDÓRº∞”;-D¿∫!∂9∫b˜Å;¯J*<Ü=Fªåb<¬
-—πß©-;ÿÊ∫óWPª~JS;I¬πE&);<˚NN;ùJ¿ª1?;˘7«;>Qº‚fú;ÁL≈∫ÛÛ;˜≈
-∏˜≠A<I°;n_<í2Ÿº3’;vQÄ∫°pºŒ]∫ºø¨É;\4Û:√i:YhT9;}<™ZMºV	º†5;´∏Ç;TÑº0≤∫ıÿvº]=≈ª7tkªñü%<æ*+<Yì;ï›í∫ÊZ<}2£:˙=∫k+‚ªÖ∫Sà¨º}íª]íî<°ë+ª)O3º†â¢;÷ ºa:∫€¯Eº©º<!º≤ºoçJªje;SÓ¿ªÜ≈º´p;§><ﬁ¢:‘ºLô‚;˝s±ªØ@nª¡‡Nº“¸=ºeÿÒª˜ â;˚;ΩπD#<ºÁ™.ºmHA<˚V∞; Hr:8C≠º}∂?ºy9W;YpZª 6.<gë<ípﬂ;Ç]-<€ „;¯<Ìª…º*2.ª+sOª+d_;gƒKª<ÀÜªQ`è;<A0ªŸ`ºßçªÕ.»ºÈ<;–;ACµ;≠Æªªf¢A;%&<ºpò@ºµt3º/˚P<8”lª`êªÚ`Ü; ®;!%™ºπÑ;;?f;X ﬁ;RÆEªÀsoª)ò9€˙æª*{º‡H*º ¸<‘p:7B<Ì≠9˝òºŒÜª&˚C<¢Ô§ª23'<+ΩT<|ØcªƒªsºdRºdùÅ:4]"<f»∞ª∏.Å;J„…:∏È>ºSÜ:ı∫:}ª70V;Ìc<;—P<`$ªπá„95uÒª©Á=:Ñº©Ùªd≠Äºè´<¥ÃπªR£Bºâ©Ì;„õ;ÙÊ»ª˘à;^é5<óí6<ÁÃ<–∞õ;ƒﬂª˜B;Rì
-ªF)i<<ê_|ª7€Éª‰“è;ïßºXjm:ÇF$ªpX°º‘ÅÈ9b∏º~ÙO;üÔ	ºá€TºòWOº‹Üº¸8L<∂`<<ªô*∞∫R}Q<A{;BÎ<î‡»º∞‚kª)j‰πÀ9”:¯ *ºÕü-:ÿÀª—:ê∫ı«·ª◊≈w<”RºÔ<§ö<’<™•6<0d^<KF;|
-<2…dª	!;$PπßEû<gâ;WŸºﬁ˝•ºˇ]óºw|:	Â,<CËk;Ç8<ó®g∫’≈—;Yæq<…ïª:e=πô€;—â;
-<ß?π¯ÊnºÊ‘:jtºF ’πÊ‹h:À€õºâyá∫˘8›:b2ôª'æ£<JÆ0º¢jœª Ü9ºÄ IºTÅeºg•=ªæqwºJiªAsô:âÎ+ªK$;«˝õ;ÕW*<Ôë<â–¬:4rõ;é´<“dºî€sº¿  ºìª; Å∫Á≤Ü;Ôí;'„s<ª|,ºƒ±º◊B∞;@∂â;Õ©<ïH<”ÇT<&TXºó“<g âª£Éù<âhy;	Ë(<ŒuH<¯Z÷;\√∂;&–1<2úﬂ;[]∑:ŸXWºDOºªg<uˆ;«ÊπClºÚ“m<{_Åªj?Ø;f¬)ºR"·∫UuD;`*πôâ<B˙¸ªOÂº∫.ecºœﬁ¨ªÙbº˚•:™7;;œ+lº´*1;Ç ñªƒ£áºÉt
-∫UmˇªøπÜº◊<˚!ª3txª$<\∏fº»3ºèjLº!;G<‡-<Á+
-º¢Ye;íƒºóO‚;+NâºØÕ¥;esºª‡Éº$∞πlXgªÃ≈<Ÿ”í<∞0ã∫,4ÓªKùªXWYºRZ<eC∑8‚ÓÕª¸9πûì<¢VºçÂ*ºt”;ã;Mº% º˚o#º˜Ø„;e⁄!<¶∞<“µº2=Ö;ÁdDªtSºßß¶ªág/<ä†≥<Ø¯ª|˝ªi≥Fº·Ûπáï<dÜ<∑π";u«X:Wä<>°ò<a•ç<dÄ)ªRºamº99◊;¨≤<œÍ@ªº Bºë˚:ò^3ªé√ºƒ—X<·÷4;º”Œº´ßÜ;|ﬂç;K—a<êhª |,;AÜãºÙ˘Ïª´¸&<ó˚á<πÆ<¿∞º{#Ú;ó°+;SÇ'º≥Œ,<yV∫eJﬁ;xƒ\:ˇ<F‚F<.0(<ï[hª8*:<À≠°ªEø—;jÅºkœ∞<ÀÊ⁄;,`ºBY2<-c&ºY‘:;i†96›
-ª0/\;¬À¶∑v†º∑’ﬂ;OŸ9ô°<m ªlC0<ˆ‚z;†|e;Hoµm¢;c8{<A[;PD≤;RAÇª†¥;Ü≠∫µƒÚª∞æ!ºCT*;\CπÁ<⁄};⁄d`<'H—∫ÁN¢º21sº;b#º)Fµ<Û¥∫’Û,<Ìé<ó2⁄;~Øû;¬ªõÅ< )∑Vü:x◊<¶åè<§R√∫<∏¢ªûù;XRÚ:πá⁄;”Tæπk1Vª‡€ºã/äºr5%<	#º%Ø„;«f<*â„9ê}™ºY>;`úT∫;©;.‘=;o·é;Öc*<¨c;≈2i∫úf∫K§ªoÊºeöØ;T/ºúfiºyç9¡¯gªm:Æª5[ïº˝3:ø“¨;›'R:–ÁÖªÁ‰†∫’`<ΩVí;	öÉªıªœ;/Rô<_õ^<y.Cªö8≠ªåó·º¿ÊÄ<ºÛ¸;4º2˙<ßªÊƒä<D¨√;èã(<¿oûºa>·:AÄ¡ªÁ¡§∫?≈Ï;ÊRÎ∫É8Ô∫%ºl¥<°Õ<0<î⁄;≠/º¢˚;ÄY<	–º∫dK<:r<fgì9Ÿ¨˚∏“ª‚?êª—9Q<âdRº›¡§<H(ª’í+;˘«ıª¬ï07ˆ (< ˙P;Ÿ;º˚ç+<E–Éº¡K+ºñì·;FS
-º§qK<¥‘˝;Æœ:ªµD&º79	;rõg;<eª”8Aª†¨/ºû{©ªﬁ⁄5ªÒ»ñºÁ‘2ºY>	º‘VºòZ‡;›•Ø∫kò›;Aó~ªtÇ˚∫õ˜∫∫Ê∫m<Ã5qª„<%n
-<‚4ºòπº˛@<EpSª·\º∑ºàºƒÈ6ºWÆ˚∫f¢º™Ì ª¢9:Ô4Åª’ïw;Í˚(<qêµ;<]º≥<√tz;ıbtªˆﬁb;/$I<›ˆ‘ªü÷;è%ö;“Íºÿﬁåº◊7<‡{ÇºöçIº‹º7ÏÙª∑§;m¨º≠°<…∫jºXÁ—∫Ç¸ûº◊:<<–wàª∫aMºc	<1®º~x:·;_¨0<hKEºK6JÁπ…GNπÈGº‰ä£<!CÆ8|œªUó[ªπæ6<dõ:!ìÆºñv°:ô8º¢∞;w®]ºBø|<°Èm<zÿ;?ùªÜ—˘;ÿ<P¬<ú≤C<0±$º4‡∫¸Sv<Âo;ˇœ£;S©Ó;»<<Õ¡:Aã≤;√WÂªSÕ∫Ñ<W\<ƒXgª)ÔY;ì[<∂cÖºíH<#êu:›â¿;ã≤á<÷ß§º”Ìî;«π9!8º%èZª§◊∫</$Üªhë;y≤(∫&n∫‚l∫ﬁm∫n∫'n∫·ù∫q'‡π3n∫$n∫ë^ìπ«˘∫+n∫‹JÁπK πım∫Y÷?∫È?i˘?+Á?ÉÏ?ß‰?Ùˇ?ﬁÃ?˝Ÿ?ø‰?»Œ?¥ˆ?ê⁄?xÀ?nÃ?.Ë??≤(∫$n∫‚l∫ﬁm∫n∫&n∫Âù∫:)‡π4n∫ n∫YZìπ«˘∫+n∫OÁπƒÒπım∫                                                                  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?ß_I∫N}Iº™≠;"B/<Ö>g<q@îº#¶ºwóÁ∫h?<!wˆ;ãçµªeÁ?:Tö1ºƒˇøº¯˙Xºcl¢ªXö®<5j∫R›øª°yß:WRS<\Ér∏”«ì;)eé:Á9ÂªÔ k:¶¥ØªKiQ<ù∞4<}j<2ﬂ¶;ŒåÒ;ò'?:–¬º‰π◊ª∞Å<`™;ÓÚ‡:'ºØıÒ:R≠<xÃ≥ªxô.<◊´5ªÂG∏ªs=πÛªÜi{ª<Ró<3çÅªgÒ[ªªÍ<‚{ª°2r<k[`<[‘wªà∆Ç;™ıØ;i9î∏·?'ªiÿ¡ªG¨É<sŒÉ;Ö$¬;–ê:∫sÃ)ºìªD¶«;M0º¯C¬ª†;Â∫ÚŸ…;Ì\/ªé¯·ª 5UºJÍe<[<vªG}QºêiÄ<Áª›•ª>ìX<7æß:Ê;ë;›S’ª™Qa;éT<œ–:ß\∫∏•;º0/:ƒ&/º“«à<v®;wE<ÌwºtrNº$©ª;¥Pº‘áºó+ö:ÕAºªä);ïË@<¶ïÈªÃ˘<¬≤<¿ÈºBz-<`U7ªtãJªÎ˝qªÔÓWªÜë;¥Ù<ÿ‚¶ºfsp<é M;MÎÉ;Ø¬q<\#…ªŸúã;3/ ∫È7<™Fï;Ù=i©¬<%>º|´ò:ò€æ;Îøç;©£9<4\Â:f"!<	Ï‘;¬€„ª©<
-|í;“pº§±2<ı¿^;ÇK§;õú]<ãlEº„.;'ˆw; JF∫ xåºe+Zºwß@º¥Â„9k«Rª§ªº”ÇÅ;]\»;[ª2≠∫Î¡-<›d;'≈√∫ıØºñˇ•; Jmª%H¨:É<èK0º±9:G¸<‹D¯∫	øÄ:ñ≤ç;ßiªî<Øx;.˜≤<Í Mº|g ºAo)<éµ=º‘K∫_\9‹œü;ì`Ω∫‚˛»;ïôkπ46;XÖ<ÆÇW∫¨∆gº°„ÿ;òîçª3Ÿ}ª]=<Œ‡®πﬁB5∫mªª‚<ºP≠$;ÌªN≥`ºSt=ºBÂQªXd69ÚÓ≤∫@PŸ:Åœ≤∫Ü	+ªD—º=]Õ∫Orã∫6Â†<∑ì™πØépº≥FÔª§<°ªy≤º◊ËfºEÏ&;å‰‹ª¿˚eºFπ><•á]<ô€< ô€;‡ê¬ªï÷9<∂Z.ºï‰?ºQìºÈU<Z'ã∫ï®bº=4ïªl∞;G°D:π˘};i‹N<Œˇ≠ºGâh<åBºVùâ<%î?<¡†:ÓsfºÇÊòªû™Úªê{ª9z`:Ó8[ºÊÑÿªΩ@;£ƒt:·π?<bı;ÜªH<s™ÿ;›X(º’Ò;”ÎXªcZ ª‡˘;Æëª∞)x;…ó„;]‰º¡ˇVºªë<Rd≤;LÛS<Çb<6|<ù˜;∑†Ä:ÜΩ<|#VªXÅ⁄;QüºΩ@$;Àìø;˘óvª€¢<R3tº€T≥ª }˚:"~ªÕyº‹5·ªƒ∑éªgI∞º'„ø;ΩIÍªœ\ª!ê:0}
-º†-ª:Fú<<Ç>q<;€<ñK<©Rˆ;UöŸª†aº¿z:ªEàO<X…Å∫*k,º©Ó≤ª&˙^<Íd‹;≠{<jh<˝¬h<#;ã;›0U;¶…J<Ih¡;ÎT<º‘ .;πHÁª!{ß;TËâº∆Cãªﬂ/ê<–A</ƒªè^<˛B»ªáIËªVhºî∫©›™ªA>Í;$Ô!ºi’
-<dõº≠.><∞“q<áÄX∫Ì±ªµiªÆ¬ﬂª‰O#<ÏpYºÈ≠¿:&°º†U)<œJ<4í€;ıù5;πò®ªœ‡bª¯ÇMºÅ‘®:À®<Æ\/º“âÁªÇˇ1<Õh<Å¶[<âg2º¶Ÿ∑ªî«:º2å><’o"<¢P√;I[Û;S‚ª+aª◊èû;å‹<B§Cº¬k`ªÁËñª¨ªõ∆9=3êªﬁ¶\ºÇ∆<ı”eª¯ËUº∑é	º‰≈öª)Ã;«q(;2#ºªKÅºFNº˝ìªÖÍ…;oïπª~Hª“ª◊x<éˆªq˙9-? <Ö§˘ªQ-<ùÏÀ;-x<ŒÕG<Pt<<ﬁ∂<5
-ºfF<Pº‡;4tƒ;Cçk<˜˝Fºg<ä;ú≠H9-ï∑]$ªv<˚^ª≥ƒ^ªºájºÖê‡ªeúÜ;í´ãºÃ˙⁄º>¿ºª :/S∂;˛
-üºHÄ<`^å;êœ;jA‘<2ıx; 3xºj¿¨ª{	ÿ;Œ.®;Ÿ‹ò:gπU;FIp<Oo<íÄÀºßπ)ºDìÂ;-Í©ª 0*;)˚π;Dﬂ∫bã;ú’<lÇ–ª<ﬁº<ÖÆº)Bªl‹Z<∆ºÌ€ôºÛäªZﬁ<’}<∑Ç}ºx‰>;‹◊∫Gh;;qåπ⁄<8x</˛xªXnmººÓ‹<Aº0;∏´ü;˘iå;L(jº€fª?<R#T<ÿµæ<¢ò:ﬁï,<á„Åªy\Ó;%£*ºÜé<ƒ+Ñº^ÙªÚ$ú;KÔ2;©?<∫"ÌlºK/.º7)‹:@zÿ;ﬁK‚:$\Âª∞xô;u†WºÔÛÒ;RT:∆6Ü<…äÊ∫ èSºÆ‰?<ﬁ#Ÿ<"‚+<ªÉ∫:ãÍ"<2÷~º0<…:â˘ü<j®;ñ<k§ºÎ⁄ùª„H¯:Üﬁª_nÜªuºï~;!›èº $<&Gçª(ó8ªS ªÃ3=º¿É)º˚*õ<î</•«∫~VAº÷$:;†ã
-º∫;<ÜÖºS˚“:A∞:)Î.ºÛIØ;-ºU< ﬂªm°Ú;qBèº±ª9ø <®J‘ª«àÙª›"õ;«¬ªZœ‚ª˙‰Û:Ω⁄—;îd<PKº$’Ÿ:ZŸ`º/{)ªF≥π:™6µº◊ªë8ª˙⁄<Ô€±ªsä2:¢6E;çº<*aﬁª$H∏+Ô7ªdü;∫uRªÛ◊∫≠;¢™w<‹Ç{ª3‘;´£;∏	º^ï&ºo<2!-<Z¶:}ìh8´i˘;ﬁÉy<…¸:“t;—¥£ª†H3ºÒßì;õé”;äH[ºb∂±<†Âª`ù;ﬂ˚É;»“O<bˆé;˜º£æº ‘?<√ºÊ†<BË¢ª>'ªŸ£Dªíkº	ôªìº’M<ªUªïK˛:ƒ:q<˙^<∞oº'`£:c’=ºV™<‘(ª„<5∞<"óªè%º",ê<ÔL—º¥@ <%†∞;˙ÎºÁ>Ó;9´zº∑ ;Óû;'Ü<†!3<°é§∫)^<q∂ªdDΩ;´Æé;iŸI<}•ƒ:‹/<G0<vº&Æoº€©Ç9˝Óóª®◊º\§πæâDºrïΩ;˘X∫àÑ‹ª„ <Ûˇ]<≥¥H<Nﬂ3ºÕjº„ç:#:9ª<Æøã<™”‰ªì ºp6ÅºÑaÚ8√ﬂà;S„˛;3e÷ªxÅ;Ô©º∆! ª<¥;,m§∫∏†˝:8¯∫∞lºÙ,ò∫˜êÉºäı2ºÕ]aªÙ‘Õª…ó+ºóÓ¿<ä~_<J∆;î¶;Çö<∆∞ºKP-ª≤ºJg<ú}à;ˆÒ†º˙T$<Õ$<üV‡ª”¢êª¢»¨∫º∫ªKZü∫√sªÎº)˛<S∆®ª“∞;H√π‚<D<JÜ
-<+¿®:\ÜÁ;∞ÀOπ”va<o˜ﬂª⁄ªÒ—<«<à‹:8≠!ºÑ%ºâ<ﬁh	ªUB<Õ=\ª§˛í;Ñ„ùª`w0π≤ÑÓ;bÇº-JDª´Â§ªá∏$∫˜ÅK<?ª‡zc<Œ…I<Ó5v<3˛)ªÈ‹<.$Í:ÍcW<&ÿ”:Ç–mºçΩGÌ);É[\;àûºc xª§J<ÍÏö;≤ÀlªÔ ÎªF˙%<Z8ü<85Çª‚SΩªçΩZºã.qº‚:∏;À¢BªÏoä<gˆ∞∫¥¢:$;L-ªh&«<)s_ªR»Eº÷<oº	îº    …´∫D”∫6z\∫/∫ÍJ"::I≤8D∫N·(∫X©:¨1∫Óv™9    Ê©™:~ä≈∫PlÄ∫  Ä?ã≤?mõ?oÄ?©ˇ?}??§IÄ?z˛?g‚?a‹?¬À?∑Ä?  Ä?ˆqÅ?∞ú?d€?    w´∫´”∫Vq\∫
-/∫Ì6":ÇM≥8&D∫Ó„(∫]¥:›1∫:ù™9    √Ñ™:é≈∫rlÄ∫                                                                  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?¡f;¿‹á;á≠€;E]†ªF‹–ª@àlºΩ}ò;á‰ÎªA‚%;GR8ª|£%∫Äƒ)ªÂØ<ä»0∫r[ªSC´ª/Ÿ%º‚Ó,º>™ªPéºoÈ;oáºº+n;πªI<.Rº'\/ºä∫†ª™¢'º˚±; ·Äº˙n;¶—À<rñ√∫ÌŸì;˘‡{;ÚqªR{Ö∫Ù8ªıKa<0ëv9Ø∫ªôªNºNb?ºÅº5<cR;r ¯ªp.qº°n≈;Üì‹º∞
-„∫G ºŸq9∆°,º”Ú{ªÛË;õ}<2(ºÈ®;œÚ'ªÛ_ªätºù‡å<@Ôë;∞=<Û¬Ω9—íÄ∫rFµªf.ºrö|<Å’ıªıJ4<(ƒ;´å*; 2˛;+j“ªŸ‚Pº¡*:ñ÷ºßŸ∫0ÿË<"‚+º!á#:˚˘Eª‚q;'tP;¸B∆;Å°∂<“ùû<"W.ºo˙¿ªÓE.ºbö<“äà<rs÷ª≥¸H:ˇÒª‰}ºÔ„Ø<äªÀπ;Ö>=º….<µº;| ºº∞4∏º∆iQºzÎ;ÙYE∫øìÄ;˜H"<ÍˇÕ;YA”ªáä ºŸç?<˝´√ªivzº6≠.ºrò¡;Ë∆∫î∞!<Wj!ªøÛì;¢FZº‚ÕàªÔé<{*J<∞ïøªl“9–Ä≈ª>;Ç¡zºl≤c;Ø∞ºè1;†ˇÛ;û;a√∏;ßbº.ß<
-Ø];67<åZ<Á˜9ªê‘@ºt_à<.Ñªÿ º{ˇñºˇÅ;˚Oºœ1˛ªF(<áÌ;uØóºyØ~<åOó< î ºÆ4ÒªÑc±ªãm<	éÉª‡<˝å‹∫≥Ñ<WÇÅ∫~È«:ï·XªC Ó:*πºÈ4<¯Ï¨;xÆ#ª{5@ºÛ»Jªòj0<Ê<4ÑÆ<òO8º Æº9<„nl;Û»ªÁ»<Ñ:
-<TÕﬂ;k‹ªhkäª Ûg;îlú<•Ò>ªîéy: ¥<ô˜ª¸®ªö‘Ä<iÀ4πgØç;"9s„ªT”<¬√⁄ªJf<arºµ¡öº⁄ºÎUÑ<EÕ,<0Ìe<≤≥ÕªÆÏ©ªK⁄ºòÁ`º@^áº∂ß<}i><'“ÄºFµ∫œJ<aÛ<Ôz∫ñ<âm‹;’2ø:Ñ≥-ª°‚Yª°Ä˝ªÆÉ<™?»:∑?<DÛ ;˜NªcÉm;>>˚9¶ô†ªÓónº—πº}¿≠ª=Êƒ:#ûº£JÖ;}≠•:ØΩ◊;~9<¢jÇª98e<’’‡;â{2ºâΩº‹"é<∏ÿ%ª7.™;'lIº›èˇª©?XªA∫∆¬e∫(óª+≈V<Ù\‹;@?›∫#ëî;§û∫F¸1<Sfª0äº ∏a;óp°ººM<^*Øº∑ùc:≠ˇî<∆ı£ºÈWë<ôôÕ;†!î∫ ≠¬ªy0<¥º9æ%ª	:ÿô¨9¿˘}ª:ÓàªAÃ_;`ï®ºTx+<YFÑªÀF∆;~≠ÄªV≈Æª∆»<é9¶º|ß;§Ñ-</]∑;º·„≠ªÃµËªå˛Wºﬂ¢;kŸHº	ƒ£ªóÄ<úﬁjºÜª¶–®;Üﬁà;sà∫∑g5ª}f∫Ù—;óÅ<ÌÒ;"ë><£ÿi<Ÿ‘#ºbÒÏª;˜=I<Ô#jªê0ì; 1 ªúÔíª}d•ªÀ	‚:'pº≤úiºtúªΩ:‰Ù©;¢‡Uºß+<ÃqOº∏S˜º…Çkº‰D√∫5˛º@œSª˚î⁄ª8;âª≠ëÀ;MK<äª%ö„∫ïπ<ò–;’E<îù–ªAmç∫£±ê<RÃªí;Ê;◊K<ß><0ªïúŒ;W*kªı/:ºÕäG:M+<ûƒ8∫çûçº4≈,ªÏ…ªªºsSÈ;îO^:¬Ú	π«ë‰ªÑƒ£º>,™6ΩÈÌ;‚/úºuBºû—9ªŸI;<Á´∏º7 ®;%êºÆñˇ;™PºjÂ$ªPö	ª¡‚+ºbKë;Oúªo û∫Ç¸WººlÏ;⁄îªÛà∏<-œ;<˚vA;œ£‹ª™Ì€ª√l;8áB;l¡û;æºK;A<ê¿Ù:”k;ÿ%~ºv¨ì:ˇ/ºá£º∆J	<Óº=º_C<Kb<óø∏º”Sªª…Ö™∫ˆU<R.º !0<≈1´ª<é∫ª†¯¬ºXÉ<v˛ï;XIºñu.º&$…ªÁ…ÿªdâf<‡5<ˆ3ºÊ%BπdqQ<$Å ª	ﬁWºJu∫ª‘ H<!úu∫fÆﬂªÇº
-L∂∫ Î∫F·©ª≠º<G¥¢ªá¨6º89n<·S÷ªâéºÜ˚√ªªBÕ;˚Mä∫Ç’≠<ú;∑3<<_ºò©?<iw™πt¥ºcÏ∫∞¶ÎªgG<R <≥W;>Ÿäº¢XöºÔÖâºnxœºQ=:7ß<Œ‚CºX¶<4Úçºﬁ÷Àªôü$º~;U3ãª7Ø8ºvîªNp]ºº˘Q<˜ù;–?£;ûÃ<~æ$<Mı∑ªÙYç<÷øº≥®∆;¿Pº'0;õ5º>3!ºÑÑ<)K°ª÷ã
-ºD∫@ª,‹Z<ÇÙºRÁó;´⁄ªÂ=º™;ÄÂ€;ÚyÙªìˆ:ıÌ;KÃ#<cPr∫2øIº˛/ô<Ç…<˘.<hº§™πP|ÛªïôBº”V<ß˜ø:N)≠ªEcº¡q5<Y≈•;$œº‡mÉª◊v\º¢€ºKèª"πªKÛ:X›„;K:	;:æßª
-Çº5æ:·'ëºâ¥N<Udº@AªW‚åº9$QπùG3<èhº◊Î≥∫{P<µˇ<3‚;5›µ;3Ràª=— ª∏_‹;ì!VºXﬂâ∫i&Äª=.A;ÇwƒªO∞ª„ûË;$Ò∆;¬±'º˛D[<::Ñªæ⁄=ªäÙª*e*ºDﬁºwÕtº,Ñ`;|˝<eªjh;›Î≤º^<
-Sô<u<íªnâ<¬=º'ÍÑ<ÔS<Î˜»ª
-Gï;Ewπô ÑºïÈ;Eáª?ïª;';äD@975©º◊∂+º{t≤;ı=˝;·å¬<≥^;ä
-.;ì~qºﬁN;≠B†πäûªü·Î:2àºbíºIJØ;üÚºW¬;¿<Ö;Œº|‰4<-=y;ÊFDº˘Ç	ªb˙<I)å<«;ª2<+OH<∂ç˜:kx¥∫%3:ÚZ‚ªbºÀ∏#;O<"=™;Âpî<≤p∆∫'˚ï;ÄÿM;ÿ…ƒ;á¶…;èeä<«˘ØªÔ§]ªµÂ˜π}YªÒ]<Ä 1ºÀ<'Ôò;5ßë;  °;Ç’9Ûé;Ö¿ûªFT*:d*»:SUÄ<ñ’ºap~;Ã<7:˜∫¢∫n=âºéhÃ;F\><∆xñ:3ê2<©uº∆G<j…ˆª|ªÚ∫Â®<i_˜∫'”Æ∫{ld<	¿ºﬁqØº.“ª"◊°∫≈§»;Ãèﬂ9¯Fﬂ;—pã;#Pªûpô:bÊ…;ÜÅ0ª¬ö:I+ª∆<G;´T˝ª_<ÆîÙ;[|ºn`»ªRÏ!; ºjı∫¿«+ªÅ;Ÿ;9|o:\G∫áæÇº'è<aÁ•ªØ‹ªñ["<g«Ïπd.<æ˙
-ºÊº;6ÜÜ;L±ªÅù—ª≠óó∫3ªé”ºeπß;≥π˛<`ªx·ıπ[ıªôÜº«,º–q;¢'&<%_j:<`/ª‹9:9È∫o¨∂;ΩÙW<óˇhº™ïªõ£°;Ã√É;á,0ªU¨∑ºŒºÁ2P:”¶
-;dÀ{<)ño<¨“<ÁZf<¡øXºxHdºRØ;≠yõºu∫Gºª“/∫’π3<¡.aºíß$º·÷,ºîè<´âáªΩ≠ñªs/%;çóY<ú[<œπÆ<gÄ;{w"ºàÏ#<4ÕÖºb¯<¶Ãy<Gêp<2Æç;¿Œ´∫çÓ7<>Çº7èfºghNªÌë<bò<æˆä<á“6;Ò§«ª¯Ê<        ¶m∫    #m∫√G/: n∫—·*∫å5∫9).∫8CdπÀ∞’π+n∫pX–∏áXÒπ-n∫  Ä?  Ä?◊È?  Ä?¸ˇ?ÆÄ?ã€?‘?ª˛?’˜?ï–?{‡?á€?üÃ?§Œ?≥Ÿ?        ßm∫    $m∫ﬂU/:n∫ñ·*∫ä5∫<).∫A6dπ©≤’π+n∫6–∏	]Òπ,n∫                                                                  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?  Ä?ã{Î#≥n
-
-
-temporalCN
-
-linear
-
-network
-S
-
-kernel
-bias;
-OBJECT_CONFIG_JSON%linear/.ATTRIBUTES/OBJECT_CONFIG_JSON
-A
-layer-0
-layer-1
-layer-2
-	layer-3
-
-layer-4
-NL
-VARIABLE_VALUEtcn/dense/kernel(linear/kernel/.ATTRIBUTES/VARIABLE_VALUE
-JH
-VARIABLE_VALUEtcn/dense/bias&linear/bias/.ATTRIBUTES/VARIABLE_VALUE
-o
-	conv1
-
-batch1
-ac1
-	drop1
-	conv2
-
-batch2
-ac2
-	drop2
-
-downsample
-ac3
-o
-	conv1
-
-batch1
-ac1
-	drop1
-	conv2
-
-batch2
-ac2
-	drop2
-
-downsample
-ac3
-o
-	conv1
-
- batch1
-!ac1
-	"drop1
-	#conv2
-
-$batch2
-%ac2
-	&drop2
-'
-downsample
-(ac3
-o
-	)conv1
-
-*batch1
-+ac1
-	,drop1
-	-conv2
-
-.batch2
-/ac2
-	0drop2
-1
-downsample
-2ac3
-o
-	3conv1
-
-4batch1
-5ac1
-	6drop1
-	7conv2
-
-8batch2
-9ac2
-	:drop2
-;
-downsample
-<ac3
-m
-
-=kernel
->biasU
-OBJECT_CONFIG_JSON?temporalCN/network/layer-0/conv1/.ATTRIBUTES/OBJECT_CONFIG_JSON
-ì
-	?gamma
-@beta
-Amoving_mean
-Bmoving_varianceV
-OBJECT_CONFIG_JSON@temporalCN/network/layer-0/batch1/.ATTRIBUTES/OBJECT_CONFIG_JSON
-US
-OBJECT_CONFIG_JSON=temporalCN/network/layer-0/ac1/.ATTRIBUTES/OBJECT_CONFIG_JSON
-WU
-OBJECT_CONFIG_JSON?temporalCN/network/layer-0/drop1/.ATTRIBUTES/OBJECT_CONFIG_JSON
-m
-
-Ckernel
-DbiasU
-OBJECT_CONFIG_JSON?temporalCN/network/layer-0/conv2/.ATTRIBUTES/OBJECT_CONFIG_JSON
-ì
-	Egamma
-Fbeta
-Gmoving_mean
-Hmoving_varianceV
-OBJECT_CONFIG_JSON@temporalCN/network/layer-0/batch2/.ATTRIBUTES/OBJECT_CONFIG_JSON
-US
-OBJECT_CONFIG_JSON=temporalCN/network/layer-0/ac2/.ATTRIBUTES/OBJECT_CONFIG_JSON
-WU
-OBJECT_CONFIG_JSON?temporalCN/network/layer-0/drop2/.ATTRIBUTES/OBJECT_CONFIG_JSON
-r
-
-Ikernel
-JbiasZ
-OBJECT_CONFIG_JSONDtemporalCN/network/layer-0/downsample/.ATTRIBUTES/OBJECT_CONFIG_JSON
-US
-OBJECT_CONFIG_JSON=temporalCN/network/layer-0/ac3/.ATTRIBUTES/OBJECT_CONFIG_JSON
-m
-
-Kkernel
-LbiasU
-OBJECT_CONFIG_JSON?temporalCN/network/layer-1/conv1/.ATTRIBUTES/OBJECT_CONFIG_JSON
-ì
-	Mgamma
-Nbeta
-Omoving_mean
-Pmoving_varianceV
-OBJECT_CONFIG_JSON@temporalCN/network/layer-1/batch1/.ATTRIBUTES/OBJECT_CONFIG_JSON
-US
-OBJECT_CONFIG_JSON=temporalCN/network/layer-1/ac1/.ATTRIBUTES/OBJECT_CONFIG_JSON
-WU
-OBJECT_CONFIG_JSON?temporalCN/network/layer-1/drop1/.ATTRIBUTES/OBJECT_CONFIG_JSON
-m
-
-Qkernel
-RbiasU
-OBJECT_CONFIG_JSON?temporalCN/network/layer-1/conv2/.ATTRIBUTES/OBJECT_CONFIG_JSON
-ì
-	Sgamma
-Tbeta
-Umoving_mean
-Vmoving_varianceV
-OBJECT_CONFIG_JSON@temporalCN/network/layer-1/batch2/.ATTRIBUTES/OBJECT_CONFIG_JSON
-US
-OBJECT_CONFIG_JSON=temporalCN/network/layer-1/ac2/.ATTRIBUTES/OBJECT_CONFIG_JSON
-WU
-OBJECT_CONFIG_JSON?temporalCN/network/layer-1/drop2/.ATTRIBUTES/OBJECT_CONFIG_JSON
-\Z
-OBJECT_CONFIG_JSONDtemporalCN/network/layer-1/downsample/.ATTRIBUTES/OBJECT_CONFIG_JSON
-US
-OBJECT_CONFIG_JSON=temporalCN/network/layer-1/ac3/.ATTRIBUTES/OBJECT_CONFIG_JSON
-m
-
-Wkernel
-XbiasU
-OBJECT_CONFIG_JSON?temporalCN/network/layer-2/conv1/.ATTRIBUTES/OBJECT_CONFIG_JSON
-ì
-	Ygamma
-Zbeta
-[moving_mean
-\moving_varianceV
-OBJECT_CONFIG_JSON@temporalCN/network/layer-2/batch1/.ATTRIBUTES/OBJECT_CONFIG_JSON
-US
-OBJECT_CONFIG_JSON=temporalCN/network/layer-2/ac1/.ATTRIBUTES/OBJECT_CONFIG_JSON
-WU
-OBJECT_CONFIG_JSON?temporalCN/network/layer-2/drop1/.ATTRIBUTES/OBJECT_CONFIG_JSON
-m
-
-]kernel
-^biasU
-OBJECT_CONFIG_JSON?temporalCN/network/layer-2/conv2/.ATTRIBUTES/OBJECT_CONFIG_JSON
-ì
-	_gamma
-`beta
-amoving_mean
-bmoving_varianceV
-OBJECT_CONFIG_JSON@temporalCN/network/layer-2/batch2/.ATTRIBUTES/OBJECT_CONFIG_JSON
-US
-OBJECT_CONFIG_JSON=temporalCN/network/layer-2/ac2/.ATTRIBUTES/OBJECT_CONFIG_JSON
-WU
-OBJECT_CONFIG_JSON?temporalCN/network/layer-2/drop2/.ATTRIBUTES/OBJECT_CONFIG_JSON
-\Z
-OBJECT_CONFIG_JSONDtemporalCN/network/layer-2/downsample/.ATTRIBUTES/OBJECT_CONFIG_JSON
-US
-OBJECT_CONFIG_JSON=temporalCN/network/layer-2/ac3/.ATTRIBUTES/OBJECT_CONFIG_JSON
-m
-
-ckernel
-dbiasU
-OBJECT_CONFIG_JSON?temporalCN/network/layer-3/conv1/.ATTRIBUTES/OBJECT_CONFIG_JSON
-ì
-	egamma
-fbeta
-gmoving_mean
-hmoving_varianceV
-OBJECT_CONFIG_JSON@temporalCN/network/layer-3/batch1/.ATTRIBUTES/OBJECT_CONFIG_JSON
-US
-OBJECT_CONFIG_JSON=temporalCN/network/layer-3/ac1/.ATTRIBUTES/OBJECT_CONFIG_JSON
-WU
-OBJECT_CONFIG_JSON?temporalCN/network/layer-3/drop1/.ATTRIBUTES/OBJECT_CONFIG_JSON
-m
-
-ikernel
-jbiasU
-OBJECT_CONFIG_JSON?temporalCN/network/layer-3/conv2/.ATTRIBUTES/OBJECT_CONFIG_JSON
-ì
-	kgamma
-lbeta
-mmoving_mean
-nmoving_varianceV
-OBJECT_CONFIG_JSON@temporalCN/network/layer-3/batch2/.ATTRIBUTES/OBJECT_CONFIG_JSON
-US
-OBJECT_CONFIG_JSON=temporalCN/network/layer-3/ac2/.ATTRIBUTES/OBJECT_CONFIG_JSON
-WU
-OBJECT_CONFIG_JSON?temporalCN/network/layer-3/drop2/.ATTRIBUTES/OBJECT_CONFIG_JSON
-\Z
-OBJECT_CONFIG_JSONDtemporalCN/network/layer-3/downsample/.ATTRIBUTES/OBJECT_CONFIG_JSON
-US
-OBJECT_CONFIG_JSON=temporalCN/network/layer-3/ac3/.ATTRIBUTES/OBJECT_CONFIG_JSON
-m
-
-okernel
-pbiasU
-OBJECT_CONFIG_JSON?temporalCN/network/layer-4/conv1/.ATTRIBUTES/OBJECT_CONFIG_JSON
-ì
-	qgamma
-rbeta
-smoving_mean
-tmoving_varianceV
-OBJECT_CONFIG_JSON@temporalCN/network/layer-4/batch1/.ATTRIBUTES/OBJECT_CONFIG_JSON
-US
-OBJECT_CONFIG_JSON=temporalCN/network/layer-4/ac1/.ATTRIBUTES/OBJECT_CONFIG_JSON
-WU
-OBJECT_CONFIG_JSON?temporalCN/network/layer-4/drop1/.ATTRIBUTES/OBJECT_CONFIG_JSON
-m
-
-ukernel
-vbiasU
-OBJECT_CONFIG_JSON?temporalCN/network/layer-4/conv2/.ATTRIBUTES/OBJECT_CONFIG_JSON
-ì
-	wgamma
-xbeta
-ymoving_mean
-zmoving_varianceV
-OBJECT_CONFIG_JSON@temporalCN/network/layer-4/batch2/.ATTRIBUTES/OBJECT_CONFIG_JSON
-US
-OBJECT_CONFIG_JSON=temporalCN/network/layer-4/ac2/.ATTRIBUTES/OBJECT_CONFIG_JSON
-WU
-OBJECT_CONFIG_JSON?temporalCN/network/layer-4/drop2/.ATTRIBUTES/OBJECT_CONFIG_JSON
-\Z
-OBJECT_CONFIG_JSONDtemporalCN/network/layer-4/downsample/.ATTRIBUTES/OBJECT_CONFIG_JSON
-US
-OBJECT_CONFIG_JSON=temporalCN/network/layer-4/ac3/.ATTRIBUTES/OBJECT_CONFIG_JSON
-áÑ
-VARIABLE_VALUE.tcn/temporal_conv_net/sequential/conv1d/kernelBtemporalCN/network/layer-0/conv1/kernel/.ATTRIBUTES/VARIABLE_VALUE
-ÉÄ
-VARIABLE_VALUE,tcn/temporal_conv_net/sequential/conv1d/bias@temporalCN/network/layer-0/conv1/bias/.ATTRIBUTES/VARIABLE_VALUE
-ñì
-VARIABLE_VALUE=tcn/temporal_conv_net/sequential/batch_normalization_v1/gammaBtemporalCN/network/layer-0/batch1/gamma/.ATTRIBUTES/VARIABLE_VALUE
-îë
-VARIABLE_VALUE<tcn/temporal_conv_net/sequential/batch_normalization_v1/betaAtemporalCN/network/layer-0/batch1/beta/.ATTRIBUTES/VARIABLE_VALUE
-¢ü
-VARIABLE_VALUECtcn/temporal_conv_net/sequential/batch_normalization_v1/moving_meanHtemporalCN/network/layer-0/batch1/moving_mean/.ATTRIBUTES/VARIABLE_VALUE
-™ß
-VARIABLE_VALUEGtcn/temporal_conv_net/sequential/batch_normalization_v1/moving_varianceLtemporalCN/network/layer-0/batch1/moving_variance/.ATTRIBUTES/VARIABLE_VALUE
-âÜ
-VARIABLE_VALUE0tcn/temporal_conv_net/sequential/conv1d_1/kernelBtemporalCN/network/layer-0/conv2/kernel/.ATTRIBUTES/VARIABLE_VALUE
-ÖÇ
-VARIABLE_VALUE.tcn/temporal_conv_net/sequential/conv1d_1/bias@temporalCN/network/layer-0/conv2/bias/.ATTRIBUTES/VARIABLE_VALUE
-òï
-VARIABLE_VALUE?tcn/temporal_conv_net/sequential/batch_normalization_v1_1/gammaBtemporalCN/network/layer-0/batch2/gamma/.ATTRIBUTES/VARIABLE_VALUE
-ñì
-VARIABLE_VALUE>tcn/temporal_conv_net/sequential/batch_normalization_v1_1/betaAtemporalCN/network/layer-0/batch2/beta/.ATTRIBUTES/VARIABLE_VALUE
-§°
-VARIABLE_VALUEEtcn/temporal_conv_net/sequential/batch_normalization_v1_1/moving_meanHtemporalCN/network/layer-0/batch2/moving_mean/.ATTRIBUTES/VARIABLE_VALUE
-¨©
-VARIABLE_VALUEItcn/temporal_conv_net/sequential/batch_normalization_v1_1/moving_varianceLtemporalCN/network/layer-0/batch2/moving_variance/.ATTRIBUTES/VARIABLE_VALUE
-éã
-VARIABLE_VALUE0tcn/temporal_conv_net/sequential/conv1d_2/kernelGtemporalCN/network/layer-0/downsample/kernel/.ATTRIBUTES/VARIABLE_VALUE
-äá
-VARIABLE_VALUE.tcn/temporal_conv_net/sequential/conv1d_2/biasEtemporalCN/network/layer-0/downsample/bias/.ATTRIBUTES/VARIABLE_VALUE
-âÜ
-VARIABLE_VALUE0tcn/temporal_conv_net/sequential/conv1d_3/kernelBtemporalCN/network/layer-1/conv1/kernel/.ATTRIBUTES/VARIABLE_VALUE
-ÖÇ
-VARIABLE_VALUE.tcn/temporal_conv_net/sequential/conv1d_3/bias@temporalCN/network/layer-1/conv1/bias/.ATTRIBUTES/VARIABLE_VALUE
-òï
-VARIABLE_VALUE?tcn/temporal_conv_net/sequential/batch_normalization_v1_2/gammaBtemporalCN/network/layer-1/batch1/gamma/.ATTRIBUTES/VARIABLE_VALUE
-ñì
-VARIABLE_VALUE>tcn/temporal_conv_net/sequential/batch_normalization_v1_2/betaAtemporalCN/network/layer-1/batch1/beta/.ATTRIBUTES/VARIABLE_VALUE
-§°
-VARIABLE_VALUEEtcn/temporal_conv_net/sequential/batch_normalization_v1_2/moving_meanHtemporalCN/network/layer-1/batch1/moving_mean/.ATTRIBUTES/VARIABLE_VALUE
-¨©
-VARIABLE_VALUEItcn/temporal_conv_net/sequential/batch_normalization_v1_2/moving_varianceLtemporalCN/network/layer-1/batch1/moving_variance/.ATTRIBUTES/VARIABLE_VALUE
-âÜ
-VARIABLE_VALUE0tcn/temporal_conv_net/sequential/conv1d_4/kernelBtemporalCN/network/layer-1/conv2/kernel/.ATTRIBUTES/VARIABLE_VALUE
-ÖÇ
-VARIABLE_VALUE.tcn/temporal_conv_net/sequential/conv1d_4/bias@temporalCN/network/layer-1/conv2/bias/.ATTRIBUTES/VARIABLE_VALUE
-òï
-VARIABLE_VALUE?tcn/temporal_conv_net/sequential/batch_normalization_v1_3/gammaBtemporalCN/network/layer-1/batch2/gamma/.ATTRIBUTES/VARIABLE_VALUE
-ñì
-VARIABLE_VALUE>tcn/temporal_conv_net/sequential/batch_normalization_v1_3/betaAtemporalCN/network/layer-1/batch2/beta/.ATTRIBUTES/VARIABLE_VALUE
-§°
-VARIABLE_VALUEEtcn/temporal_conv_net/sequential/batch_normalization_v1_3/moving_meanHtemporalCN/network/layer-1/batch2/moving_mean/.ATTRIBUTES/VARIABLE_VALUE
-¨©
-VARIABLE_VALUEItcn/temporal_conv_net/sequential/batch_normalization_v1_3/moving_varianceLtemporalCN/network/layer-1/batch2/moving_variance/.ATTRIBUTES/VARIABLE_VALUE
-âÜ
-VARIABLE_VALUE0tcn/temporal_conv_net/sequential/conv1d_6/kernelBtemporalCN/network/layer-2/conv1/kernel/.ATTRIBUTES/VARIABLE_VALUE
-ÖÇ
-VARIABLE_VALUE.tcn/temporal_conv_net/sequential/conv1d_6/bias@temporalCN/network/layer-2/conv1/bias/.ATTRIBUTES/VARIABLE_VALUE
-òï
-VARIABLE_VALUE?tcn/temporal_conv_net/sequential/batch_normalization_v1_4/gammaBtemporalCN/network/layer-2/batch1/gamma/.ATTRIBUTES/VARIABLE_VALUE
-ñì
-VARIABLE_VALUE>tcn/temporal_conv_net/sequential/batch_normalization_v1_4/betaAtemporalCN/network/layer-2/batch1/beta/.ATTRIBUTES/VARIABLE_VALUE
-§°
-VARIABLE_VALUEEtcn/temporal_conv_net/sequential/batch_normalization_v1_4/moving_meanHtemporalCN/network/layer-2/batch1/moving_mean/.ATTRIBUTES/VARIABLE_VALUE
-¨©
-VARIABLE_VALUEItcn/temporal_conv_net/sequential/batch_normalization_v1_4/moving_varianceLtemporalCN/network/layer-2/batch1/moving_variance/.ATTRIBUTES/VARIABLE_VALUE
-âÜ
-VARIABLE_VALUE0tcn/temporal_conv_net/sequential/conv1d_7/kernelBtemporalCN/network/layer-2/conv2/kernel/.ATTRIBUTES/VARIABLE_VALUE
-ÖÇ
-VARIABLE_VALUE.tcn/temporal_conv_net/sequential/conv1d_7/bias@temporalCN/network/layer-2/conv2/bias/.ATTRIBUTES/VARIABLE_VALUE
-òï
-VARIABLE_VALUE?tcn/temporal_conv_net/sequential/batch_normalization_v1_5/gammaBtemporalCN/network/layer-2/batch2/gamma/.ATTRIBUTES/VARIABLE_VALUE
-ñì
-VARIABLE_VALUE>tcn/temporal_conv_net/sequential/batch_normalization_v1_5/betaAtemporalCN/network/layer-2/batch2/beta/.ATTRIBUTES/VARIABLE_VALUE
-§°
-VARIABLE_VALUEEtcn/temporal_conv_net/sequential/batch_normalization_v1_5/moving_meanHtemporalCN/network/layer-2/batch2/moving_mean/.ATTRIBUTES/VARIABLE_VALUE
-¨©
-VARIABLE_VALUEItcn/temporal_conv_net/sequential/batch_normalization_v1_5/moving_varianceLtemporalCN/network/layer-2/batch2/moving_variance/.ATTRIBUTES/VARIABLE_VALUE
-âÜ
-VARIABLE_VALUE0tcn/temporal_conv_net/sequential/conv1d_9/kernelBtemporalCN/network/layer-3/conv1/kernel/.ATTRIBUTES/VARIABLE_VALUE
-ÖÇ
-VARIABLE_VALUE.tcn/temporal_conv_net/sequential/conv1d_9/bias@temporalCN/network/layer-3/conv1/bias/.ATTRIBUTES/VARIABLE_VALUE
-òï
-VARIABLE_VALUE?tcn/temporal_conv_net/sequential/batch_normalization_v1_6/gammaBtemporalCN/network/layer-3/batch1/gamma/.ATTRIBUTES/VARIABLE_VALUE
-ñì
-VARIABLE_VALUE>tcn/temporal_conv_net/sequential/batch_normalization_v1_6/betaAtemporalCN/network/layer-3/batch1/beta/.ATTRIBUTES/VARIABLE_VALUE
-§°
-VARIABLE_VALUEEtcn/temporal_conv_net/sequential/batch_normalization_v1_6/moving_meanHtemporalCN/network/layer-3/batch1/moving_mean/.ATTRIBUTES/VARIABLE_VALUE
-¨©
-VARIABLE_VALUEItcn/temporal_conv_net/sequential/batch_normalization_v1_6/moving_varianceLtemporalCN/network/layer-3/batch1/moving_variance/.ATTRIBUTES/VARIABLE_VALUE
-äá
-VARIABLE_VALUE1tcn/temporal_conv_net/sequential/conv1d_10/kernelBtemporalCN/network/layer-3/conv2/kernel/.ATTRIBUTES/VARIABLE_VALUE
-ÜÉ
-VARIABLE_VALUE/tcn/temporal_conv_net/sequential/conv1d_10/bias@temporalCN/network/layer-3/conv2/bias/.ATTRIBUTES/VARIABLE_VALUE
-òï
-VARIABLE_VALUE?tcn/temporal_conv_net/sequential/batch_normalization_v1_7/gammaBtemporalCN/network/layer-3/batch2/gamma/.ATTRIBUTES/VARIABLE_VALUE
-ñì
-VARIABLE_VALUE>tcn/temporal_conv_net/sequential/batch_normalization_v1_7/betaAtemporalCN/network/layer-3/batch2/beta/.ATTRIBUTES/VARIABLE_VALUE
-§°
-VARIABLE_VALUEEtcn/temporal_conv_net/sequential/batch_normalization_v1_7/moving_meanHtemporalCN/network/layer-3/batch2/moving_mean/.ATTRIBUTES/VARIABLE_VALUE
-¨©
-VARIABLE_VALUEItcn/temporal_conv_net/sequential/batch_normalization_v1_7/moving_varianceLtemporalCN/network/layer-3/batch2/moving_variance/.ATTRIBUTES/VARIABLE_VALUE
-äá
-VARIABLE_VALUE1tcn/temporal_conv_net/sequential/conv1d_12/kernelBtemporalCN/network/layer-4/conv1/kernel/.ATTRIBUTES/VARIABLE_VALUE
-ÜÉ
-VARIABLE_VALUE/tcn/temporal_conv_net/sequential/conv1d_12/bias@temporalCN/network/layer-4/conv1/bias/.ATTRIBUTES/VARIABLE_VALUE
-òï
-VARIABLE_VALUE?tcn/temporal_conv_net/sequential/batch_normalization_v1_8/gammaBtemporalCN/network/layer-4/batch1/gamma/.ATTRIBUTES/VARIABLE_VALUE
-ñì
-VARIABLE_VALUE>tcn/temporal_conv_net/sequential/batch_normalization_v1_8/betaAtemporalCN/network/layer-4/batch1/beta/.ATTRIBUTES/VARIABLE_VALUE
-§°
-VARIABLE_VALUEEtcn/temporal_conv_net/sequential/batch_normalization_v1_8/moving_meanHtemporalCN/network/layer-4/batch1/moving_mean/.ATTRIBUTES/VARIABLE_VALUE
-¨©
-VARIABLE_VALUEItcn/temporal_conv_net/sequential/batch_normalization_v1_8/moving_varianceLtemporalCN/network/layer-4/batch1/moving_variance/.ATTRIBUTES/VARIABLE_VALUE
-äá
-VARIABLE_VALUE1tcn/temporal_conv_net/sequential/conv1d_13/kernelBtemporalCN/network/layer-4/conv2/kernel/.ATTRIBUTES/VARIABLE_VALUE
-ÜÉ
-VARIABLE_VALUE/tcn/temporal_conv_net/sequential/conv1d_13/bias@temporalCN/network/layer-4/conv2/bias/.ATTRIBUTES/VARIABLE_VALUE
-òï
-VARIABLE_VALUE?tcn/temporal_conv_net/sequential/batch_normalization_v1_9/gammaBtemporalCN/network/layer-4/batch2/gamma/.ATTRIBUTES/VARIABLE_VALUE
-ñì
-VARIABLE_VALUE>tcn/temporal_conv_net/sequential/batch_normalization_v1_9/betaAtemporalCN/network/layer-4/batch2/beta/.ATTRIBUTES/VARIABLE_VALUE
-§°
-VARIABLE_VALUEEtcn/temporal_conv_net/sequential/batch_normalization_v1_9/moving_meanHtemporalCN/network/layer-4/batch2/moving_mean/.ATTRIBUTES/VARIABLE_VALUE
-¨©
-VARIABLE_VALUEItcn/temporal_conv_net/sequential/batch_normalization_v1_9/moving_varianceLtemporalCN/network/layer-4/batch2/moving_variance/.ATTRIBUTES/VARIABLE_VALUE
