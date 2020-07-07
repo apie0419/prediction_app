@@ -9,28 +9,28 @@ layers = tf.keras.layers
 
 class TemporalBlock(tf.keras.Model):
 	def __init__(self, dilation_rate, nb_filters, kernel_size, 
-				       padding, dropout_rate=0.0, l2_lambda=0.01): 
+				       padding, dropout_rate=0.0): 
 		super(TemporalBlock, self).__init__()
 		init = tf.keras.initializers.RandomNormal(mean=0.0, stddev=0.01)
 		assert padding in ['causal', 'same']
 
 		# block1
 		self.conv1 = layers.Conv1D(filters=nb_filters, kernel_size=kernel_size,
-				                   dilation_rate=dilation_rate, padding=padding, kernel_initializer=init, kernel_regularizer=regularizers.l2(l2_lambda))
+				                   dilation_rate=dilation_rate, padding=padding, kernel_initializer=init)
 		self.batch1 = layers.BatchNormalization(axis=-1)
 		self.ac1 = layers.Activation('relu')
 		self.drop1 = layers.Dropout(rate=dropout_rate)
 		
 		# block2
 		self.conv2 = layers.Conv1D(filters=nb_filters, kernel_size=kernel_size,
-						           dilation_rate=dilation_rate, padding=padding, kernel_initializer=init, kernel_regularizer=regularizers.l2(l2_lambda))
+						           dilation_rate=dilation_rate, padding=padding, kernel_initializer=init)
 		self.batch2 = layers.BatchNormalization(axis=-1)		
 		self.ac2 = layers.Activation('relu')
 		self.drop2 = layers.Dropout(rate=dropout_rate)
 
 		# 为了防止维度不一致使用 1*1 卷积在channel处进行匹配  
 		self.downsample = layers.Conv1D(filters=nb_filters, kernel_size=1, 
-									    padding='same', kernel_initializer=init, kernel_regularizer=regularizers.l2(l2_lambda))
+									    padding='same', kernel_initializer=init)
 		self.ac3 = layers.Activation('relu')
 
 
@@ -54,7 +54,7 @@ class TemporalBlock(tf.keras.Model):
 
 
 class TemporalConvNet(tf.keras.Model):
-    def __init__(self, num_channels, kernel_size=2, dropout=0.2, l2_lambda=0.01):
+    def __init__(self, num_channels, kernel_size=2, dropout=0.2):
     	# num_channels is a list contains hidden sizes of Conv1D
         super(TemporalConvNet, self).__init__()
         assert isinstance(num_channels, list)
@@ -66,7 +66,7 @@ class TemporalConvNet(tf.keras.Model):
         for i in range(num_levels):
             dilation_rate = 2 ** i                  # exponential growth
             model.add(TemporalBlock(dilation_rate, num_channels[i], kernel_size, 
-                      padding='causal', dropout_rate=dropout, l2_lambda=l2_lambda))
+                      padding='causal', dropout_rate=dropout))
         self.network = model
 
     def call(self, x, training):

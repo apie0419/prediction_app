@@ -1,10 +1,17 @@
-from model import TCN
-from utils import process_data, rmse
+from .model import TCN
+from .utils import process_data, rmse
 from tensorflow.contrib.eager.python import tfe
 import tensorflow as tf
 import numpy as np
+import os
 
 tf.enable_eager_execution()
+
+BASE_PATH = os.path.dirname(os.path.abspath(__file__))
+output_path = os.path.join(BASE_PATH, "weights")
+
+if not os.path.exists(output_path):
+    os.makedirs(output_path, exist_ok=True)
 
 class tcn():
 
@@ -29,17 +36,14 @@ class tcn():
         logits = self.model(batch_x, training=True)
         
         return rmse(logits, batch_y)
-        
+
     def train(self, data_raw, target_raw):
         """
         Todo:
         1. 在畫面呈現訓練過程
-        2. GPU 使用可以在畫面上選取
-        3. 儲存權重
         """
         data, target = process_data(self.timesteps, data_raw, target_raw)
-        num_input = len(data[0])
-        _max = max(target)
+        num_input = len(data[0][0])
 
         trainset = tf.data.Dataset.from_tensor_slices((data, target))
         with tf.device(f"/gpu:{self.GPU}"):
@@ -73,18 +77,38 @@ class tcn():
 
                 predict = np.array(predict)
                 target = np.array(target)
-                train_loss = rmse(predict, target) / _max * 100.
+                train_loss = round(rmse(predict, target) * 100., 2)
+
+            model.save_weights(os.path.join(output_path, "tcn_weight.ckpt"))
     
-    def test(self, data_raw, target_raw):
-        """
-        Todo:
-        1. Load 訓練好的權重
-        2. 測試完呈現圖表在畫面上
-        """
-        pass
-                
-
+    def test(self, data_raw, target_raw, layout):
         
+        self.model.load_weights(os.path.join(output_path, "tcn_weight.ckpt"))
+        data, target = process_data(self.timesteps, data_raw, target_raw)
+        num_input = len(data[0][0])
+        predict, gt = list(), list()
 
-                
+        with tf.device("/cpu:0"):
+            for i in range(0, len(data), 8):
+                logits = None
+                if i + 10 > len(data):
+                    break
+                for j in range(11):
+                    x, y = data[i + j], target[i + j]
+                    if logits != None:
+                        x[-1][-1] = float(logits.numpy()[0][0])
+                    x = tf.convert_to_tensor(x, dtype=tf.float32)
+                    x = tf.reshape(x, (1, self.timesteps, num_input))
+                    y = tf.convert_to_tensor(y, dtype=tf.float32)
+                    
+                    logits = self.model(x, training=False)
+                    if j > 2:
+                        predict.append(logits.numpy()[0][0])
+                        gt.append(y.numpy())
+                progress = round(i / (len(data) - 1) * 100., 2)
+
+        test_predict = np.array(predict)
+        test_target = np.array(gt)
+        test_loss = round(rmse(test_predict, test_target).numpy() * 100., 2)
+        return test_predict, test_target, test_loss
             

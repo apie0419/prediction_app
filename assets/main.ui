@@ -63,7 +63,7 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>241</width>
+      <width>271</width>
       <height>21</height>
      </rect>
     </property>
@@ -85,12 +85,12 @@ color: rgb(255, 255, 255);</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="file_btn">
+   <widget class="QPushButton" name="data_file_btn">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>40</y>
-      <width>141</width>
+      <x>230</x>
+      <y>50</y>
+      <width>51</width>
       <height>21</height>
      </rect>
     </property>
@@ -109,14 +109,14 @@ border-style: outset;
 padding: 4px;</string>
     </property>
     <property name="text">
-     <string>Press here to import</string>
+     <string>Browse</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>80</y>
+      <x>0</x>
+      <y>50</y>
       <width>81</width>
       <height>21</height>
      </rect>
@@ -130,20 +130,20 @@ padding: 4px;</string>
      </font>
     </property>
     <property name="text">
-     <string>File Name</string>
+     <string>Data File</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="data_file_edit">
     <property name="enabled">
      <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>80</y>
+      <x>80</x>
+      <y>50</y>
       <width>141</width>
       <height>21</height>
      </rect>
@@ -157,7 +157,7 @@ padding: 4px;</string>
      <rect>
       <x>10</x>
       <y>120</y>
-      <width>241</width>
+      <width>271</width>
       <height>21</height>
      </rect>
     </property>
@@ -173,15 +173,15 @@ padding: 4px;</string>
 color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>Select Input</string>
+     <string>Device Configuration</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QCheckBox" name="wp_ckbox">
+   <widget class="QCheckBox" name="gpu_ckbox">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -192,51 +192,7 @@ color: rgb(255, 255, 255);</string>
      </rect>
     </property>
     <property name="text">
-     <string>Wind Power</string>
-    </property>
-    <property name="checkable">
-     <bool>true</bool>
-    </property>
-    <property name="checked">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="ws_ckbox">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>170</y>
-      <width>121</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Wind Speed</string>
-    </property>
-    <property name="checkable">
-     <bool>true</bool>
-    </property>
-    <property name="checked">
-     <bool>false</bool>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="cwb_ckbox">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>190</y>
-      <width>191</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>CWB Ensemble Wind Speed</string>
+     <string>Use GPU</string>
     </property>
     <property name="checkable">
      <bool>true</bool>
@@ -249,8 +205,8 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>230</y>
-      <width>241</width>
+      <y>180</y>
+      <width>271</width>
       <height>21</height>
      </rect>
     </property>
@@ -276,13 +232,13 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>250</y>
-      <width>241</width>
+      <y>200</y>
+      <width>271</width>
       <height>111</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="train_tab">
      <attribute name="title">
@@ -333,21 +289,45 @@ color: rgb(255, 255, 255);</string>
      <widget class="QDateEdit" name="train_dtfrom">
       <property name="geometry">
        <rect>
-        <x>70</x>
+        <x>90</x>
         <y>20</y>
         <width>151</width>
         <height>21</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="showGroupSeparator" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
      </widget>
      <widget class="QDateEdit" name="train_dtto">
       <property name="geometry">
        <rect>
-        <x>70</x>
+        <x>90</x>
         <y>50</y>
         <width>151</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+      <property name="timeSpec">
+       <enum>Qt::LocalTime</enum>
       </property>
      </widget>
     </widget>
@@ -400,21 +380,36 @@ color: rgb(255, 255, 255);</string>
      <widget class="QDateEdit" name="test_dtfrom">
       <property name="geometry">
        <rect>
-        <x>70</x>
+        <x>90</x>
         <y>20</y>
         <width>151</width>
         <height>21</height>
        </rect>
       </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
      </widget>
      <widget class="QDateEdit" name="test_dtto">
       <property name="geometry">
        <rect>
-        <x>70</x>
+        <x>90</x>
         <y>50</y>
         <width>151</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>
@@ -423,8 +418,8 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>370</y>
-      <width>241</width>
+      <y>320</y>
+      <width>271</width>
       <height>21</height>
      </rect>
     </property>
@@ -450,19 +445,14 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>400</y>
-      <width>201</width>
+      <y>350</y>
+      <width>231</width>
       <height>22</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
-    <item>
-     <property name="text">
-      <string>LSTM</string>
-     </property>
-    </item>
     <item>
      <property name="text">
       <string>TCN</string>
@@ -478,8 +468,8 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>430</y>
-      <width>201</width>
+      <y>380</y>
+      <width>231</width>
       <height>22</height>
      </rect>
     </property>
@@ -501,8 +491,8 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>470</y>
-      <width>241</width>
+      <y>420</y>
+      <width>271</width>
       <height>21</height>
      </rect>
     </property>
@@ -528,7 +518,7 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>510</y>
+      <y>460</y>
       <width>71</width>
       <height>16</height>
      </rect>
@@ -548,8 +538,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QSpinBox" name="spinBox">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>510</y>
+      <x>110</x>
+      <y>460</y>
       <width>42</width>
       <height>22</height>
      </rect>
@@ -564,8 +554,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="label_12">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>510</y>
+      <x>180</x>
+      <y>460</y>
       <width>91</width>
       <height>20</height>
      </rect>
@@ -585,8 +575,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QPushButton" name="train_btn">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>560</y>
+      <x>30</x>
+      <y>510</y>
       <width>91</width>
       <height>41</height>
      </rect>
@@ -629,8 +619,8 @@ QPushButton::pressed
    <widget class="QPushButton" name="forecast_btn">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>560</y>
+      <x>160</x>
+      <y>510</y>
       <width>91</width>
       <height>41</height>
      </rect>
@@ -673,7 +663,7 @@ QPushButton::pressed
    <widget class="Line" name="line">
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>280</x>
       <y>10</y>
       <width>20</width>
       <height>621</height>
@@ -683,6 +673,148 @@ QPushButton::pressed
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
+   <widget class="QLineEdit" name="target_file_edit">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>80</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="target_file_btn">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>80</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-color: black;
+border-radius: 5px;
+border-width: 1px;
+border-style: outset;
+padding: 4px;</string>
+    </property>
+    <property name="text">
+     <string>Browse</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>80</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Target File</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="graph_widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>10</y>
+      <width>561</width>
+      <height>571</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>590</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>RMSE Loss</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="rmse_loss_edit">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>590</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="gpu_cbbox">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>150</y>
+      <width>69</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>560</y>
+      <width>261</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="progress_layout"/>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menubar">
@@ -691,7 +823,7 @@ QPushButton::pressed
      <x>0</x>
      <y>0</y>
      <width>871</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="autoFillBackground">

@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/apie/projects/wind_power_prediction/dayahead/Output/tcn_weight.ckpt"
+all_model_checkpoint_paths: "/home/apie/projects/wind_power_prediction/dayahead/Output/tcn_weight.ckpt"
