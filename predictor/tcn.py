@@ -16,21 +16,25 @@ if not os.path.exists(output_path):
 class tcn():
 
     def __init__(self):
-        self.GPU           = 6
         self.batch_size    = 16
         self.hidden_units  = 16
         self.dropout       = 0.3
-        self.epochs        = 100
+        self.epochs        = 10
         self.ksize         = 3
         self.levels        = 5
         self.output_dim    = 1
         self.timesteps     = 8
 
-        global_step   = tf.Variable(0, trainable=False)
+        self.global_step   = tf.Variable(0, trainable=False)
         channel_sizes = [self.hidden_units] * self.levels
-        self.learning_rate = tf.compat.v1.train.exponential_decay(0.0001, global_step, 3000, 0.7, staircase=True)
+        self.learning_rate = tf.compat.v1.train.exponential_decay(0.0001, self.global_step, 3000, 0.7, staircase=True)
         self.optimizer = tf.compat.v1.train.AdamOptimizer(self.learning_rate)
         self.model = TCN(self.output_dim, channel_sizes, kernel_size=self.ksize, dropout=self.dropout)
+
+    def init_model(self, use_gpu=False, device=0, mode=1):
+        self.mode = mode
+        self.use_gpu = use_gpu
+        self.device = device
 
     def loss_function(self, batch_x, batch_y):
         logits = self.model(batch_x, training=True)
@@ -46,7 +50,14 @@ class tcn():
         num_input = len(data[0][0])
 
         trainset = tf.data.Dataset.from_tensor_slices((data, target))
-        with tf.device(f"/gpu:{self.GPU}"):
+        if self.use_gpu:
+            todevice = f"/gpu:{self.device}"
+        else:
+            todevice = f"/cpu:0"
+
+        train_losses = list()
+
+        with tf.device(todevice):
     
             for epoch in range(1, self.epochs + 1):
                 train = trainset.batch(self.batch_size, drop_remainder=True)
@@ -57,7 +68,7 @@ class tcn():
                     batch_y = tf.dtypes.cast(batch_y, tf.float32)
                     self.optimizer.minimize(lambda: self.loss_function(batch_x, batch_y), global_step=self.global_step)
                 
-                predict, target = list(), list()
+                predict, gt = list(), list()
                 for i in range(0, len(data), 8):
                     logits = None
                     if i + 10 > len(data):
@@ -73,22 +84,29 @@ class tcn():
                         logits = self.model(x, training=False)
                         if j > 2:
                             predict.append(logits.numpy()[0][0])
-                            target.append(y.numpy())
+                            gt.append(y.numpy())
 
                 predict = np.array(predict)
-                target = np.array(target)
-                train_loss = round(rmse(predict, target) * 100., 2)
+                gt = np.array(gt)
+                train_losses.append(round(rmse(predict, gt).numpy() * 100., 2))
+                
+            self.model.save_weights(os.path.join(output_path, "tcn_weight.ckpt"))
 
-            model.save_weights(os.path.join(output_path, "tcn_weight.ckpt"))
+        return np.array(train_losses)
     
-    def test(self, data_raw, target_raw, layout):
+    def test(self, data_raw, target_raw):
         
         self.model.load_weights(os.path.join(output_path, "tcn_weight.ckpt"))
         data, target = process_data(self.timesteps, data_raw, target_raw)
         num_input = len(data[0][0])
         predict, gt = list(), list()
 
-        with tf.device("/cpu:0"):
+        if self.use_gpu:
+            todevice = f"/gpu:{self.device}"
+        else:
+            todevice = f"/cpu:0"
+
+        with tf.device(todevice):
             for i in range(0, len(data), 8):
                 logits = None
                 if i + 10 > len(data):

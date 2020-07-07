@@ -29,22 +29,74 @@ def train(obj):
     dt_from = obj.train_dtfrom.text()
     dt_to = obj.train_dtto.text()
     data, target = process_data(obj, dt_from, dt_to)
+    use_gpu = obj.gpu_ckbox.isChecked()
+    device = None
+    if use_gpu:
+        device = obj.gpu_cbbox.text()
+    if obj.hourahead_btn.isChecked():
+        mode = 1
+    elif obj.dayahead_btn.isChecked():
+        mode = 2
+
+    data, target = process_data(obj, dt_from, dt_to)
+    model = get_model(obj.model_cbbox.currentText())
+    model.init_model(use_gpu, device, mode)
+
+    losses = model.train(data, target)
+    loss = round(losses.mean(), 2)
+
+    sc = MplCanvas(None, width=5, height=4, dpi=100)
+    df = pd.DataFrame({
+        "loss": losses.flatten(),
+    })
+
+    df.plot(ax=sc.axes)
+    toolbar = NavigationToolbar(sc, None)
+    layout = obj.graph_widget.layout()
+    if layout == None:
+        layout = QtWidgets.QVBoxLayout()
+    else:
+        for i in reversed(range(layout.count())): 
+            layout.itemAt(i).widget().setParent(None)
+
+    layout.addWidget(toolbar)
+    layout.addWidget(sc)
+    obj.graph_widget.setLayout(layout)
+    obj.rmse_loss_edit.setText(str(loss) + "%")
 
 def forecast(obj):
     dt_from = obj.test_dtfrom.text()
     dt_to = obj.test_dtto.text()
+    use_gpu = obj.gpu_ckbox.isChecked()
+    device = None
+    if use_gpu:
+        device = obj.gpu_cbbox.text()
+    if obj.hourahead_btn.isChecked():
+        mode = 1
+    elif obj.dayahead_btn.isChecked():
+        mode = 2
+
     data, target = process_data(obj, dt_from, dt_to)
     model = get_model(obj.model_cbbox.currentText())
-    predict, target, loss = model.test(data, target, obj.progress_layout)
+    model.init_model(use_gpu, device, mode)
+    predict, target, loss = model.test(data, target)
     sc = MplCanvas(None, width=5, height=4, dpi=100)
     df = pd.DataFrame({
         "predict": predict.flatten(),
         "target": target.flatten()
     })
 
-    df.plot(ax=sc.axes)
+    ax = df.plot(ax=sc.axes)
+    ax.set_xlabel("Epoch")
+    ax.set_ylabel("RMSE Loss")
     toolbar = NavigationToolbar(sc, None)
-    layout = QtWidgets.QVBoxLayout()
+    layout = obj.graph_widget.layout()
+    if layout == None:
+        layout = QtWidgets.QVBoxLayout()
+    else:
+        for i in reversed(range(layout.count())): 
+            layout.itemAt(i).widget().setParent(None)
+            
     layout.addWidget(toolbar)
     layout.addWidget(sc)
     obj.graph_widget.setLayout(layout)
