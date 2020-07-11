@@ -49,29 +49,36 @@ def train(obj):
     elif obj.dayahead_btn.isChecked():
         mode = 2
 
-    model = get_model(obj.model_cbbox.currentText())
+    modelname = obj.model_cbbox.currentText()
+    model = get_model(modelname)
     model.init_model(use_gpu, device, mode)
 
-    losses = model.train(data, target)
-    loss = round(losses.mean(), 2)
+    if modelname == "TCN":
+        losses = model.train(data, target)
+        loss = round(losses.mean(), 2)
 
-    sc = MplCanvas(None, width=5, height=4, dpi=100)
-    df = pd.DataFrame({
-        "loss": losses.flatten(),
-    })
+        sc = MplCanvas(None, width=5, height=4, dpi=100)
+        df = pd.DataFrame({
+            "loss": losses.flatten(),
+        })
 
-    df.plot(ax=sc.axes)
-    toolbar = NavigationToolbar(sc, None)
-    layout = obj.graph_widget.layout()
-    if layout == None:
-        layout = QtWidgets.QVBoxLayout()
+        df.plot(ax=sc.axes)
+        ax.set_xlabel("Epoch")
+        ax.set_ylabel("RMSE Loss")
+        toolbar = NavigationToolbar(sc, None)
+        layout = obj.graph_widget.layout()
+        if layout == None:
+            layout = QtWidgets.QVBoxLayout()
+        else:
+            for i in reversed(range(layout.count())): 
+                layout.itemAt(i).widget().setParent(None)
+
+        layout.addWidget(toolbar)
+        layout.addWidget(sc)
+        obj.graph_widget.setLayout(layout)
     else:
-        for i in reversed(range(layout.count())): 
-            layout.itemAt(i).widget().setParent(None)
+        loss = model.train(data, target)
 
-    layout.addWidget(toolbar)
-    layout.addWidget(sc)
-    obj.graph_widget.setLayout(layout)
     obj.rmse_loss_edit.setText(str(loss) + "%")
 
 def forecast(obj):
@@ -95,10 +102,12 @@ def forecast(obj):
         showerror("Please Select Correct Date Range")
         return
 
-    model = get_model(obj.model_cbbox.currentText())
+    modelname = obj.model_cbbox.currentText()
+    model = get_model(modelname)
     model.init_model(use_gpu, device, mode)
     predict, target, loss = model.test(data, target)
-    if predict == None or target == None or loss == None:
+
+    if type(predict) == type(None) or type(target) == type(None) or type(loss) == type(None):
         showerror("Please Train Correspondind model")
         return
         
@@ -109,8 +118,6 @@ def forecast(obj):
     })
 
     ax = df.plot(ax=sc.axes)
-    ax.set_xlabel("Epoch")
-    ax.set_ylabel("RMSE Loss")
     toolbar = NavigationToolbar(sc, None)
     layout = obj.graph_widget.layout()
     if layout == None:
