@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
   <property name="enabled">
    <bool>true</bool>
   </property>
@@ -46,7 +46,7 @@
    <bool>false</bool>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>預測系統</string>
   </property>
   <property name="statusTip">
    <string/>
@@ -821,7 +821,7 @@ padding: 4px;</string>
    </property>
    <widget class="QMenu" name="menuMenu">
     <property name="title">
-     <string>Main Menu</string>
+     <string>Menu</string>
     </property>
     <addaction name="actionWind_Power"/>
     <addaction name="actionSolar_Power"/>

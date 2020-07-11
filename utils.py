@@ -1,3 +1,4 @@
+from predictor.utils import data
 import pandas as pd
 import numpy as np
 import matplotlib
@@ -29,16 +30,25 @@ def train(obj):
     dt_from = obj.train_dtfrom.text()
     dt_to = obj.train_dtto.text()
     data, target = process_data(obj, dt_from, dt_to)
+    
+    if type(data) == type(None) or type(target) == type(None):
+        return
+
+    if len(data) == 0:
+        showerror("Please Select Correct Date Range")
+        return
+
     use_gpu = obj.gpu_ckbox.isChecked()
     device = None
     if use_gpu:
         device = obj.gpu_cbbox.text()
+
+    mode = None
     if obj.hourahead_btn.isChecked():
         mode = 1
     elif obj.dayahead_btn.isChecked():
         mode = 2
 
-    data, target = process_data(obj, dt_from, dt_to)
     model = get_model(obj.model_cbbox.currentText())
     model.init_model(use_gpu, device, mode)
 
@@ -77,9 +87,21 @@ def forecast(obj):
         mode = 2
 
     data, target = process_data(obj, dt_from, dt_to)
+
+    if type(data) == type(None) or type(target) == type(None):
+        return
+
+    if len(data) == 0:
+        showerror("Please Select Correct Date Range")
+        return
+
     model = get_model(obj.model_cbbox.currentText())
     model.init_model(use_gpu, device, mode)
     predict, target, loss = model.test(data, target)
+    if predict == None or target == None or loss == None:
+        showerror("Please Train Correspondind model")
+        return
+        
     sc = MplCanvas(None, width=5, height=4, dpi=100)
     df = pd.DataFrame({
         "predict": predict.flatten(),
@@ -105,6 +127,9 @@ def forecast(obj):
 def process_data(obj, dt_from, dt_to):
     data_filepath = obj.data_file_edit.text()
     target_filepath = obj.target_file_edit.text()
+    if data_filepath == "" or target_filepath == "":
+        showerror("Please Select Input and Output Files")
+        return None, None
 
     from_split = dt_from.split("/")
     dt_from = date(int(from_split[0]), int(from_split[1]), int(from_split[2]))
@@ -130,9 +155,13 @@ def select_gpu_device(obj):
         for idx, gpu in enumerate(gpus):
             obj.gpu_cbbox.setItemText(idx, str(gpu))
     else:
-        msg = QMessageBox()
-        msg.setWindowTitle("Error")
-        msg.setText("Cannot Detect GPU Devices")
-        msg.setIcon(QMessageBox.Critical)
-        msg.exec_()
+        showerror("Cannot Detect GPU Devices")
         obj.gpu_ckbox.setChecked(False)
+
+def showerror(msg):
+
+    box = QMessageBox()
+    box.setWindowTitle("Error")
+    box.setText(msg)
+    box.setIcon(QMessageBox.Critical)
+    box.exec_()
