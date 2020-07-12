@@ -1,6 +1,19 @@
+import matplotlib
+
+matplotlib.use('Qt5Agg')
+
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg, NavigationToolbar2QT as NavigationToolbar
+from matplotlib.figure import Figure
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QApplication
+from PyQt5.QtWidgets import QApplication, QProgressBar, QMessageBox
 from utils import *
+
+class MplCanvas(FigureCanvasQTAgg):
+
+    def __init__(self, parent=None, width=5, height=4, dpi=100):
+        fig = Figure(figsize=(width, height), dpi=dpi)
+        self.axes = fig.add_subplot(111)
+        super(MplCanvas, self).__init__(fig)
 class Ui_MainWindow(object):
     def setupUi(self, mainWindow):
         mainWindow.setObjectName("mainWindow")
@@ -111,10 +124,6 @@ class Ui_MainWindow(object):
         self.label_6.setObjectName("label_6")
         self.train_dtfrom = QtWidgets.QDateEdit(self.train_tab)
         self.train_dtfrom.setGeometry(QtCore.QRect(90, 20, 151, 21))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(9)
-        self.train_dtfrom.setFont(font)
         self.train_dtfrom.setAlignment(QtCore.Qt.AlignCenter)
         self.train_dtfrom.setProperty("showGroupSeparator", False)
         self.train_dtfrom.setCalendarPopup(True)
@@ -127,6 +136,9 @@ class Ui_MainWindow(object):
         self.train_dtto.setObjectName("train_dtto")
         self.tabWidget.addTab(self.train_tab, "")
         self.test_tab = QtWidgets.QWidget()
+        font = QtGui.QFont()
+        font.setFamily("AR JULIAN")
+        self.test_tab.setFont(font)
         self.test_tab.setObjectName("test_tab")
         self.label_7 = QtWidgets.QLabel(self.test_tab)
         self.label_7.setGeometry(QtCore.QRect(10, 20, 61, 16))
@@ -307,7 +319,7 @@ class Ui_MainWindow(object):
         self.gpu_cbbox.setGeometry(QtCore.QRect(160, 150, 69, 22))
         self.gpu_cbbox.setObjectName("gpu_cbbox")
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 560, 261, 41))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 560, 271, 41))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.progress_layout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.progress_layout.setContentsMargins(0, 0, 0, 0)
@@ -392,14 +404,67 @@ class Ui_MainWindow(object):
         self.actionWind_Power.setText(_translate("mainWindow", "Wind Power"))
         self.actionSolar_Power.setText(_translate("mainWindow", "Solar Power"))
         self.actionExit.setText(_translate("mainWindow", "Exit"))
+        self.init()
         self.bind_func()
+
+    def init(self):
+        pbar_style = """
+        QProgressBar{
+            margin-top: 2px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 17px;
+        }
+        """
+        self.pbar = QProgressBar()
+        self.pbar.setStyleSheet(pbar_style)
+        layout = self.progress_layout
+        layout.addWidget(self.pbar)
+        self.pbar.setValue(0)
+        self.train_func = train(self)
+        self.forecast_func = forecast(self)
+        self.train_func.progress.connect(self.update_pbar)
+        self.train_func.graph.connect(self.update_graph)
+        self.train_func.error.connect(self.showerror)
+        self.forecast_func.progress.connect(self.update_pbar)
+        self.forecast_func.graph.connect(self.update_graph)
+        self.forecast_func.error.connect(self.showerror)
 
     def bind_func(self):
         self.data_file_btn.clicked.connect(lambda: select_file(self.data_file_edit))
         self.target_file_btn.clicked.connect(lambda: select_file(self.target_file_edit))
-        self.train_btn.clicked.connect(lambda: train(self))
-        self.forecast_btn.clicked.connect(lambda: forecast(self))
+        self.train_btn.clicked.connect(self.train_func.start)
+        self.forecast_btn.clicked.connect(self.forecast_func.start)
         self.gpu_ckbox.clicked.connect(lambda: select_gpu_device(self))
+
+    def update_pbar(self, value):
+        self.pbar.setValue(value)
+
+    def update_graph(self, df):
+        sc = MplCanvas(None, width=5, height=4, dpi=100)
+        ax = df.plot(ax=sc.axes)
+        ax.set_xlabel("Epoch")
+        ax.set_ylabel("RMSE Loss")
+        toolbar = NavigationToolbar(sc, None)
+        layout = QtWidgets.QVBoxLayout()
+        layout = self.graph_widget.layout()
+        if layout == None:
+            layout = QtWidgets.QVBoxLayout()
+        else:
+            for i in reversed(range(layout.count())): 
+                layout.itemAt(i).widget().setParent(None)
+        layout.addWidget(toolbar)
+        layout.addWidget(sc)
+        self.graph_widget.setLayout(layout)
+
+    def showerror(self, msg):
+
+        box = QMessageBox()
+        box.setWindowTitle("Error")
+        box.setText(msg)
+        box.setIcon(QMessageBox.Critical)
+        box.exec_()
 
 if __name__ == "__main__":
     import sys

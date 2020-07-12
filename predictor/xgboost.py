@@ -21,7 +21,7 @@ class xgboost():
         self.n_estimators     = 1000
         self.reg_alpha        = 0.5
         self.reg_lambda       = 0.5
-        self.reg_alpha        = 'rmse'
+        self.eval_metric      = 'rmse'
         self.objective        = 'reg:logistic'
         self.subsample        = 0.7
 
@@ -65,11 +65,13 @@ class xgboost():
                 seed=50
             )
 
-    def train(self, data_raw, target_raw):
+    def train(self, data_raw, target_raw, progress):
 
         data, target = process_data(self.timesteps, data_raw, target_raw)
         num_input = len(data[0][0])
         data = np.reshape(data, (-1, num_input * self.timesteps))
+        
+        progress.emit(0)
 
         self.model.fit(data, target)
         predict, gt = list(), list()
@@ -93,7 +95,10 @@ class xgboost():
                     if j > 2:
                         predict.append(logits[0])
                         gt.append(y)
+                
+                progress.emit(round((i + 1) / (len(data) + 1)))
 
+        progress.emit(100)
         predict = np.array(predict, dtype=np.float32)
         target = np.array(gt, dtype=np.float32)
         loss = round(math.sqrt(metrics.mean_squared_error(target, predict)) * 100., 2)
@@ -101,8 +106,7 @@ class xgboost():
 
         return loss
         
-    
-    def test(self, data_raw, target_raw):
+    def test(self, data_raw, target_raw, progress):
         data, target = process_data(self.timesteps, data_raw, target_raw)
         num_input = len(data[0][0])
 
@@ -110,6 +114,7 @@ class xgboost():
         if not os.path.exists(model_path):
             return None, None, None
 
+        progress.emit(0)
         self.model = pickle.load(open(model_path, "rb"))
         data = np.reshape(data, (-1, num_input * self.timesteps))
         predict, gt = list(), list()
@@ -133,9 +138,12 @@ class xgboost():
                     if j > 2:
                         predict.append(logits[0])
                         gt.append(y)
+                
+                progress.emit(round((i + 1) / (len(data) + 1)))
 
+        progress.emit(100)
         predict = np.array(predict, dtype=np.float32)
         target = np.array(gt, dtype=np.float32)
         loss = round(math.sqrt(metrics.mean_squared_error(target, predict)) * 100., 2)
-
+        
         return predict, target, loss

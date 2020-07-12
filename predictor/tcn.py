@@ -1,6 +1,8 @@
 from .model import TCN
 from .utils import process_data, rmse
 from tensorflow.contrib.eager.python import tfe
+from PyQt5.QtCore import pyqtSignal
+
 import tensorflow as tf
 import numpy as np
 import os
@@ -16,13 +18,13 @@ if not os.path.exists(output_path):
 class tcn():
 
     def __init__(self):
-        self.batch_size    = 16
-        self.hidden_units  = 16
-        self.dropout       = 0.3
-        self.epochs        = 10
-        self.ksize         = 3
-        self.levels        = 5
-        self.output_dim    = 1
+        self.batch_size      = 16
+        self.hidden_units    = 16
+        self.dropout         = 0.3
+        self.epochs          = 10
+        self.ksize           = 3
+        self.levels          = 5
+        self.output_dim      = 1
 
         self.global_step   = tf.Variable(0, trainable=False)
         channel_sizes = [self.hidden_units] * self.levels
@@ -45,8 +47,9 @@ class tcn():
         
         return rmse(logits, batch_y)
 
-    def train(self, data_raw, target_raw):
+    def train(self, data_raw, target_raw, progress):
         
+        progress.emit(0)
         data, target = process_data(self.timesteps, data_raw, target_raw)
         num_input = len(data[0][0])
 
@@ -100,22 +103,28 @@ class tcn():
                 predict = np.array(predict)
                 gt = np.array(gt)
                 train_losses.append(round(rmse(predict, gt).numpy() * 100., 2))
-
-                
+                p = round(epoch / (self.epochs + 1) * 100.)
+                progress.emit(p)
+            
+            progress.emit(100)
             self.model.save_weights(os.path.join(output_path, f"tcn_weight_{self.mode}.ckpt"))
 
         return np.array(train_losses)
     
-    def test(self, data_raw, target_raw):
+    def test(self, data_raw, target_raw, progress):
         model_path = os.path.join(output_path, f"tcn_weight_{self.mode}.ckpt")
-        if not os.path.exists(model_path):
+        
+        try:
+            self.model.load_weights(os.path.join(output_path, f"tcn_weight_{self.mode}.ckpt"))
+        except:
             return None, None, None
 
-        self.model.load_weights(os.path.join(output_path, f"tcn_weight_{self.mode}.ckpt"))
         data, target = process_data(self.timesteps, data_raw, target_raw)
         num_input = len(data[0][0])
         predict, gt = list(), list()
         testset = tf.data.Dataset.from_tensor_slices((data, target))
+        progress.emit(0)
+
 
         if self.use_gpu:
             todevice = f"/gpu:{self.device}"
@@ -150,8 +159,10 @@ class tcn():
                         if j > 2:
                             predict.append(logits.numpy()[0][0])
                             gt.append(y.numpy())
-                    progress = round(i / (len(data) - 1) * 100., 2)
+                    p = round(i / (len(data) - 1) * 100., 2)
+                    progress.emit(p)
 
+        progress.emit(100)
         test_predict = np.array(predict)
         test_target = np.array(gt)
         test_loss = round(rmse(test_predict, test_target).numpy() * 100., 2)

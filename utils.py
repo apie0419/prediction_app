@@ -1,141 +1,125 @@
-from predictor.utils import data
 import pandas as pd
 import numpy as np
-import matplotlib
 
-matplotlib.use('Qt5Agg')
-
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg, NavigationToolbar2QT as NavigationToolbar
 from tensorflow.python.client import device_lib
-from PyQt5.QtWidgets import QFileDialog, QMessageBox, QProgressBar, QDialog
-from matplotlib.figure import Figure
+from PyQt5.QtWidgets import QFileDialog, QMessageBox
 from PyQt5 import QtWidgets
 from datetime import date
 from predictor import get_model
-
-class MplCanvas(FigureCanvasQTAgg):
-
-    def __init__(self, parent=None, width=5, height=4, dpi=100):
-        fig = Figure(figsize=(width, height), dpi=dpi)
-        self.axes = fig.add_subplot(111)
-        super(MplCanvas, self).__init__(fig)
+from PyQt5.QtCore import pyqtSignal, QThread
 
 def select_file(obj):
     options = QFileDialog.Options()
     options |= QFileDialog.DontUseNativeDialog
     fileName, _ = QFileDialog.getOpenFileName(None, "QFileDialog.getOpenFileName()", "","Excel File (*.xlsx)", options=options)
     obj.setText(fileName)
-    
-def train(obj):
-    dt_from = obj.train_dtfrom.text()
-    dt_to = obj.train_dtto.text()
-    data, target = process_data(obj, dt_from, dt_to)
-    
-    if type(data) == type(None) or type(target) == type(None):
-        return
+class train(QThread):
 
-    if len(data) == 0:
-        showerror("Please Select Correct Date Range")
-        return
+    progress = pyqtSignal(int)
+    error = pyqtSignal(str)
+    graph = pyqtSignal(object)
 
-    use_gpu = obj.gpu_ckbox.isChecked()
-    device = None
-    if use_gpu:
-        device = obj.gpu_cbbox.text()
+    def __init__(self, obj):
+        super(train, self).__init__()
+        self.obj = obj
 
-    mode = None
-    if obj.hourahead_btn.isChecked():
-        mode = 1
-    elif obj.dayahead_btn.isChecked():
-        mode = 2
-
-    modelname = obj.model_cbbox.currentText()
-    model = get_model(modelname)
-    model.init_model(use_gpu, device, mode)
-
-    if modelname == "TCN":
-        losses = model.train(data, target)
-        loss = round(losses.mean(), 2)
-
-        sc = MplCanvas(None, width=5, height=4, dpi=100)
-        df = pd.DataFrame({
-            "loss": losses.flatten(),
-        })
-
-        df.plot(ax=sc.axes)
-        ax.set_xlabel("Epoch")
-        ax.set_ylabel("RMSE Loss")
-        toolbar = NavigationToolbar(sc, None)
-        layout = obj.graph_widget.layout()
-        if layout == None:
-            layout = QtWidgets.QVBoxLayout()
-        else:
-            for i in reversed(range(layout.count())): 
-                layout.itemAt(i).widget().setParent(None)
-
-        layout.addWidget(toolbar)
-        layout.addWidget(sc)
-        obj.graph_widget.setLayout(layout)
-    else:
-        loss = model.train(data, target)
-
-    obj.rmse_loss_edit.setText(str(loss) + "%")
-
-def forecast(obj):
-    dt_from = obj.test_dtfrom.text()
-    dt_to = obj.test_dtto.text()
-    use_gpu = obj.gpu_ckbox.isChecked()
-    device = None
-    if use_gpu:
-        device = obj.gpu_cbbox.text()
-    if obj.hourahead_btn.isChecked():
-        mode = 1
-    elif obj.dayahead_btn.isChecked():
-        mode = 2
-
-    data, target = process_data(obj, dt_from, dt_to)
-
-    if type(data) == type(None) or type(target) == type(None):
-        return
-
-    if len(data) == 0:
-        showerror("Please Select Correct Date Range")
-        return
-
-    modelname = obj.model_cbbox.currentText()
-    model = get_model(modelname)
-    model.init_model(use_gpu, device, mode)
-    predict, target, loss = model.test(data, target)
-
-    if type(predict) == type(None) or type(target) == type(None) or type(loss) == type(None):
-        showerror("Please Train Correspondind model")
-        return
+    def run(self):
+        dt_from = self.obj.train_dtfrom.text()
+        dt_to = self.obj.train_dtto.text()
+        data, target = process_data(self.obj, dt_from, dt_to)
         
-    sc = MplCanvas(None, width=5, height=4, dpi=100)
-    df = pd.DataFrame({
-        "predict": predict.flatten(),
-        "target": target.flatten()
-    })
+        if type(data) == type(None) or type(target) == type(None):
+            self.error.emit("Please Select Input and Output Files")
+            return
 
-    ax = df.plot(ax=sc.axes)
-    toolbar = NavigationToolbar(sc, None)
-    layout = obj.graph_widget.layout()
-    if layout == None:
-        layout = QtWidgets.QVBoxLayout()
-    else:
-        for i in reversed(range(layout.count())): 
-            layout.itemAt(i).widget().setParent(None)
+        if len(data) == 0:
+            self.error.emit("Please Select Correct Date Range")
+            return
+
+        use_gpu = self.obj.gpu_ckbox.isChecked()
+        device = None
+        if use_gpu:
+            device = self.obj.gpu_cbbox.text()
+
+        mode = None
+        if self.obj.hourahead_btn.isChecked():
+            mode = 1
+        elif self.obj.dayahead_btn.isChecked():
+            mode = 2
+
+        modelname = self.obj.model_cbbox.currentText()
+        model = get_model(modelname)
+        model.init_model(use_gpu, device, mode)
+        
+
+        if modelname == "TCN":
             
-    layout.addWidget(toolbar)
-    layout.addWidget(sc)
-    obj.graph_widget.setLayout(layout)
-    obj.rmse_loss_edit.setText(str(loss) + "%")
+            losses = model.train(data, target, self.progress)
+            loss = round(losses.mean(), 2)
+
+            df = pd.DataFrame({
+                "loss": losses.flatten(),
+            })
+            
+            self.graph.emit(df)
+        else:
+            loss = model.train(data, target, self.progress)
+
+        self.obj.rmse_loss_edit.setText(str(loss) + "%")
+
+class forecast(QThread):
+
+    progress = pyqtSignal(int)
+    error = pyqtSignal(str)
+    graph = pyqtSignal(object)
+
+    def __init__(self, obj):
+        super(forecast, self).__init__()
+        self.obj = obj
+
+    def run(self):
+        dt_from = self.obj.test_dtfrom.text()
+        dt_to = self.obj.test_dtto.text()
+        use_gpu = self.obj.gpu_ckbox.isChecked()
+        device = None
+        mode = None
+        if use_gpu:
+            device = self.obj.gpu_cbbox.text()
+        if self.obj.hourahead_btn.isChecked():
+            mode = 1
+        elif self.obj.dayahead_btn.isChecked():
+            mode = 2
+
+        data, target = process_data(self.obj, dt_from, dt_to)
+
+        if type(data) == type(None) or type(target) == type(None):
+            self.error.emit("Please Select Input and Output Files")
+            return
+
+        if len(data) == 0:
+            self.error.emit("Please Select Correct Date Range")
+            return
+
+        modelname = self.obj.model_cbbox.currentText()
+        model = get_model(modelname)
+        model.init_model(use_gpu, device, mode)
+        predict, target, loss = model.test(data, target, self.progress)
+
+        if type(predict) == type(None) or type(target) == type(None) or type(loss) == type(None):
+            self.error.emit("Please Train Correspondind model")
+            return
+            
+        df = pd.DataFrame({
+            "predict": predict.flatten(),
+            "target": target.flatten()
+        })
+        self.graph.emit(df)
+        self.obj.rmse_loss_edit.setText(str(loss) + "%")
 
 def process_data(obj, dt_from, dt_to):
     data_filepath = obj.data_file_edit.text()
     target_filepath = obj.target_file_edit.text()
     if data_filepath == "" or target_filepath == "":
-        showerror("Please Select Input and Output Files")
         return None, None
 
     from_split = dt_from.split("/")
@@ -162,13 +146,9 @@ def select_gpu_device(obj):
         for idx, gpu in enumerate(gpus):
             obj.gpu_cbbox.setItemText(idx, str(gpu))
     else:
-        showerror("Cannot Detect GPU Devices")
+        box = QMessageBox()
+        box.setWindowTitle("Error")
+        box.setText("Cannot Detect GPU Devices")
+        box.setIcon(QMessageBox.Critical)
+        box.exec_()
         obj.gpu_ckbox.setChecked(False)
-
-def showerror(msg):
-
-    box = QMessageBox()
-    box.setWindowTitle("Error")
-    box.setText(msg)
-    box.setIcon(QMessageBox.Critical)
-    box.exec_()
