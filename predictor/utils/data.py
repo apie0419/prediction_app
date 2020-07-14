@@ -12,4 +12,3 @@ def process_data(timesteps, data_raw, target_raw):
     target = target_raw[timesteps - 1:, 4]
     
     return data, target
-        

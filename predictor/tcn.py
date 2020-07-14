@@ -40,7 +40,9 @@ class tcn():
     def train(self, data_raw, target_raw):
         """
         Todo:
-        1. 在畫面呈現訓練過程
+        1. Progress Bar
+        2. XGBOOST
+        3. hourahead train & test
         """
         data, target = process_data(self.timesteps, data_raw, target_raw)
         num_input = len(data[0][0])
