@@ -21,7 +21,7 @@ class tcn():
         self.batch_size      = 16
         self.hidden_units    = 16
         self.dropout         = 0.3
-        self.epochs          = 10
+        self.epochs          = 100
         self.ksize           = 3
         self.levels          = 5
         self.output_dim      = 1

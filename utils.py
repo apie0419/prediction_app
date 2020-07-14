@@ -17,13 +17,15 @@ class train(QThread):
 
     progress = pyqtSignal(int)
     error = pyqtSignal(str)
-    graph = pyqtSignal(object)
+    graph = pyqtSignal(object, float, bool)
+    status = pyqtSignal(bool)
 
     def __init__(self, obj):
         super(train, self).__init__()
         self.obj = obj
 
     def run(self):
+        self.status.emit(True)
         dt_from = self.obj.train_dtfrom.text()
         dt_to = self.obj.train_dtto.text()
         data, target = process_data(self.obj, dt_from, dt_to)
@@ -39,7 +41,7 @@ class train(QThread):
         use_gpu = self.obj.gpu_ckbox.isChecked()
         device = None
         if use_gpu:
-            device = self.obj.gpu_cbbox.text()
+            device = self.obj.gpu_cbbox.currentText()
 
         mode = None
         if self.obj.hourahead_btn.isChecked():
@@ -61,30 +63,33 @@ class train(QThread):
                 "loss": losses.flatten(),
             })
             
-            self.graph.emit(df)
+            self.graph.emit(df, loss, True)
         else:
             loss = model.train(data, target, self.progress)
 
-        self.obj.rmse_loss_edit.setText(str(loss) + "%")
+            self.graph.emit(None, loss, True)
+
 
 class forecast(QThread):
 
     progress = pyqtSignal(int)
     error = pyqtSignal(str)
-    graph = pyqtSignal(object)
+    graph = pyqtSignal(object, float, bool)
+    status = pyqtSignal(bool)
 
     def __init__(self, obj):
         super(forecast, self).__init__()
         self.obj = obj
 
     def run(self):
+        self.status.emit(False)
         dt_from = self.obj.test_dtfrom.text()
         dt_to = self.obj.test_dtto.text()
         use_gpu = self.obj.gpu_ckbox.isChecked()
         device = None
         mode = None
         if use_gpu:
-            device = self.obj.gpu_cbbox.text()
+            device = self.obj.gpu_cbbox.currentText()
         if self.obj.hourahead_btn.isChecked():
             mode = 1
         elif self.obj.dayahead_btn.isChecked():
@@ -113,8 +118,7 @@ class forecast(QThread):
             "predict": predict.flatten(),
             "target": target.flatten()
         })
-        self.graph.emit(df)
-        self.obj.rmse_loss_edit.setText(str(loss) + "%")
+        self.graph.emit(df, loss, False)
 
 def process_data(obj, dt_from, dt_to):
     data_filepath = obj.data_file_edit.text()
@@ -145,6 +149,7 @@ def select_gpu_device(obj):
     if len(gpus) > 0:
         for idx, gpu in enumerate(gpus):
             obj.gpu_cbbox.setItemText(idx, str(gpu))
+            obj.gpu_cbbox.setEnabled(True)
     else:
         box = QMessageBox()
         box.setWindowTitle("Error")

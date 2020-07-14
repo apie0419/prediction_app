@@ -298,7 +298,7 @@ color: rgb(255, 255, 255);</string>
       <property name="font">
        <font>
         <family>Arial</family>
-        <pointsize>11</pointsize>
+        <pointsize>9</pointsize>
        </font>
       </property>
       <property name="alignment">
@@ -391,6 +391,11 @@ color: rgb(255, 255, 255);</string>
         <height>21</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+       </font>
+      </property>
       <property name="layoutDirection">
        <enum>Qt::LeftToRight</enum>
       </property>
@@ -409,6 +414,11 @@ color: rgb(255, 255, 255);</string>
         <width>151</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+       </font>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -450,7 +460,7 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>350</y>
+      <y>360</y>
       <width>231</width>
       <height>22</height>
      </rect>
@@ -473,7 +483,7 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>380</y>
+      <y>390</y>
       <width>231</width>
       <height>22</height>
      </rect>
@@ -496,7 +506,7 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>420</y>
+      <y>430</y>
       <width>271</width>
       <height>21</height>
      </rect>
@@ -523,7 +533,7 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>510</y>
+      <y>520</y>
       <width>91</width>
       <height>41</height>
      </rect>
@@ -553,10 +563,12 @@ color: rgb(255, 255, 255);</string>
 QPushButton::hover
 {
  	background-color : rgb(129, 159, 255);
+    background-color : rgb(17, 247, 0);
 }
 QPushButton::pressed
 {
  	background-color : rgb(89, 110, 177);
+	background-color : rgb(15, 190, 0);
 }</string>
     </property>
     <property name="text">
@@ -567,7 +579,7 @@ QPushButton::pressed
     <property name="geometry">
      <rect>
       <x>160</x>
-      <y>510</y>
+      <y>520</y>
       <width>91</width>
       <height>41</height>
      </rect>
@@ -597,10 +609,12 @@ QPushButton::pressed
 QPushButton::hover
 {
  	background-color : rgb(129, 159, 255);
+    background-color : rgb(17, 247, 0);
 }
 QPushButton::pressed
 {
  	background-color : rgb(89, 110, 177);
+	background-color : rgb(15, 190, 0);
 }</string>
     </property>
     <property name="text">
@@ -693,49 +707,8 @@ padding: 4px;</string>
       <x>300</x>
       <y>10</y>
       <width>561</width>
-      <height>571</height>
+      <height>581</height>
      </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_14">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>590</y>
-      <width>121</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>10</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>RMSE Loss</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="rmse_loss_edit">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>590</y>
-      <width>131</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
     </property>
    </widget>
    <widget class="QComboBox" name="gpu_cbbox">
@@ -755,7 +728,7 @@ padding: 4px;</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>560</y>
+      <y>580</y>
       <width>271</width>
       <height>41</height>
      </rect>
@@ -766,7 +739,7 @@ padding: 4px;</string>
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>460</y>
+      <y>470</y>
       <width>111</width>
       <height>22</height>
      </rect>
@@ -790,7 +763,7 @@ padding: 4px;</string>
     <property name="geometry">
      <rect>
       <x>160</x>
-      <y>460</y>
+      <y>470</y>
       <width>111</width>
       <height>22</height>
      </rect>
@@ -807,33 +780,19 @@ padding: 4px;</string>
      <string>Day-ahead</string>
     </property>
    </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>590</y>
+      <width>561</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="result_layout"/>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>871</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="autoFillBackground">
-    <bool>true</bool>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">gridline-color: rgb(0, 0, 0);</string>
-   </property>
-   <widget class="QMenu" name="menuMenu">
-    <property name="title">
-     <string>Menu</string>
-    </property>
-    <addaction name="actionWind_Power"/>
-    <addaction name="actionSolar_Power"/>
-    <addaction name="actionExit"/>
-   </widget>
-   <addaction name="menuMenu"/>
-  </widget>
   <action name="actionWind_Power">
    <property name="text">
     <string>Wind Power</string>

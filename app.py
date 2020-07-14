@@ -14,6 +14,7 @@ class MplCanvas(FigureCanvasQTAgg):
         fig = Figure(figsize=(width, height), dpi=dpi)
         self.axes = fig.add_subplot(111)
         super(MplCanvas, self).__init__(fig)
+
 class Ui_MainWindow(object):
     def setupUi(self, mainWindow):
         mainWindow.setObjectName("mainWindow")
@@ -124,6 +125,10 @@ class Ui_MainWindow(object):
         self.label_6.setObjectName("label_6")
         self.train_dtfrom = QtWidgets.QDateEdit(self.train_tab)
         self.train_dtfrom.setGeometry(QtCore.QRect(90, 20, 151, 21))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(9)
+        self.train_dtfrom.setFont(font)
         self.train_dtfrom.setAlignment(QtCore.Qt.AlignCenter)
         self.train_dtfrom.setProperty("showGroupSeparator", False)
         self.train_dtfrom.setCalendarPopup(True)
@@ -160,12 +165,18 @@ class Ui_MainWindow(object):
         self.label_8.setObjectName("label_8")
         self.test_dtfrom = QtWidgets.QDateEdit(self.test_tab)
         self.test_dtfrom.setGeometry(QtCore.QRect(90, 20, 151, 21))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        self.test_dtfrom.setFont(font)
         self.test_dtfrom.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.test_dtfrom.setAlignment(QtCore.Qt.AlignCenter)
         self.test_dtfrom.setCalendarPopup(True)
         self.test_dtfrom.setObjectName("test_dtfrom")
         self.test_dtto = QtWidgets.QDateEdit(self.test_tab)
         self.test_dtto.setGeometry(QtCore.QRect(90, 50, 151, 21))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        self.test_dtto.setFont(font)
         self.test_dtto.setAlignment(QtCore.Qt.AlignCenter)
         self.test_dtto.setCalendarPopup(True)
         self.test_dtto.setObjectName("test_dtto")
@@ -182,19 +193,19 @@ class Ui_MainWindow(object):
         self.label_9.setAlignment(QtCore.Qt.AlignCenter)
         self.label_9.setObjectName("label_9")
         self.model_cbbox = QtWidgets.QComboBox(self.centralwidget)
-        self.model_cbbox.setGeometry(QtCore.QRect(30, 350, 231, 22))
+        self.model_cbbox.setGeometry(QtCore.QRect(30, 360, 231, 22))
         self.model_cbbox.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.model_cbbox.setObjectName("model_cbbox")
         self.model_cbbox.addItem("")
         self.model_cbbox.addItem("")
         self.method_cbbox = QtWidgets.QComboBox(self.centralwidget)
-        self.method_cbbox.setGeometry(QtCore.QRect(30, 380, 231, 22))
+        self.method_cbbox.setGeometry(QtCore.QRect(30, 390, 231, 22))
         self.method_cbbox.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.method_cbbox.setObjectName("method_cbbox")
         self.method_cbbox.addItem("")
         self.method_cbbox.addItem("")
         self.label_10 = QtWidgets.QLabel(self.centralwidget)
-        self.label_10.setGeometry(QtCore.QRect(10, 420, 271, 21))
+        self.label_10.setGeometry(QtCore.QRect(10, 430, 271, 21))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setBold(True)
@@ -205,7 +216,7 @@ class Ui_MainWindow(object):
         self.label_10.setAlignment(QtCore.Qt.AlignCenter)
         self.label_10.setObjectName("label_10")
         self.train_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.train_btn.setGeometry(QtCore.QRect(30, 510, 91, 41))
+        self.train_btn.setGeometry(QtCore.QRect(30, 520, 91, 41))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(11)
@@ -226,14 +237,16 @@ class Ui_MainWindow(object):
 "QPushButton::hover\n"
 "{\n"
 "     background-color : rgb(129, 159, 255);\n"
+"    background-color : rgb(17, 247, 0);\n"
 "}\n"
 "QPushButton::pressed\n"
 "{\n"
 "     background-color : rgb(89, 110, 177);\n"
+"    background-color : rgb(15, 190, 0);\n"
 "}")
         self.train_btn.setObjectName("train_btn")
         self.forecast_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.forecast_btn.setGeometry(QtCore.QRect(160, 510, 91, 41))
+        self.forecast_btn.setGeometry(QtCore.QRect(160, 520, 91, 41))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(11)
@@ -254,10 +267,12 @@ class Ui_MainWindow(object):
 "QPushButton::hover\n"
 "{\n"
 "     background-color : rgb(129, 159, 255);\n"
+"    background-color : rgb(17, 247, 0);\n"
 "}\n"
 "QPushButton::pressed\n"
 "{\n"
 "     background-color : rgb(89, 110, 177);\n"
+"    background-color : rgb(15, 190, 0);\n"
 "}")
         self.forecast_btn.setObjectName("forecast_btn")
         self.line = QtWidgets.QFrame(self.centralwidget)
@@ -294,38 +309,20 @@ class Ui_MainWindow(object):
         self.label_13.setAlignment(QtCore.Qt.AlignCenter)
         self.label_13.setObjectName("label_13")
         self.graph_widget = QtWidgets.QWidget(self.centralwidget)
-        self.graph_widget.setGeometry(QtCore.QRect(300, 10, 561, 571))
+        self.graph_widget.setGeometry(QtCore.QRect(300, 10, 561, 581))
         self.graph_widget.setObjectName("graph_widget")
-        self.label_14 = QtWidgets.QLabel(self.centralwidget)
-        self.label_14.setGeometry(QtCore.QRect(470, 590, 121, 21))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_14.setFont(font)
-        self.label_14.setObjectName("label_14")
-        self.rmse_loss_edit = QtWidgets.QLineEdit(self.centralwidget)
-        self.rmse_loss_edit.setGeometry(QtCore.QRect(570, 590, 131, 21))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setBold(True)
-        font.setWeight(75)
-        self.rmse_loss_edit.setFont(font)
-        self.rmse_loss_edit.setReadOnly(True)
-        self.rmse_loss_edit.setObjectName("rmse_loss_edit")
         self.gpu_cbbox = QtWidgets.QComboBox(self.centralwidget)
         self.gpu_cbbox.setEnabled(False)
         self.gpu_cbbox.setGeometry(QtCore.QRect(160, 150, 69, 22))
         self.gpu_cbbox.setObjectName("gpu_cbbox")
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 560, 271, 41))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 580, 271, 41))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.progress_layout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.progress_layout.setContentsMargins(0, 0, 0, 0)
         self.progress_layout.setObjectName("progress_layout")
         self.hourahead_btn = QtWidgets.QRadioButton(self.centralwidget)
-        self.hourahead_btn.setGeometry(QtCore.QRect(30, 460, 111, 22))
+        self.hourahead_btn.setGeometry(QtCore.QRect(30, 470, 111, 22))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(11)
@@ -335,7 +332,7 @@ class Ui_MainWindow(object):
         self.hourahead_btn.setChecked(True)
         self.hourahead_btn.setObjectName("hourahead_btn")
         self.dayahead_btn = QtWidgets.QRadioButton(self.centralwidget)
-        self.dayahead_btn.setGeometry(QtCore.QRect(160, 460, 111, 22))
+        self.dayahead_btn.setGeometry(QtCore.QRect(160, 470, 111, 22))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(11)
@@ -343,18 +340,16 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.dayahead_btn.setFont(font)
         self.dayahead_btn.setObjectName("dayahead_btn")
+        self.horizontalLayoutWidget_2 = QtWidgets.QWidget(self.centralwidget)
+        self.horizontalLayoutWidget_2.setGeometry(QtCore.QRect(300, 590, 561, 41))
+        self.horizontalLayoutWidget_2.setObjectName("horizontalLayoutWidget_2")
+        self.result_layout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_2)
+        self.result_layout.setContentsMargins(0, 0, 0, 0)
+        self.result_layout.setObjectName("result_layout")
         mainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(mainWindow)
         self.statusbar.setObjectName("statusbar")
         mainWindow.setStatusBar(self.statusbar)
-        self.menubar = QtWidgets.QMenuBar(mainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 871, 25))
-        self.menubar.setAutoFillBackground(True)
-        self.menubar.setStyleSheet("gridline-color: rgb(0, 0, 0);")
-        self.menubar.setObjectName("menubar")
-        self.menuMenu = QtWidgets.QMenu(self.menubar)
-        self.menuMenu.setObjectName("menuMenu")
-        mainWindow.setMenuBar(self.menubar)
         self.actionWind_Power = QtWidgets.QAction(mainWindow)
         self.actionWind_Power.setVisible(True)
         self.actionWind_Power.setObjectName("actionWind_Power")
@@ -363,10 +358,6 @@ class Ui_MainWindow(object):
         self.actionSolar_Power.setObjectName("actionSolar_Power")
         self.actionExit = QtWidgets.QAction(mainWindow)
         self.actionExit.setObjectName("actionExit")
-        self.menuMenu.addAction(self.actionWind_Power)
-        self.menuMenu.addAction(self.actionSolar_Power)
-        self.menuMenu.addAction(self.actionExit)
-        self.menubar.addAction(self.menuMenu.menuAction())
 
         self.retranslateUi(mainWindow)
         self.tabWidget.setCurrentIndex(0)
@@ -397,10 +388,8 @@ class Ui_MainWindow(object):
         self.forecast_btn.setText(_translate("mainWindow", "Forecast"))
         self.target_file_btn.setText(_translate("mainWindow", "Browse"))
         self.label_13.setText(_translate("mainWindow", "Target File"))
-        self.label_14.setText(_translate("mainWindow", "RMSE Loss"))
         self.hourahead_btn.setText(_translate("mainWindow", "Hour-ahead"))
         self.dayahead_btn.setText(_translate("mainWindow", "Day-ahead"))
-        self.menuMenu.setTitle(_translate("mainWindow", "Menu"))
         self.actionWind_Power.setText(_translate("mainWindow", "Wind Power"))
         self.actionSolar_Power.setText(_translate("mainWindow", "Solar Power"))
         self.actionExit.setText(_translate("mainWindow", "Exit"))
@@ -427,9 +416,11 @@ class Ui_MainWindow(object):
         self.train_func.progress.connect(self.update_pbar)
         self.train_func.graph.connect(self.update_graph)
         self.train_func.error.connect(self.showerror)
+        self.train_func.status.connect(self.showstatus)
         self.forecast_func.progress.connect(self.update_pbar)
         self.forecast_func.graph.connect(self.update_graph)
         self.forecast_func.error.connect(self.showerror)
+        self.forecast_func.status.connect(self.showstatus)
 
     def bind_func(self):
         self.data_file_btn.clicked.connect(lambda: select_file(self.data_file_edit))
@@ -441,21 +432,40 @@ class Ui_MainWindow(object):
     def update_pbar(self, value):
         self.pbar.setValue(value)
 
-    def update_graph(self, df):
-        sc = MplCanvas(None, width=5, height=4, dpi=100)
-        ax = df.plot(ax=sc.axes)
-        ax.set_xlabel("Epoch")
-        ax.set_ylabel("RMSE Loss")
-        toolbar = NavigationToolbar(sc, None)
-        layout = QtWidgets.QVBoxLayout()
+    def update_graph(self, df, loss, training=True):
+        for i in reversed(range(self.result_layout.count())): 
+            self.result_layout.itemAt(i).widget().setParent(None)
+
+        label = QtWidgets.QLabel(self.centralwidget)
+        label.setAlignment(QtCore.Qt.AlignCenter)
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        label.setFont(font)
+        if training:
+            label.setText(f"Training RMSE Loss: {loss}%")
+        else:
+            label.setText(f"Testing RMSE Loss: {loss}%")
+
+        self.result_layout.addWidget(label)
+
         layout = self.graph_widget.layout()
         if layout == None:
             layout = QtWidgets.QVBoxLayout()
         else:
             for i in reversed(range(layout.count())): 
                 layout.itemAt(i).widget().setParent(None)
-        layout.addWidget(toolbar)
-        layout.addWidget(sc)
+        if type(df) != type(None):
+            sc = MplCanvas(None, width=5, height=4, dpi=100)
+            ax = df.plot(ax=sc.axes)
+            if training:
+                ax.set_xlabel("Epoch")
+                ax.set_ylabel("RMSE Loss")
+            toolbar = NavigationToolbar(sc, None)
+            layout.addWidget(toolbar)
+            layout.addWidget(sc)
         self.graph_widget.setLayout(layout)
 
     def showerror(self, msg):
@@ -465,6 +475,26 @@ class Ui_MainWindow(object):
         box.setText(msg)
         box.setIcon(QMessageBox.Critical)
         box.exec_()
+
+    def showstatus(self, training=True):
+        for i in reversed(range(self.result_layout.count())): 
+            self.result_layout.itemAt(i).widget().setParent(None)
+
+        label = QtWidgets.QLabel(self.centralwidget)
+        label.setAlignment(QtCore.Qt.AlignCenter)
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        label.setFont(font)
+        if training:
+            label.setText("Training")
+        else:
+            label.setText("Testing")
+
+        self.result_layout.addWidget(label)
+        
 
 if __name__ == "__main__":
     import sys
