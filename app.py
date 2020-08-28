@@ -459,10 +459,11 @@ class Ui_MainWindow(object):
                 layout.itemAt(i).widget().setParent(None)
         if type(df) != type(None):
             sc = MplCanvas(None, width=5, height=4, dpi=100)
-            ax = df.plot(ax=sc.axes)
+            ax = df.plot(ax=sc.axes, style='.-')
             if training:
                 ax.set_xlabel("Epoch")
                 ax.set_ylabel("RMSE Loss")
+                ax.set(xlim=(0, 100), ylim=(0, 100))
             toolbar = NavigationToolbar(sc, None)
             layout.addWidget(toolbar)
             layout.addWidget(sc)

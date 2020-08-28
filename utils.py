@@ -13,6 +13,7 @@ def select_file(obj):
     options |= QFileDialog.DontUseNativeDialog
     fileName, _ = QFileDialog.getOpenFileName(None, "QFileDialog.getOpenFileName()", "","Excel File (*.xlsx)", options=options)
     obj.setText(fileName)
+
 class train(QThread):
 
     progress = pyqtSignal(int)
@@ -56,14 +57,18 @@ class train(QThread):
 
         if modelname == "TCN":
             
-            losses = model.train(data, target, self.progress)
-            loss = round(losses.mean(), 2)
+            for losses in model.train(data, target):
+                
+                loss = round(losses.mean(), 2)
 
-            df = pd.DataFrame({
-                "loss": losses.flatten(),
-            })
-            
-            self.graph.emit(df, loss, True)
+                df = pd.DataFrame({
+                    "loss": losses.flatten(),
+                })
+                p = round(losses.shape[0] / 100 * 100.)
+
+                self.graph.emit(df, loss, True)
+                self.progress.emit(p)
+
         else:
             loss = model.train(data, target, self.progress)
 

@@ -47,9 +47,9 @@ class tcn():
         
         return rmse(logits, batch_y)
 
-    def train(self, data_raw, target_raw, progress):
+    def train(self, data_raw, target_raw):
         
-        progress.emit(0)
+        # progress.emit(0)
         data, target = process_data(self.timesteps, data_raw, target_raw)
         num_input = len(data[0][0])
 
@@ -103,10 +103,11 @@ class tcn():
                 predict = np.array(predict)
                 gt = np.array(gt)
                 train_losses.append(round(rmse(predict, gt).numpy() * 100., 2))
-                p = round(epoch / (self.epochs + 1) * 100.)
-                progress.emit(p)
+                # p = round(epoch / (self.epochs + 1) * 100.)
+                # progress.emit(p)
+                yield np.array(train_losses)
             
-            progress.emit(100)
+            # progress.emit(100)
             self.model.save_weights(os.path.join(output_path, f"tcn_weight_{self.mode}.ckpt"))
 
         return np.array(train_losses)
